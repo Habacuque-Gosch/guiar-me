@@ -18,6 +18,10 @@
     padding: 0;
 }
 
+html, body{
+    height: 100%;
+ }
+
 /* PALETA DE CORES (ROOT) */
 :root {
     --destaque: #005DDF;
