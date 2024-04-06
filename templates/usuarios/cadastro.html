@@ -1,0 +1,70 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+{% if request.method == 'GET' %}
+
+<style>
+    .navegation-bar{
+        display: none;
+    }
+</style>
+
+{% endif %}
+
+<main class="main-login"> 
+
+    <section class="section-login">
+
+        <div class="tela-login">
+            
+            <script>
+                function voltar()
+                {
+                  history.back();
+                }
+                
+            </script>
+
+            <div class="div-btn-back">
+                <a href="javascript: voltar()" class="btn-back"><img src="{% static '/assets/icones_login/back-icone.png' %}" alt=""></a>
+            </div>
+
+            <div class="titulo-cadastro">
+                <p class="titulo-login">Novo por aqui?</p>
+            </div>
+
+            <form class="section-cadastro-form" action="{% url 'cadastro' %}" method="post">
+
+                {% csrf_token %}
+
+                <div class="form-group-campos" style="gap: 1em;">
+
+                    {% for field in form.visible_fields %}
+
+                        <label class="form-label" for="{{ field.id_for_label }}">{{field.label}}</label>
+                        {{ field }}
+
+                    {% for error in field.errors %}
+
+                    <div class="alert alert-danger">
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                    {% endfor %}
+
+                    <div class="div-alternativas-de-login">
+                        <p class="cadastro">Ao utilizar o GuiarMe, você concorda com nossos Termos de Serviço e Política de Privacidade.</p>
+                    </div>
+
+                    <button class="btn-entrar" style="margin-top: 1em;" type="submit">Cadastrar</button>
+                
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+{% endblock %}

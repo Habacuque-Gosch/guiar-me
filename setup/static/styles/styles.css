@@ -1,0 +1,50 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* ESTILOS */
+@import url(partials/header.css);
+@import url(home/home.css);
+@import url(login/login.css);
+@import url(cadastro/cadastro.css);
+@import url(partials/navegation_bar.css);
+@import url(partials/formularios.css);
+
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* PALETA DE CORES (ROOT) */
+:root {
+    --destaque: #005DDF;
+    --primaria: #005DDF;
+    --secundaria: #22262D;
+    --terciaria: #EBF5F9;
+
+    /* HOME */
+    --texto: #ffffff;
+    --texto_70: #ffffff30;
+    --texto_miudo: #78B0FF;
+
+    /* LOGIN */
+    --fundo_card_inicial: #22262D;
+    --texto-no-card:#455368;
+    --fundo-campo: #313640;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    background-color: #22262D;
+}

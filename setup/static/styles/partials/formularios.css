@@ -1,0 +1,106 @@
+
+
+@media (max-width: 428px) {
+
+    .section-tela {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--fundo_card_inicial);
+        width: 100%;
+        height: 100%;
+    }
+    
+    .div-btn-back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin-left: -75%;
+        margin-top: 1.5em;
+    }
+
+    .btn-back{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        color: transparent;
+        height:45px;
+        width: 10%;
+        text-decoration: none;
+    }
+
+    .form-group-campos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .section-login-form label {
+        font-size: 16px;
+        font-family: "Lato", "sans-serif";
+        font-weight: bold;
+        text-decoration: none;
+        color: var(--texto-no-card);
+        margin-bottom: 10px;
+        margin-left: -18.5em;
+    }
+
+    .campo-user-login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--fundo-campo);
+        color: #ffffff;
+        height: 60px;
+        width: 85%;
+        padding-left: 18px;
+        border: none;
+        border-radius: 20px;
+        font-size: 18px;
+        font-family: "Lato", "sans-serif";
+        font-weight: bold;
+        text-decoration: none;
+        margin-bottom: 7px;
+    }
+
+    .campo-user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--fundo-campo);
+        color: #ffffff;
+        height: 60px;
+        width: 85%;
+        padding-left: 18px;
+        border: none;
+        border-radius: 20px;
+        font-size: 18px;
+        font-family: "Lato", "sans-serif";
+        font-weight: bold;
+        text-decoration: none;
+        margin-bottom: 7px;
+    }
+    
+    .btn-entrar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffff;
+        color: var(--destaque);
+        height: 60px;
+        width: 90%;
+        padding: 6px;
+        border: 1px solid #ffff;
+        border-radius: 20px;
+        font-size: 20px;
+        font-family: "Lato", "sans-serif";
+        text-decoration: none;
+        margin-top: 1.2em;
+    }
+}

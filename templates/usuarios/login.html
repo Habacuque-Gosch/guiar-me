@@ -1,0 +1,81 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+{% if request.method == 'GET' %}
+
+<style>
+    .navegation-bar{
+        display: none;
+    }
+    .header{
+        display: none;
+    }
+</style>
+
+{% endif %}
+
+<main class="main-login"> 
+
+    <section class="section-tela">
+
+        <div class="tela-login">
+    
+            <script>
+                function voltar()
+                {
+                  history.back();
+                }
+                
+            </script>
+
+            <div class="div-btn-back">
+                <a href="javascript: voltar()" class="btn-back"><img src="{% static '/assets/icones_login/back-icone.png' %}" alt=""></a>
+            </div>
+
+            <div class="titulo-e-btn-google">
+                <p class="titulo-login">Você por aqui?</p>
+                <a class="btn-google" href=""><img src="{% static '/assets/icones_login/google-icone.png' %}" alt="">Continue google</a>
+            </div>
+
+            <div class="div-alternativa-de-login">
+                <hr>
+                <p class="texto-alternativa-login">OU LOGIN COM E-MAIL</p>
+                <hr>
+            </div>
+
+            <form class="section-login-form" action="{% url 'login' %}" method="post">
+        
+                {% csrf_token %}
+
+                <div class="form-group-campos">
+
+                    {% for field in form.visible_fields %}
+                
+                    <label class="form-label-login" for="{{ field.id_for_label }}">{{field.label}}</label>
+                    {{ field }}
+                
+                    {% endfor %}
+
+                </div>
+                
+                <button class="btn-entrar" type="submit">Entrar</button>
+
+            </form>
+
+            <div class="div-alternativas-de-login">
+                        
+                <a href="" class="cadastro">Esqueci minha senha</a>
+                
+                <a href="{% url 'cadastro' %}" class="cadastro">Criar uma conta</a>
+            
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+{% endblock %}             

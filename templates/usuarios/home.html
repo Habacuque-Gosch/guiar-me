@@ -1,0 +1,32 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<main class="main-home">
+
+    <section class="section-home">
+
+        <img class="logo-inicial" src="{% static '/assets/icones_id/logo.png' %}" alt="logo incial">
+
+        <div class="logo-e-contexto">
+            <img class="logo-texto" src="{% static '/assets/icones_id/logo_texto.png' %}" alt="">
+            <p class="contexto-home">Encontre seu próximo destino perfeito.</p>
+        </div>
+
+        <div class="botoes-login-ou-cadastro">
+
+            <a href="{% url 'cadastro' %}" class="botao-criar-conta">Criar uma conta</a>
+
+            <a href="{% url 'login' %}" class="botao-criar-conta" style="background-color: #1855ab00; color: #ffff;">Entrar</a>
+
+        </div>
+
+        <div class="avisos">
+            <p>Ao utilizar o GuiarMe, você concorda com nossos Termos de Serviço e Política de Privacidade.</p>
+        </div>
+
+    </section>
+
+</main>
+
+{% endblock %}

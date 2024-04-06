@@ -1,0 +1,26 @@
+
+
+@media (max-width: 428px) {
+    .btn-google{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffff;
+        color: #151A22;
+        height:45px;
+        width: 85%;
+        padding: 6px;
+        gap: 1.8em;
+        border: 1px solid #ffff;
+        border-radius: 20px;
+        font-size: 20px;
+        font-family: "Lato", "sans-serif";
+        text-decoration: none;
+    }
+    
+    .btn-google img {
+        margin-left: -15%;
+        width: 25px;
+        height: 25px;
+    }
+}
