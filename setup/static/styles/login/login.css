@@ -93,6 +93,7 @@
         font-family: "Lato", "sans-serif";
         text-decoration: none;
         color: var(--texto-no-card);
+        width: 90%;
     }
 
 }
