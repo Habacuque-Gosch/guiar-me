@@ -8,7 +8,7 @@
         align-items: center;
         background-color: var(--fundo_card_inicial);
         width: 100%;
-        height: 100%;
+        height: 80%;
     }
     
     .div-btn-back {
@@ -18,7 +18,6 @@
         width: 100%;
         height: 100%;
         margin-left: -75%;
-        margin-top: 1.5em;
     }
 
     .btn-back{
