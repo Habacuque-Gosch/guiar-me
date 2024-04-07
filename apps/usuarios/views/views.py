@@ -59,8 +59,17 @@ def cadastro(request):
             password=senha
         )
         usuario.save()
+
+        nome = form["nome_cadastro"].value()
+        senha = form["senha_cadastro"].value()
+                
+        usuario = auth.authenticate(
+            request,
+            username=nome,
+            password=senha
+        )
         # messages.success(request, "Cadastro efetuado com sucesso")
-        return redirect('login')
+        return redirect('index')
 
     return render(request, 'usuarios/cadastro.html', {"form": form})
 

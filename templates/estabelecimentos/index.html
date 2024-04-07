@@ -3,6 +3,8 @@
 {% load static %}
 {% block content %}
 
+{% if request.method == 'GET' %}
+
 <style>
     .navegation-bar{
         display: none;
@@ -19,6 +21,7 @@
     <section class="section-busca-e-filtro">
 
         <div class="">
+            <p>Página home</p>
 
         </div>                 
 
@@ -27,6 +30,7 @@
     <section class="section-cards">
 
         <div class="">
+            <p></p>
 
         </div>
 
