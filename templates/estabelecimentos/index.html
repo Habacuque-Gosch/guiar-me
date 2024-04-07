@@ -1,5 +1,4 @@
 {% extends 'partials/base.html' %}
-{% include 'partials/_busca.html' %}
 {% load static %}
 {% block content %}
 
@@ -20,17 +19,14 @@
 
     <section class="section-busca-e-filtro">
 
-        <div class="">
-            <p>Página home</p>
-
-        </div>                 
+        {% include 'estabelecimentos/partials/_busca.html' %}
 
     </section>
 
     <section class="section-cards">
 
         <div class="">
-            <p></p>
+            <p>Página home</p>
 
         </div>
 

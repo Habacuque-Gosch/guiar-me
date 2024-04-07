@@ -1,0 +1,28 @@
+
+@media (max-width: 428px) {
+
+    .main-index {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .section-busca-e-filtro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+    }
+    
+    
+    .section-cards {
+        width: 100%;
+        /* height: 100%; */
+    }
+
+    
+}

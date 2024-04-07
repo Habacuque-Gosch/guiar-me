@@ -18,4 +18,4 @@ def buscar(request):
 
             # user__email=nome_a_buscar)| profiles_friends.filter(user__first_name=nome_a_buscar) | profiles_friends.filter(user__full_name=nome_a_buscar)
 
-    return render(request, 'vagas/index.html', {"estabelecimentos": estabelecimentos, "palavra": nome_a_buscar})
+    return render(request, 'estabelecimentos/index.html', {"estabelecimentos": estabelecimentos, "palavra": nome_a_buscar})

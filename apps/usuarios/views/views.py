@@ -8,6 +8,12 @@ from apps.usuarios.forms import LoginForms, CadastroForms
 
 
 def home(request):
+    ''' Função responsável pela tela inicial do App'''
+    user = request.user
+    if user.is_authenticated:
+        # messages.error(request, "Usuário não logado")
+        return redirect('index')
+    
     return render(request, 'usuarios/home.html')
 
 def login(request):

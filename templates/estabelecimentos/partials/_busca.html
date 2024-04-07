@@ -1,11 +1,41 @@
 {% load static %}
 
-<form action="{% url 'buscar' %}">
-    
-    <input class="entrada" type="text" name="buscar" id="buscar" placeholder="Cargos, palavras-chaves ou empresa">
-    
-    <button class="search-button-click" type="submit">
-        <img class="search-img" src="{% static '/assets/icones/lupa.svg' %}" alt="ícone de search">
-    </button>
+<div class="div-busca">
+    <form class="form-de-busca" action="{% url 'buscar' %}">
 
-</form>
+        <input class="input-busca" type="text" name="buscar" id="buscar" placeholder="Pesquisar">
+        
+        <!-- <button class="search-button-click" type="submit">
+            <img class="search-img" src="{% static '/assets/icones/lupa.svg' %}" alt="ícone de search">
+        </button> -->
+
+    </form>
+
+    <div class="caixa-tags">
+        <div class="tag">
+            <p>aaaaaaa</p>
+        </div>
+        <div class="tag">
+            <p>aaaaaaa</p>
+        </div>
+        <div class="tag">
+            <p>aaaaaaa</p>
+        </div>
+        <div class="tag">
+            <p>aaaaaaa</p>
+        </div>
+        <div class="tag">
+            <p>aaaaaaa</p>
+        </div>
+        <div class="tag">
+            <p>aaaaaaa</p>
+        </div>
+        <div class="tag">
+            <p>aaaaaaa</p>
+        </div>
+        <div class="tag">
+            <p>aaaaaaa</p>
+        </div>
+    </div>
+
+</div> 
