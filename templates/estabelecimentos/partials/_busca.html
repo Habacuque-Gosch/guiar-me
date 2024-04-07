@@ -1,3 +1,11 @@
 {% load static %}
 
+<form action="{% url 'buscar' %}">
+    
+    <input class="entrada" type="text" name="buscar" id="buscar" placeholder="Cargos, palavras-chaves ou empresa">
+    
+    <button class="search-button-click" type="submit">
+        <img class="search-img" src="{% static '/assets/icones/lupa.svg' %}" alt="ícone de search">
+    </button>
 
+</form>
