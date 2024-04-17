@@ -44,11 +44,11 @@
                 <hr>
             </div>
 
-            <form class="section-cadastro-form" action="{% url 'login' %}" method="post">
+            <form class="section-login-form" action="{% url 'login' %}" method="post">
         
                 {% csrf_token %}
 
-                <div class="form-group-campos">
+                <div class="form-group-login">
 
                     {% for field in form.visible_fields %}
                 
