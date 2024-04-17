@@ -44,7 +44,7 @@
                 <hr>
             </div>
 
-            <form class="section-login-form" action="{% url 'login' %}" method="post">
+            <form class="section-cadastro-form" action="{% url 'login' %}" method="post">
         
                 {% csrf_token %}
 
@@ -58,8 +58,12 @@
                     {% endfor %}
 
                 </div>
+
+                <div class="div-botao-login">
+                    <button class="btn-entrar" type="submit">Entrar</button>
+                </div>
                 
-                <button class="btn-entrar" type="submit">Entrar</button>
+                
 
             </form>
 

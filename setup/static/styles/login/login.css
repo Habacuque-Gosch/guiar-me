@@ -18,10 +18,11 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin-top: 5%;
-        background-color: var(--fundo_card_inicial);
         width: 100%;
         height: 100%;
+        margin-top: 2em;
+        /* margin-top: 5%; */
+        /* background-color: var(--fundo_card_inicial); */
     }
     
     .titulo-e-btn-google {
@@ -41,7 +42,6 @@
 
     }
     
-    
     .form-group-login {
     display: flex;
     justify-content: center;
@@ -51,9 +51,14 @@
     height: 100%;
     text-align: left;
     }
+
+    .div-botao-login {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     
-
-
     .div-alternativa-de-login {
         display: flex;
         justify-content: center;
