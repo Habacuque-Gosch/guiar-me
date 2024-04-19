@@ -4,17 +4,13 @@ import os, sys
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
-# load_dotenv()
-
+load_dotenv()
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = str(os.getenv('SECRET_KEY'))
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
-
-
-STRIPE_SECRET_KEY = ""
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -33,6 +29,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.usuarios.apps.UsuariosConfig',
     'apps.estabelecimentos.apps.EstabelecimentosConfig',
+    'apps.resumo.apps.ResumoConfig',
+
 ]
 
 MIDDLEWARE = [
