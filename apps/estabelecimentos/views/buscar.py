@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from apps.estabelecimentos.models import Estabelecimentos
+from apps.estabelecimentos.models import Estabelecimento
 from django.contrib import messages
 
 
@@ -9,7 +9,7 @@ def buscar(request):
         messages.error(request, "Usuário não logado")
         return redirect('login')
     
-    estabelecimentos = Estabelecimentos.objects.order_by("data_publicada").filter(publicada=True)
+    estabelecimentos = Estabelecimento.objects.order_by("data_publicada").filter(publicada=True)
 
     if "buscar" in request.GET:
         nome_a_buscar = request.GET['buscar']
