@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 
 
-class Estabelecimentos(models.Model):
+class Estabelecimento(models.Model):
 
     OPCOES_CATEGORIAO = [
         ("teste", "TESTE"),
@@ -19,13 +19,14 @@ class Estabelecimentos(models.Model):
     local = models.CharField(max_length=200, null=False, blank=False)
     publicada = models.BooleanField(default=True)
     data_publicada = models.DateTimeField(default=datetime.now, blank=False)
-    usuario = models.ForeignKey(
-        to=User,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=False,
-        related_name="user",
-    )
+    foto = models.ImageField(upload_to="fotos/%Y/%m/%d/", blank=True)
+    # usuario = models.ForeignKey(
+    #     to=User,
+    #     on_delete=models.SET_NULL,
+    #     null=True,
+    #     blank=False,
+    #     related_name="user",
+    # )
 
     def __str__(self):
         return self.nome
