@@ -14,7 +14,7 @@ def home(request):
         # messages.error(request, "Usuário não logado")
         return redirect('index')
     
-    return render(request, 'usuarios/home.html')
+    return render(request, 'usuarios/home/home.html')
 
 def login(request):
     ''' Realiza o login do usuario na aplicação '''
@@ -39,7 +39,7 @@ def login(request):
                 messages.error(request, "usuário ou senha inválido")
                 return redirect('login')
 
-    return render(request, 'usuarios/login.html', {"form": form})
+    return render(request, 'usuarios/login/login.html', {"form": form})
 
 def cadastro(request):
     ''' Realiza o cadastro de um novo usuario no sistema '''
@@ -77,7 +77,7 @@ def cadastro(request):
         # messages.success(request, "Cadastro efetuado com sucesso")
         return redirect('index')
 
-    return render(request, 'usuarios/cadastro.html', {"form": form})
+    return render(request, 'usuarios/cadastro/cadastro.html', {"form": form})
 
 def logout(request):
     ''' Realiza o logout do usuario na aplicação '''
