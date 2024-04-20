@@ -6,8 +6,8 @@ from django.contrib.auth.models import User
 
 class Resumo(models.Model):
     sexo = [
-        ('FEMININO','Feminino'),
         ('MASCULINO','Masculino'),
+        ('FEMININO','Feminino'),
         ('OUTRO','Outro'),
     ]
 
