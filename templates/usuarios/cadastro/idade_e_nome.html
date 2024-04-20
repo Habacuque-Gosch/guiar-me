@@ -9,7 +9,7 @@
 
         <div class="tela-login">
             
-            <!-- <script>
+            <script>
                 function voltar()
                 {
                   history.back();
@@ -19,17 +19,17 @@
 
             <div class="div-btn-back">
                 <a href="javascript: voltar()" class="btn-back"><img src="{% static '/assets/icones_login/back-icone.png' %}" alt=""></a>
-            </div> -->
-
-            <div class="titulo-cadastro">
-                <p class="titulo-login">Como podemos te chamar?</p>
             </div>
 
-            <form class="section-login-form" action="{% url 'novo_perfil' %}" method="post" enctype="multipart/form-data">
+            <div class="div-titulo-profile">
+                <p class="titulo-profile">Como podemos te chamar?</p>
+            </div>
+
+            <form class="section-profile-form" action="{% url 'novo_perfil' %}" method="post" enctype="multipart/form-data">
 
                 {% csrf_token %}
 
-                <div class="form-group-campos" style="gap: 1em;">
+                <div class="form-group-campos">
 
                     {% for field in form.visible_fields %}
 
