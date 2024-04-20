@@ -60,12 +60,16 @@
         width: 85%;
         padding-left: 18px;
         border: none;
+        outline: var(--destaque);
         border-radius: 20px;
         font-size: 18px;
         font-family: "Lato", "sans-serif";
         font-weight: bold;
         text-decoration: none;
         margin-bottom: 7px;
+    }
+    .campo-user-login:focus {
+        outline: solid 2px var(--destaque);
     }
 
     .campo-user {
@@ -78,6 +82,7 @@
         width: 85%;
         padding-left: 18px;
         border: none;
+        outline: var(--destaque);
         border-radius: 20px;
         font-size: 18px;
         font-family: "Lato", "sans-serif";
@@ -85,6 +90,11 @@
         text-decoration: none;
         margin-bottom: 7px;
     }
+
+    .campo-user:focus {
+        outline: solid 2px var(--destaque);
+    }
+
     
     .btn-entrar {
         display: flex;
