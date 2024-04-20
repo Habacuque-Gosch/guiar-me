@@ -1,0 +1,69 @@
+
+
+
+
+
+.div-titulo-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 1em;
+}
+
+.div-titulo-profile p{
+    font-weight: bold;
+    font-size: 40px;
+    font-family: "Lato", "sans-serif";
+    color: #ffff;
+    width: 80%;
+}
+
+.section-profile-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-top: 2em;
+}
+
+.section-profile-form label {
+    font-size: 16px;
+    font-family: "Lato", "sans-serif";
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--texto-no-card);
+    margin-bottom: 10px;
+    margin-left: -75%;
+    display: none;
+}
+
+.section-profile-form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 0px;
+    text-overflow: '';
+    width: 89%;
+    font-size: 16px;
+}
+
+.upload-img {
+    background-color: var(--destaque);
+    background-image: url('../cadastro/upload_img.svg');
+    background-position: center top;
+    background-size: 100% auto;
+    margin-top: 1em;
+    color: #ffffff00;
+    cursor: pointer;
+    padding: 5px 20px;
+    width: 30%;
+    height: 147px;
+    border-radius: 100%;
+}
+.upload-img label {
+    display: none;
+}

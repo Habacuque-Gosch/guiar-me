@@ -13,11 +13,11 @@
     
     .div-btn-back {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: left;
+        align-items: left;
         width: 100%;
         height: 100%;
-        margin-left: -75%;
+        padding-left: 3em;
     }
 
     .btn-back{
