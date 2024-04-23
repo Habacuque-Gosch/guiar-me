@@ -67,3 +67,6 @@
 .upload-img label {
     display: none;
 }
+.upload-img::-webkit-file-upload-button {
+    display: none;
+}
