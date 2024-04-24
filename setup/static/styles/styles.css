@@ -9,6 +9,7 @@
 @import url(login/login.css);
 @import url(cadastro/cadastro.css);
 @import url(cadastro/profile.css);
+@import url(cadastro/splash_profile.css);
 @import url(estabelecimentos/busca.css);
 @import url(estabelecimentos/index.css);
 @import url(partials/navegation_bar.css);
@@ -21,10 +22,13 @@
     padding: 0;
 }
 
-html, body{
+html, body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 100%;
- }
+}
 
 /* PALETA DE CORES (ROOT) */
 :root {
