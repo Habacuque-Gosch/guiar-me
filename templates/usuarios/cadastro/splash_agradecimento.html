@@ -1,0 +1,36 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<main class="main-login"> 
+
+    <section class="section-login">
+
+        <div class="tela-login">
+
+            <div class="div-user-image-splash">
+                {% if resumo.foto.url != '' %}
+                    <img src="{{ resumo.foto.url }}" alt="">
+                {% else %}
+                    <img src="" alt="">
+                {% endif %}
+            </div>
+
+            <div class="div-contexto-de-agradecimento-inicial">
+                <p class="contexto-de-agradecimento-inicial">Obrigado {{ resumo.nome }} por falar mais de você!</p>
+                <p class="contexto-de-agradecimento-inicial-menor">Sinta-se à vontade para personalizar suas preferências a qualquer momento.</p>
+            </div>
+
+            <div class="div-botao-login" style="margin-top: 1em;">
+                <a class="btn-entrar" href="{% url 'index' %}">Continuar</a>
+            </div>
+            
+
+        </div>
+
+    </section>
+
+</main>
+
+{% endblock %}

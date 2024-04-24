@@ -1,0 +1,47 @@
+
+
+
+.div-user-image-splash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.div-user-image-splash img{
+    width: 40%;
+    height: 150px;
+    border-radius: 100%;
+}
+
+.div-contexto-de-agradecimento-inicial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-top: 1em;
+    gap: 1em;
+}
+
+.contexto-de-agradecimento-inicial {
+    font-weight: bold;
+    font-size: 35px;
+    font-family: "Lato", "sans-serif";
+    color: #ffff;
+    text-align: center;
+    width: 95%;
+
+}
+
+.contexto-de-agradecimento-inicial-menor {
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Lato", "sans-serif";
+    color: var(--texto_70);
+    text-align: center;
+    width: 95%;
+}
