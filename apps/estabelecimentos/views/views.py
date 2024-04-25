@@ -9,10 +9,14 @@ from apps.resumo.models import Resumo
 
 
 
-@login_required(login_url='login')
+# @login_required(login_url='login')
 def index(request):
 
     user = request.user
+
+    if not user.is_authenticated:
+        # messages.error(request, "Usuário não logado")
+        return redirect('login')
 
     try:
         resumo = get_list_or_404(Resumo, usuario=user)
