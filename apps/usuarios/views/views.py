@@ -18,6 +18,13 @@ def home(request):
 
 def login(request):
     ''' Realiza o login do usuario na aplicação '''
+
+    user = request.user
+
+    if user.is_authenticated:
+        # messages.error(request, "Usuário não logado")
+        return redirect('index')
+
     form = LoginForms()
     if request.method == 'POST':
         form = LoginForms(request.POST)
@@ -75,7 +82,10 @@ def cadastro(request):
             password=senha
         )
         # messages.success(request, "Cadastro efetuado com sucesso")
+        # if usuario.is_authenticated:
         return redirect('index')
+        # else:
+        #     ('login')
 
     return render(request, 'usuarios/cadastro/cadastro.html', {"form": form})
 
