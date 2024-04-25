@@ -113,4 +113,10 @@
         text-decoration: none;
         margin-top: 1.2em;
     }
+
+    .btn-entrar:hover {
+        background-color: var(--destaque);
+        color: #ffff;
+        border: 1px solid var(--destaque);
+    }
 }
