@@ -81,11 +81,15 @@ def cadastro(request):
             username=nome,
             password=senha
         )
-        # messages.success(request, "Cadastro efetuado com sucesso")
-        # if usuario.is_authenticated:
-        return redirect('index')
-        # else:
-        #     ('login')
+        
+        if usuario is not None:
+            auth.login(request, usuario)
+            # messages.success(request, f"{nome} logado com sucesso")
+            return redirect('index')
+        else:
+            messages.error(request, "usuário ou senha inválido")
+            return redirect('login')
+    
 
     return render(request, 'usuarios/cadastro/cadastro.html', {"form": form})
 
