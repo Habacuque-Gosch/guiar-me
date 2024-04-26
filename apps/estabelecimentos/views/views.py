@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_list_or_404
 from apps.resumo.forms import ResumoForms
+from apps.estabelecimentos.models import Estabelecimento
 from django.contrib.auth.models import User
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
@@ -23,5 +24,12 @@ def index(request):
     except:
         # messages.error(request, "Preencha seu perfil")
         return redirect('novo_perfil')
+    
+    # try:
+    estabelecimentos = Estabelecimento.objects.filter(publicada=True)
 
-    return render(request, 'estabelecimentos/index.html')
+    # except:
+    #     # messages.error(request, "Preencha seu perfil")
+    #     return render(request, 'estabelecimentos/index.html')
+
+    return render(request, 'estabelecimentos/index.html', {'estabelecimentos': estabelecimentos})
