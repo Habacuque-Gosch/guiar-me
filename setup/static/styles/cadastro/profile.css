@@ -1,15 +1,10 @@
 
-
-
-
-
 .div-titulo-profile {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 100%;
     margin-top: 1em;
 }
 
@@ -31,18 +26,48 @@
     margin-top: 2em;
 }
 
+.form-profile-campos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-top: 2em;
+}
+
+.form-profile-campos label {
+    display: none;
+}
+
 .section-profile-form label {
-    font-size: 16px;
+    /* font-size: 16px;
     font-family: "Lato", "sans-serif";
     font-weight: bold;
     text-decoration: none;
     color: var(--texto-no-card);
     margin-bottom: 10px;
-    margin-left: -75%;
+    margin-left: -75%; */
     display: none;
 }
 
-.section-profile-form select {
+.select-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fundo-campo);
+    color: #ffffff;
+    height: 60px;
+    width: 85%;
+    padding-left: 18px;
+    border: none;
+    outline: var(--destaque);
+    border-radius: 20px;
+    font-size: 18px;
+    font-family: "Lato", "sans-serif";
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 7px;
     -webkit-appearance: none;
     -moz-appearance: none;
     text-indent: 0px;
@@ -51,8 +76,12 @@
     font-size: 16px;
 }
 
+.select-user:focus {
+    outline: solid 2px var(--destaque);
+}
+
 .upload-img {
-    background-color: var(--destaque);
+    background-color: transparent;
     background-image: url('../cadastro/upload_img.svg');
     background-position: center top;
     background-size: 100% auto;

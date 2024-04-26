@@ -1,0 +1,59 @@
+{% extends 'usuarios/partials/base_formularios.html' %}
+{% load static %}
+{% block content %}
+
+
+{% if request.method == 'GET' %}
+
+    <style>     
+
+        #campo, #sexo {
+            display: none;
+        }   
+
+        .section-tela {
+            height: auto;
+        }
+
+        .div-botao-login a {
+            width: 85%;
+        }
+
+    </style>
+
+{% endif %}
+
+<div class="div-titulo-profile">
+    <p class="titulo-profile">Coloque sua melhor foto?</p>
+</div>
+
+<form class="section-login-form" action="{% url 'novo_perfil' %}" method="post" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+    <div class="form-group-campos">
+
+        {% for field in form.visible_fields %}
+
+            <label class="form-label" for="{{ field.id_for_label }}">{{field.label}}</label>
+            {{ field }}
+
+        {% for error in field.errors %}
+
+        <div class="alert alert-danger">
+            {{ error }}
+        </div>
+        {% endfor %}
+        {% endfor %}
+
+    </div>
+
+    <div class="div-botao-login">
+
+        <a class="btn-entrar" href="">Continuar</a>
+
+    </div>
+
+</form>
+
+{% endblock %}

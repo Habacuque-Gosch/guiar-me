@@ -1,87 +1,46 @@
-{% extends 'partials/base.html' %}
+{% extends 'usuarios/partials/base_formularios.html' %}
 {% load static %}
 {% block content %}
 
-<!-- {% if request.method == 'GET' %}
+<div class="titulo-e-btn-google">
+    <p class="titulo-login">Você por aqui?</p>
+    <a class="btn-google" href=""><img src="{% static '/assets/icones_login/google-icone.svg' %}" alt="">Continue google</a>
+</div>
 
-<style>
-    .navegation-bar{
-        display: none;
-    }
-    .header{
-        display: none;
-    }
-</style>
+<div class="div-alternativa-de-login">
+    <hr>
+    <p class="texto-alternativa-login">OU LOGIN COM E-MAIL</p>
+    <hr>
+</div>
 
-{% endif %} -->
+<form class="section-login-form" action="{% url 'login' %}" method="post">
 
+    {% csrf_token %}
 
+    <div class="form-group-login">
 
-<main class="main-login"> 
-
-    <section class="section-tela">
-
-        <div class="tela-login">
+        {% for field in form.visible_fields %}
     
-            <script>
-                function voltar()
-                {
-                  history.back();
-                }
-                
-            </script>
+        <label class="form-label-login" for="{{ field.id_for_label }}">{{field.label}}</label>
+        {{ field }}
+    
+        {% endfor %}
 
-            <div class="div-btn-back">
-                <a href="javascript: voltar()" class="btn-back"><img src="{% static '/assets/icones_login/back-icone.svg' %}" alt=""></a>
-            </div>
+    </div>
 
-            <div class="titulo-e-btn-google">
-                <p class="titulo-login">Você por aqui?</p>
-                <a class="btn-google" href=""><img src="{% static '/assets/icones_login/google-icone.svg' %}" alt="">Continue google</a>
-            </div>
+    <div class="div-botao-login">
+        <button class="btn-entrar" type="submit">Entrar</button>
+    </div>
 
-            <div class="div-alternativa-de-login">
-                <hr>
-                <p class="texto-alternativa-login">OU LOGIN COM E-MAIL</p>
-                <hr>
-            </div>
 
-            <form class="section-login-form" action="{% url 'login' %}" method="post">
-        
-                {% csrf_token %}
+</form>
 
-                <div class="form-group-login">
-
-                    {% for field in form.visible_fields %}
-                
-                    <label class="form-label-login" for="{{ field.id_for_label }}">{{field.label}}</label>
-                    {{ field }}
-                
-                    {% endfor %}
-
-                </div>
-
-                <div class="div-botao-login">
-                    <button class="btn-entrar" type="submit">Entrar</button>
-                </div>
-                
-                
-
-            </form>
-
-            <div class="div-alternativas-de-login">
-                        
-                <a href="" class="esqueci-senha">Esqueci minha senha</a>
-                
-                <a href="{% url 'cadastro' %}" class="cadastro">Criar uma conta</a>
+<div class="div-alternativas-de-login">
             
-            </div>
+    <a href="" class="esqueci-senha">Esqueci minha senha</a>
+    
+    <a href="{% url 'cadastro' %}" class="cadastro">Criar uma conta</a>
 
-        </div>
+</div>
 
-    </section>
-
-</main>
-
-
-{% endblock %}             
+{% endblock %}

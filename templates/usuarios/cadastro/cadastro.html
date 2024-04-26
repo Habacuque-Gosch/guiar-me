@@ -1,71 +1,40 @@
-{% extends 'partials/base.html' %}
+{% extends 'usuarios/partials/base_formularios.html' %}
 {% load static %}
 {% block content %}
 
-{% if request.method == 'GET' %}
+<div class="titulo-cadastro">
+    <p class="titulo-login">Novo por aqui?</p>
+</div>
 
-<style>
-    .navegation-bar{
-        display: none;
-    }
-</style>
+<form class="section-cadastro-form" action="{% url 'cadastro' %}" method="post">
 
-{% endif %}
+    {% csrf_token %}
 
-<main class="main-login"> 
+    <div class="form-group-campos" style="gap: 1em;">
 
-    <section class="section-login">
+        {% for field in form.visible_fields %}
 
-        <div class="tela-login">
-            
-            <script>
-                function voltar()
-                {
-                  history.back();
-                }
-                
-            </script>
+            <label class="form-label" for="{{ field.id_for_label }}">{{field.label}}</label>
+            {{ field }}
 
-            <div class="div-btn-back">
-                <a href="javascript: voltar()" class="btn-back"><img src="{% static '/assets/icones_login/back-icone.svg' %}" alt=""></a>
-            </div>
+        {% for error in field.errors %}
 
-            <div class="titulo-cadastro">
-                <p class="titulo-login">Novo por aqui?</p>
-            </div>
+        <div class="alert alert-danger">
+            {{ error }}
+        </div>
+        {% endfor %}
+        {% endfor %}
 
-            <form class="section-cadastro-form" action="{% url 'cadastro' %}" method="post">
-
-                {% csrf_token %}
-
-                <div class="form-group-campos" style="gap: 1em;">
-
-                    {% for field in form.visible_fields %}
-
-                        <label class="form-label" for="{{ field.id_for_label }}">{{field.label}}</label>
-                        {{ field }}
-
-                    {% for error in field.errors %}
-
-                    <div class="alert alert-danger">
-                        {{ error }}
-                    </div>
-                    {% endfor %}
-                    {% endfor %}
-
-                    <div class="div-alternativas-de-login">
-                        <p class="cadastro">Ao utilizar o GuiarMe, você concorda com nossos Termos de Serviço e Política de Privacidade.</p>
-                    </div>
-                </div>
-
-                <button class="btn-entrar" type="submit">Criar minha conta</button>
-                
-            </form>
-
+        <div class="div-alternativas-de-login">
+            <p class="cadastro">Ao utilizar o GuiarMe, você concorda com nossos Termos de Serviço e Política de Privacidade.</p>
         </div>
 
-    </section>
+    </div>
 
-</main>
+    <div class="div-botao-login">
+        <button class="btn-entrar" type="submit">Criar minha conta</button>
+    </div>
+    
+</form>
 
 {% endblock %}

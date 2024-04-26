@@ -1,36 +1,32 @@
-{% extends 'partials/base.html' %}
+{% extends 'usuarios/partials/base_formularios.html' %}
 {% load static %}
 {% block content %}
 
+{% if request.method == 'POST' %}
 
-<main class="main-login"> 
+    <style>
+        .div-btn-back {
+            display: none;
+        }
+    </style>
 
-    <section class="section-login">
+{% endif %}
 
-        <div class="tela-login">
+<div class="div-user-image-splash">
+    {% if resumo.foto.url != '' %}
+        <img src="{{ resumo.foto.url }}" alt="">
+    {% else %}
+        <img src="{% static '/assets/icones_cadastro/profile_default.svg' %}" alt="">
+    {% endif %}
+</div>
 
-            <div class="div-user-image-splash">
-                {% if resumo.foto.url != '' %}
-                    <img src="{{ resumo.foto.url }}" alt="">
-                {% else %}
-                    <img src="" alt="">
-                {% endif %}
-            </div>
+<div class="div-contexto-de-agradecimento-inicial">
+    <p class="contexto-de-agradecimento-inicial">Obrigado {{ resumo.nome }} por falar mais de você!</p>
+    <p class="contexto-de-agradecimento-inicial-menor">Sinta-se à vontade para personalizar suas preferências a qualquer momento.</p>
+</div>
 
-            <div class="div-contexto-de-agradecimento-inicial">
-                <p class="contexto-de-agradecimento-inicial">Obrigado {{ resumo.nome }} por falar mais de você!</p>
-                <p class="contexto-de-agradecimento-inicial-menor">Sinta-se à vontade para personalizar suas preferências a qualquer momento.</p>
-            </div>
-
-            <div class="div-botao-login" style="margin-top: 1em;">
-                <a class="btn-entrar" href="{% url 'index' %}">Continuar</a>
-            </div>
-            
-
-        </div>
-
-    </section>
-
-</main>
+<div class="div-botao-login" style="margin-top: 1em;">
+    <a class="btn-entrar" href="{% url 'index' %}">Continuar</a>
+</div>        
 
 {% endblock %}
