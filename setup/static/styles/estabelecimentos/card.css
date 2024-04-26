@@ -1,0 +1,103 @@
+@media (max-width: 428px) {
+
+    .card-estabelecimentos {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        height: 60%;
+        margin-bottom: 1em;
+    }
+
+    .foto-principal-card {
+        width: 100%;
+        height: 80%;
+        border-radius: 20px;
+
+    }
+
+    .div-gasto-medio-e-favorito {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 7em;
+        margin-top: -4em;
+    }
+
+    .gasto-medio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        border-radius: 30px;
+        width: 155px;
+        height: 50px;
+        /* margin-left: 1em; */
+    }
+
+    .p-gasto-medio {
+        color: var(--destaque);
+        font-size: 14px;
+        font-family: "Lato", "sans-serif";
+        font-weight: bold;
+    }
+
+    .v-gasto-medio {
+        color: var(--destaque);
+        font-size: 20px;
+        font-family: "Lato", "sans-serif";
+        font-weight: 900;
+    }
+
+
+    .div-informacao-card-estabelecimento {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 1.5em;
+
+    }
+
+    .div-nome-e-local {
+        display: flex;
+        /* justify-content: center; */
+        align-items: left;
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nome-estabelecimento {
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-family: "Lato", "sans-serif";
+        font-weight: 900;
+        width: 85%;
+    }
+
+    .local-estabelecimento {
+        color: var(--textos);
+        font-size: 14px;
+        font-family: "Lato", "sans-serif";
+        font-weight: bold;
+        width: 85%;
+    }
+
+    .div-avaliacao {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .div-avaliacao {
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-family: "Lato", "sans-serif";
+        font-weight: bold;
+    }
+}

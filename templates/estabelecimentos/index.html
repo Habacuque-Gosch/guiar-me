@@ -2,29 +2,76 @@
 {% load static %}
 {% block content %}
 
-<main class="main-index"> 
 
-    <section class="section-busca-e-filtro">
 
-        {% include 'estabelecimentos/partials/_busca.html' %}
 
-    </section>
 
     <section class="section-cards-estabelecimentos">
 
-        <div class="">
-            <p>Página home</p>
-            <a class="titulo-login" href="{% url 'logout' %}">Logout</a>
+        <div class="div-busca-e-filtro">
+
+            {% include 'estabelecimentos/partials/_busca.html' %}
+    
         </div>
+
+        {% if estabelecimentos %}
+        {% for estabelecimentos in estabelecimentos %}
 
         <div class="card-estabelecimentos">
 
+            <img class="foto-principal-card" src="{{ estabelecimentos.foto.url }}" alt="">
+
+            <div class="div-gasto-medio-e-favorito">
+
+                <div class="gasto-medio">
+                    <p class="p-gasto-medio">Gasto médio</p>
+                    <p class="v-gasto-medio">R$137,00</p>
+                </div>
+
+                <img src="{% static '/assets/icones_card/favoritar.svg' %}" alt="">
+
+
+            </div>
+
+            <div class="div-informacao-card-estabelecimento">
+
+                
+
+                <div class="div-nome-e-local">
+
+                    <p class="nome-estabelecimento">{{ estabelecimentos.nome }}</p>
+                    <p class="local-estabelecimento">{{ estabelecimentos.local }}</p>
+
+                </div>
+
+                <div class="div-avaliacao">
+
+                    <img src="{% static '/assets/icones_card/avaliacao.svg' %}" alt="">
+                    <p>4.9</p>
+                    
+                </div>
+
+            </div>
+
         </div>
+
+        {% endfor %}
+        {% else %}
+
+        <div class="nenhum-estabelecimento-encontrado">
+            <p class="">Nenhum estabelecimento encontrado</p>
+        </div>
+
+        {% endif %}
          
         {% include 'partials/_navegation_bar.html' %}
+        
+    {% include 'partials/_footer.html' %}
 
     </section>
 
-</main>
+
+
+
 
 {% endblock %}
