@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça login ou cadastre-se | GuiarMe</title>
+    <link rel="stylesheet" href="{% static '/styles/styles.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static '/assets/icones_id/logo_g.png' %}">
+</head>
+
+<body>
+    
+    <main class="main-login"> 
+
+        <section class="section-tela">
+    
+            <div class="tela-cadastro">
+                
+                <script>
+                    function voltar()
+                    {
+                      history.back();
+                    }
+                    
+                </script>
+    
+                <div class="div-btn-back">
+                    <a href="javascript: voltar()" class="btn-back"><img src="{% static '/assets/icones_login/back-icone.svg' %}" alt=""></a>
+                </div>
+    
+                {% block content%}{% endblock %}
+    
+            </div>
+    
+        </section>
+    
+    </main>
+
+</body>
+
+</html>
+

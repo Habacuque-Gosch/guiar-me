@@ -73,7 +73,7 @@ class CadastroForms(forms.Form):
         widget=forms.PasswordInput(
             attrs={
                 "class": "campo-user",
-                "placeholder" : "Confirme sua Senha"
+                "placeholder" : "Confirme sua senha"
             }
         )
     )
