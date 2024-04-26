@@ -1,31 +1,35 @@
 
 @media (max-width: 428px) {
-
-    .main-index {
+    
+    .section-cards-estabelecimentos {
         display: flex;
+        /* justify-content: center; */
         align-items: center;
-        justify-content: center;
         flex-direction: column;
         width: 100%;
         height: 100%;
     }
-    
-    .section-busca-e-filtro {
+
+    .div-busca-e-filtro {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 20%;
-    }
-    
-    
-    .section-cards-estabelecimentos {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
+        margin-top: 2.5em;
+        margin-bottom: 2em;
     }
 
-    
+    .nenhum-estabelecimento-encontrado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .nenhum-estabelecimento-encontrado p {
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-family: "Lato", "sans-serif";
+        font-weight: 900;
+    }
+
 }

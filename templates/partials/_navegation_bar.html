@@ -2,20 +2,13 @@
 
 
 <nav class="navegation-bar">
-  <!-- <script>
-    var scrollTop = function() {
-      window.scrollTo(0, 0);
-    };
-  </script>
-
-  <button onclick="scrollTop">aaaaaaaa</button> -->
 
   <a class="nav-item" href="/">
     <!-- <a href="javascript:history.back()"></a> -->
     <img src="{% static '/assets/partials/navegation_bar/home.svg' %}" width="26" height="24">
   </a>
   
-  <a class="nav-item" href="#buscar">
+  <a class="nav-item" href="/">
     <img src="{% static '/assets/partials/navegation_bar/local.svg' %}" width="20" height="24">
   </a>
   
@@ -23,7 +16,7 @@
     <img src="{% static '/assets/partials/navegation_bar/eventos.svg' %}" width="26" height="20">
   </a>
 
-  <a class="nav-item" href="/">
+  <a class="nav-item" href="{% url 'logout' %}">
     <img src="{% static '/assets/partials/navegation_bar/profile.svg' %}" width="20" height="24" >
   </a>
   
@@ -34,12 +27,4 @@
   document.querySelector(".nav-item").focus();
 </script>
 
-<!-- <div class="navegation-bar">
-
-    <a href="">Home</a>
-    <a href="">Local</a>
-    <a href="">Eventos</a>
-    <a href="">Profile</a>
-
-</div> -->
 
