@@ -13,7 +13,9 @@ class Estabelecimento(models.Model):
     ]
 
     nome = models.CharField(max_length=150, null=False, blank=False)
-    numero_telefone = models.CharField(max_length=20, null=False, blank=False)
+    preco_medio = models.FloatField(default=0.0, max_length=120, null=False, blank=False)
+    avaliacao = models.FloatField(max_length=150, null=True, blank=False)
+    # numero_telefone = models.CharField(max_length=20, null=False, blank=False)
     categoria = models.CharField(max_length=100, choices=OPCOES_CATEGORIAO, default='')
     descricao = models.TextField(null=False, blank=False)
     local = models.CharField(max_length=200, null=False, blank=False)
