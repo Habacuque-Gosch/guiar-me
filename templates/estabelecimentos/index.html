@@ -21,7 +21,7 @@
 
                 <div class="gasto-medio">
                     <p class="p-gasto-medio">Gasto médio</p>
-                    <p class="v-gasto-medio">R$137,00</p>
+                    <p class="v-gasto-medio">{{ estabelecimentos.preco_medio }}</p>
                 </div>
 
                 <img src="{% static '/assets/icones_card/favoritar.svg' %}" alt="">
@@ -43,7 +43,7 @@
                 <div class="div-avaliacao">
 
                     <img src="{% static '/assets/icones_card/avaliacao.svg' %}" alt="">
-                    <p>4.9</p>
+                    <p>{{ estabelecimentos.avaliacao }}</p>
                     
                 </div>
 
@@ -65,9 +65,5 @@
         {% include 'partials/_footer.html' %}
 
     </section>
-
-
-
-
 
 {% endblock %}
