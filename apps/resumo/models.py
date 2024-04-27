@@ -24,3 +24,6 @@ class Resumo(models.Model):
         blank=False,
         related_name="user",
     )
+    
+    def __str__(self):
+        return self.nome
