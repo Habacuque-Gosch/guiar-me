@@ -1,0 +1,35 @@
+
+@media (max-width: 428px) {
+    
+    .section-cards-eventos {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .div-busca-e-filtro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 2.5em;
+        margin-bottom: 2em;
+    }
+
+    .nenhum-evento-encontrado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .nenhum-evento-encontrado p {
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-family: "Lato", "sans-serif";
+        font-weight: 900;
+    }
+
+}

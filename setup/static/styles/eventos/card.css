@@ -1,0 +1,58 @@
+@media (max-width: 428px) {
+
+    .card-eventos {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        height: 60%;
+        margin-bottom: 1em;
+    }
+
+    .foto-principal-card {
+        width: 100%;
+        height: 80%;
+        border-radius: 20px;
+
+    }
+
+    .div-nome-e-local {
+        display: flex;
+        /* justify-content: center; */
+        align-items: left;
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nome-evento {
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-family: "Lato", "sans-serif";
+        font-weight: 900;
+        width: 85%;
+    }
+
+    .duracao-evento {
+        color: var(--textos);
+        font-size: 14px;
+        font-family: "Lato", "sans-serif";
+        font-weight: bold;
+        width: 85%;
+    }
+
+    .div-avaliacao {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .div-avaliacao {
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-family: "Lato", "sans-serif";
+        font-weight: bold;
+    }
+}

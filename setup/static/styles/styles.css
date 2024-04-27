@@ -13,6 +13,9 @@
 @import url(estabelecimentos/busca.css);
 @import url(estabelecimentos/index.css);
 @import url(estabelecimentos/card.css);
+@import url(eventos/index.css);
+@import url(eventos/card.css);
+@import url(eventos/busca.css);
 @import url(partials/navegation_bar.css);
 @import url(partials/formularios.css);
 @import url(partials/footer.css);

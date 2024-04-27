@@ -1,0 +1,70 @@
+
+@media (max-width: 428px) {
+
+    .div-busca {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        gap: 14px;
+    }
+    
+    .form-de-busca {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .input-busca {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 20px;
+        width: 90%;
+        height: 60px;
+        background-color: var(--fundo-campo);
+        padding-left: 1.2em;
+        box-sizing: border-box;
+        font-weight: bold;
+        font-size: 20px ;
+        font-family: "Lato", "sans-serif";
+        color: #ffff;
+    }
+
+    .input-busca:focus {
+        outline: solid 2px var(--destaque);
+    }
+    
+    .caixa-tags {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        gap: 8px;
+        overflow: visible;
+        overflow-x: auto;
+        width: 90%;
+        height: 38px;
+    }
+    
+    .tag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: var(--destaque);
+        color: rgb(255, 255, 255);
+        width: auto;
+        height: 38px;
+        border-radius: 20px;
+        padding: 0px 25px 0px 25px;
+        font-weight: bold;
+        font-size: 14px ;
+        font-family: "Lato", "sans-serif";
+        color: #ffff;
+    }
+
+    
+}
