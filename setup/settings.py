@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     'apps.usuarios.apps.UsuariosConfig',
     'apps.estabelecimentos.apps.EstabelecimentosConfig',
     'apps.resumo.apps.ResumoConfig',
-
+    'apps.eventos.apps.EventosConfig',
 ]
 
 MIDDLEWARE = [
