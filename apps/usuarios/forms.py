@@ -22,7 +22,8 @@ class LoginForms(forms.Form):
         widget=forms.PasswordInput(
             attrs={
                 "class": "campo-user-login",
-                "placeholder" : "Digite sua senha"
+                "placeholder" : "Digite sua senha",
+                "id":'input-senha'
             }
         )
     )
@@ -61,7 +62,8 @@ class CadastroForms(forms.Form):
         widget=forms.PasswordInput(
             attrs={
                 "class": "campo-user",
-                "placeholder" : "Digite sua senha"
+                "placeholder" : "Digite sua senha",
+                "id":'input-senha'
             }
         )
     )
@@ -73,7 +75,9 @@ class CadastroForms(forms.Form):
         widget=forms.PasswordInput(
             attrs={
                 "class": "campo-user",
-                "placeholder" : "Confirme sua senha"
+                "placeholder" : "Confirme sua senha",
+                "id":'input-senha-confirma'
+
             }
         )
     )
@@ -87,61 +91,4 @@ class CadastroForms(forms.Form):
                 raise forms.ValidationError('Espaços não são permitidos nesse campo')
             else:
                 return nome
-
-# class ResumoForms(forms.ModelForm):
-#     class Meta:
-#         model = Resumo
-#         exclude = ['']
-#         labels = {
-#             'nome_completo' : 'Nome completo',
-#             'telefone' : 'Telefone',
-#             'titulo_profissional' : 'Título profissional',
-#             'descricao_pessoal' : 'Conte-nos sobre você',
-#             'resumo_experiencia_profissional' : 'Resuma a sua experiência profissional'
-#         }
-
-#         widgets = {
-#             'nome_completo': forms.TextInput(attrs={'class': 'campo-user'}),
-#             'telefone': forms.TextInput(attrs={'class': 'campo-user'}),
-#             'titulo_profissional': forms.TextInput(attrs={'class': 'campo-user'}),
-#             'descricao_pessoal': forms.Textarea(attrs={'class': 'form-control'}),
-#             'resumo_experiencia_profissional': forms.Textarea(attrs={'class': 'form-control'}),
-#             # 'pago': forms.TextInput(attrs={'class': 'form-control'}),
             
-#         }
-
-# class ResumoFormsSave(forms.ModelForm):
-#     class Meta:
-#         model = Resumo
-#         exclude = ['usuario_edit']
-#         labels = {
-#             'nome_completo' : 'Nome completo',
-#             'telefone' : 'Telefone',
-#             'titulo_profissional' : 'Título profissional',
-#             'descricao_pessoal' : 'Conte-nos sobre você',
-#             'resumo_experiencia_profissional' : 'Resuma a sua experiência profissional'
-#         }
-
-#         widgets = {
-#             'nome_completo': forms.TextInput(attrs={'class': 'campo-user'}),
-#             'telefone': forms.TextInput(attrs={'class': 'campo-user'}),
-#             'titulo_profissional': forms.TextInput(attrs={'class': 'campo-user'}),
-#             'descricao_pessoal': forms.Textarea(attrs={'class': 'descricao-pessoal'}),
-#             'resumo_experiencia_profissional': forms.Textarea(attrs={'class': 'resumo-experiencia'}),
-#             # 'pago': forms.TextInput(attrs={'class': 'form-control'}),
-            
-#         }
-# # class CurriculoForms(forms.ModelForm):
-#     # class Meta:
-#         # model = Curriculo
-#         # exclude = ['']
-#         # labels = {
-#         #     'curriculo' : '',
-#         # }
-
-#         # widgets = {
-#         #     'curriculo': forms.FileInput(attrs={'class': 'form-control'})
-#         # }             
-
-
-        

@@ -19,6 +19,27 @@
 
     <div class="form-group-login">
 
+        <script>
+
+            function show_pass(){
+
+                var input_senha = document.getElementById("input-senha")
+
+                if (input_senha.type == 'text')
+                    {
+                        input_senha.type = 'password'
+            
+                    }
+                    
+                else
+                {
+                    input_senha.type = 'text'
+                }
+                
+            };
+
+        </script>
+
         {% for field in form.visible_fields %}
     
         <label class="form-label-login" for="{{ field.id_for_label }}">{{field.label}}</label>
@@ -28,7 +49,9 @@
 
     </div>
 
-    <div class="div-botao-login">
+    <a href="javascript: show_pass()" style="margin-right: -18em; margin-top: -2.8em;"><img src="{% static 'assets/icones_login/eyes.svg' %}" alt=""></a>
+
+    <div class="div-botao-login" style="margin-top: 1em;">
         <button class="btn-entrar" type="submit">Entrar</button>
     </div>
 
