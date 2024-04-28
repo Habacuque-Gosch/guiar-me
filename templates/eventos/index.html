@@ -10,23 +10,23 @@
     
         </div>
 
-        {% if evento %}
-        {% for evento in evento %}
+        {% if eventos %}
+        {% for eventos in eventos %}
 
-        <div class="card-evento">
+        <div class="card-eventos" style="background-image: url({{eventos.foto.url}});">
 
-            <img class="foto-principal-card" src="{{ evento.foto.url }}" alt="">
-
-            <div class="favorito">
+            <div class="div-favoritar">
 
                 <img src="{% static '/assets/icones_card/favoritar.svg' %}" alt="">
 
             </div>
 
+            <!-- <img class="foto-principal-card" src="{{ eventos.foto.url }}" alt=""> -->
+
             <div class="div-informacao-card-evento">
 
-                <p class="nome-evento">{{ evento.nome }}</p>
-                <p class="local-evento">{{ evento.local }}</p>
+                <p class="duracao-evento">{{ eventos.duracao }}</p>
+                <p class="nome-evento">{{ eventos.nome }}</p>
 
             </div>
 
