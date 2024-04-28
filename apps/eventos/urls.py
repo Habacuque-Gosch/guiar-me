@@ -3,6 +3,6 @@ from .views import *
 
 
 urlpatterns = [
-    path('index_eventos/', index_eventos, name = 'index_eventos'),
-    path('buscar_eventos/', buscar_eventos, name="buscar"),    
+    path('index-eventos/', index_eventos, name = 'index_eventos'),
+    path('buscar-eventos/', buscar_eventos, name="buscar_eventos"),    
 ]

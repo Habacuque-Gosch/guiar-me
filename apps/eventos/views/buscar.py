@@ -12,7 +12,7 @@ def buscar_eventos(request):
     eventos = Evento.objects.order_by("data_publicada").filter(publicada=True)
 
     if "buscar_eventos" in request.GET:
-        nome_a_buscar = request.GET['buscar-evento']
+        nome_a_buscar = request.GET['buscar_eventos']
         if nome_a_buscar:
             eventos = eventos.filter(nome__icontains=nome_a_buscar)
 
