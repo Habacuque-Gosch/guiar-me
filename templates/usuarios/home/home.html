@@ -2,6 +2,8 @@
 {% load static %}
 {% block content %}
 
+
+
 <main class="main-home">
 
     <section class="section-home">
@@ -28,5 +30,15 @@
     </section>
 
 </main>
+
+{% if request.method == 'GET' %}
+
+    <style>
+        html, main, body {
+            height: 100%;
+        }
+    </style>
+
+{% endif %}
 
 {% endblock %}
