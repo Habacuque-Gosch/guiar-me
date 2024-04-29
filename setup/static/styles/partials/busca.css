@@ -22,8 +22,8 @@
         align-items: center;
         justify-content: center;
         border: none;
-        border-radius: 20px;
-        width: 90%;
+        border-radius: 20px 0px 0px 20px;
+        width: 75%;
         height: 60px;
         background-color: var(--fundo-campo);
         padding-left: 1.2em;
@@ -34,10 +34,22 @@
         color: #ffff;
     }
 
-    .input-busca:focus {
-        outline: solid 2px var(--destaque);
+    .btn-filtro {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--fundo-campo);
+        border: none;
+        border-radius: 0px 20px 20px 0px;
+        width: 15%;
+        height: 60px;
+        box-sizing: border-box;
     }
     
+    .input-busca:focus + .btn-filtro, .input-busca:focus {
+        outline: solid 1.5px var(--destaque);
+    }
+
     .caixa-tags {
         display: flex;
         align-items: center;
