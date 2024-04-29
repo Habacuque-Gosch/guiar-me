@@ -47,7 +47,7 @@
     }
     
     .input-busca:focus + .btn-filtro, .input-busca:focus {
-        outline: solid 1.5px var(--destaque);
+        outline: solid 2px var(--destaque);
     }
 
     .caixa-tags {
