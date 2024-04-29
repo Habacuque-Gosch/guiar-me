@@ -4,22 +4,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 /* ESTILOS */
-@import url(partials/header.css);
 @import url(home/home.css);
 @import url(login/login.css);
 @import url(cadastro/cadastro.css);
 @import url(cadastro/profile.css);
 @import url(cadastro/splash_profile.css);
-@import url(estabelecimentos/busca.css);
+
 @import url(estabelecimentos/index.css);
 @import url(estabelecimentos/card.css);
+
 @import url(eventos/index.css);
 @import url(eventos/card.css);
-@import url(eventos/busca.css);
-@import url(partials/navegation_bar.css);
-@import url(partials/formularios.css);
-@import url(partials/footer.css);
 
+@import url(partials/header.css);
+@import url(partials/formularios.css);
+@import url(partials/busca.css);
+@import url(partials/navegation_bar.css);
+@import url(partials/footer.css);
 
 
 /* RESET */
