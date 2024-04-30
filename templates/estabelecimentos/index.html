@@ -2,76 +2,76 @@
 {% load static %}
 {% block content %}
 
-    <section class="section-cards-estabelecimentos">
+<section class="section-cards-estabelecimentos">
 
-        <div class="div-busca-e-filtro">
+    <div class="div-busca-e-filtro">
 
-            {% include 'estabelecimentos/partials/_busca.html' %}
-    
+        {% include 'estabelecimentos/partials/_busca.html' %}
+
+    </div>
+
+    {% if estabelecimentos %}
+    {% for estabelecimentos in estabelecimentos %}
+
+    <div class="card-estabelecimentos">
+
+        <img class="foto-principal-card" src="{{ estabelecimentos.foto.url }}" alt="">
+
+        <div class="div-gasto-medio-e-favorito">
+
+            <div class="gasto-medio">
+                <p class="p-gasto-medio">Gasto médio</p>
+                <p class="v-gasto-medio">R${{ estabelecimentos.preco_medio }}</p>
+            </div>
+
+            <img src="{% static '/assets/icones_card/favoritar.svg' %}" alt="">
+
         </div>
 
-        {% if estabelecimentos %}
-        {% for estabelecimentos in estabelecimentos %}
+        <div class="div-informacao-card-estabelecimento">
 
-        <div class="card-estabelecimentos">
+            <div class="div-nome-e-local">
 
-            <img class="foto-principal-card" src="{{ estabelecimentos.foto.url }}" alt="">
-
-            <div class="div-gasto-medio-e-favorito">
-
-                <div class="gasto-medio">
-                    <p class="p-gasto-medio">Gasto médio</p>
-                    <p class="v-gasto-medio">R${{ estabelecimentos.preco_medio }}</p>
-                </div>
-
-                <img src="{% static '/assets/icones_card/favoritar.svg' %}" alt="">
+                <p class="nome-estabelecimento">{{ estabelecimentos.nome }}</p>
+                <p class="local-estabelecimento">{{ estabelecimentos.local }}</p>
 
             </div>
 
-            <div class="div-informacao-card-estabelecimento">
+            <div class="div-avaliacao">
 
-                <div class="div-nome-e-local">
-
-                    <p class="nome-estabelecimento">{{ estabelecimentos.nome }}</p>
-                    <p class="local-estabelecimento">{{ estabelecimentos.local }}</p>
-
-                </div>
-
-                <div class="div-avaliacao">
-
-                    <img src="{% static '/assets/icones_card/avaliacao.svg' %}" alt="">
-                    <p>{{ estabelecimentos.avaliacao }}</p>
-                    
-                </div>
-
+                <img src="{% static '/assets/icones_card/avaliacao.svg' %}" alt="">
+                <p>{{ estabelecimentos.avaliacao }}</p>
+                
             </div>
 
         </div>
 
-        {% endfor %}
-        {% else %}
+    </div>
 
-        <div class="nenhum-estabelecimento-encontrado">
-            <p class="">Nenhum estabelecimento encontrado</p>
-        </div>
+    {% endfor %}
+    {% else %}
 
-        {% endif %}
-         
-        {% include 'partials/_navegation_bar.html' %}
+    <div class="nenhum-estabelecimento-encontrado">
+        <p class="">Nenhum estabelecimento encontrado</p>
+    </div>
 
-        <!-- {% if request.method == 'GET' %}
-
-            <style>
-                #home {
-                    fill: #ff0505;
-                    background-color: #ff0505;
-                }
-            </style>
-
-        {% endif %} -->
+    {% endif %}
         
-        {% include 'partials/_footer.html' %}
+    {% include 'partials/_navegation_bar.html' %}
 
-    </section>
+    <!-- {% if request.method == 'GET' %}
+
+        <style>
+            #home {
+                fill: #ff0505;
+                background-color: #ff0505;
+            }
+        </style>
+
+    {% endif %} -->
+    
+    {% include 'partials/_footer.html' %}
+
+</section>
 
 {% endblock %}

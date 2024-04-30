@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 
 @login_required(login_url='login')
 def novo_perfil(request):
+    ''' '''
     current_user = request.user
     print(current_user.id)
 
@@ -30,6 +31,7 @@ def novo_perfil(request):
     return render(request, 'usuarios/cadastro/idade_e_nome.html', {'form': form})
 
 def splash_home(request, foto_user_id):
+    ''' '''
 
     current_user = request.user
 
@@ -41,3 +43,15 @@ def splash_home(request, foto_user_id):
 
     # except:
     return render(request, 'usuarios/cadastro/splash_agradecimento.html', {'resumo': resumo})
+
+def config_user(request):
+    ''' '''
+    current_user = request.user
+
+    # try:
+    # resumo = get_list_or_404(Resumo, foto=current_user.foto)
+    resumo = Resumo.objects.get(usuario=current_user)
+
+    return render(request, 'usuarios/configuracoes/config.html', {'resumo': resumo})
+
+

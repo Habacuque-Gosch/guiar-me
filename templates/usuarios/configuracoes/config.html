@@ -1,0 +1,38 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="section-configuracoes-user">
+
+    <div class="div-img-e-name-user">
+    
+        <div class="img-e-name-user">
+            
+            {% if resumo.foto.url != '' %}
+                <img class="foto-user-config" src="{{resumo.foto.url}}" alt="">
+            {% else %}
+                <img class="foto-user-config" src="{% static '/assets/icones_cadastro/profile_default.svg' %}" alt="">
+            {% endif %}
+            <p class="name-user-config">{{ resumo.nome }}</p>
+
+        </div>
+
+    </div>
+
+    <div class="div-opcoes-config">
+
+        <a href="" class="opcao-config">Editar perfil</a>
+        <a href="" class="opcao-config">Recriar filtro</a>
+        <a href="" class="opcao-config">Favoritos</a>
+        <a href="" class="opcao-config">Trocar de senha</a>
+        <a href="" class="opcao-config">Configurações</a>
+        <a href="" class="opcao-config">Sair</a>
+
+    </div>
+
+    {% include 'partials/_navegation_bar.html' %}
+    {% include 'partials/_footer.html' %}
+
+</section>
+
+{% endblock %}

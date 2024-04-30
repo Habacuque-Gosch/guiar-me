@@ -12,15 +12,19 @@
 
 @import url(estabelecimentos/index.css);
 @import url(estabelecimentos/card.css);
+@import url(estabelecimentos/estabelecimento.css);
 
 @import url(eventos/index.css);
 @import url(eventos/card.css);
+@import url(eventos/eventos.css);
 
 @import url(partials/header.css);
 @import url(partials/formularios.css);
 @import url(partials/busca.css);
 @import url(partials/navegation_bar.css);
 @import url(partials/footer.css);
+
+@import url(configuracoes/config.css);
 
 
 /* RESET */
