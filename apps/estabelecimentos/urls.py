@@ -3,8 +3,8 @@ from .views import *
 
 
 urlpatterns = [
-    # path('', loader, name = 'loader'),
-    # path('home/', home, name = 'home'),
     path('index/', index, name = 'index'),
-    path('buscar/', buscar, name="buscar"),    
+    path('buscar/', buscar, name="buscar"),
+    path('estabelecimento/<int:estabelecimento_id>/', estabelecimento, name="estabelecimento"),
+
 ]

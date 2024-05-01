@@ -1,0 +1,42 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="section-cards-estabelecimentos">
+
+    {% if estabelecimentos %}
+
+        <img src="{{ estabelecimentos.foto.url }}" alt="">
+
+        <p class="p-gasto-medio">Gasto médio</p>
+        <p class="v-gasto-medio">R${{ estabelecimentos.preco_medio }}</p>
+        <p class="nome-estabelecimento">{{ estabelecimentos.nome }}</p>
+        <p class="local-estabelecimento">{{ estabelecimentos.local }}</p>
+
+        <img src="{% static '/assets/icones_card/avaliacao.svg' %}" alt="">
+        <p>{{ estabelecimentos.avaliacao }}</p>
+
+    {% else %}
+
+    <div class="nenhum-estabelecimento-encontrado">
+        <p class="">Nenhum estabelecimento encontrado</p>
+    </div>
+
+    {% endif %}
+
+    <!-- {% if request.method == 'GET' %}
+
+        <style>
+            #home {
+                fill: #ff0505;
+                background-color: #ff0505;
+            }
+        </style>
+
+    {% endif %} -->
+    
+    {% include 'partials/_footer.html' %}
+
+</section>
+
+{% endblock %}

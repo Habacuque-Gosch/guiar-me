@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_list_or_404
+from django.shortcuts import render, redirect, get_list_or_404, get_object_or_404
 from apps.resumo.forms import ResumoForms
 from apps.estabelecimentos.models import Estabelecimento
 from django.contrib.auth.models import User
@@ -25,11 +25,26 @@ def index(request):
         # messages.error(request, "Preencha seu perfil")
         return redirect('novo_perfil')
     
-    # try:
     estabelecimentos = Estabelecimento.objects.filter(publicada=True)
 
-    # except:
-    #     # messages.error(request, "Preencha seu perfil")
-    #     return render(request, 'estabelecimentos/index.html')
-
     return render(request, 'estabelecimentos/index.html', {'estabelecimentos': estabelecimentos})
+
+def estabelecimento(request, estabelecimento_id):
+
+    user = request.user
+
+    if not user.is_authenticated:
+        # messages.error(request, "Usuário não logado")
+        return redirect('login')
+
+    try:
+        resumo = get_list_or_404(Resumo, usuario=user)
+    except:
+        # messages.error(request, "Preencha seu perfil")
+        return redirect('novo_perfil')
+    
+    estabelecimentos = get_object_or_404(Estabelecimento, pk=estabelecimento_id)
+
+    return render(request, 'estabelecimentos/estabelecimento.html', {'estabelecimentos': estabelecimentos})
+
+

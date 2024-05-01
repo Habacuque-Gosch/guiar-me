@@ -15,7 +15,7 @@
 
     <div class="card-estabelecimentos">
 
-        <img class="foto-principal-card" src="{{ estabelecimentos.foto.url }}" alt="">
+        <a href="{% url 'estabelecimento' estabelecimentos.id %}"><img class="foto-principal-card" src="{{ estabelecimentos.foto.url }}" alt=""></a>
 
         <div class="div-gasto-medio-e-favorito">
 
@@ -30,12 +30,15 @@
 
         <div class="div-informacao-card-estabelecimento">
 
-            <div class="div-nome-e-local">
+            <a href="{% url 'estabelecimento' estabelecimentos.id %}" style="width: 100%; text-decoration: none;">
 
-                <p class="nome-estabelecimento">{{ estabelecimentos.nome }}</p>
-                <p class="local-estabelecimento">{{ estabelecimentos.local }}</p>
+                <div class="div-nome-e-local">
 
-            </div>
+                    <p class="nome-estabelecimento">{{ estabelecimentos.nome }}</p>
+                    <p class="local-estabelecimento">{{ estabelecimentos.local }}</p>
+
+                </div>
+            </a>
 
             <div class="div-avaliacao">
 
