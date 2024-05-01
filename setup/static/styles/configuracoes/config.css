@@ -15,7 +15,7 @@
     flex-direction: column;
     background-color: var(--destaque);
     width: 100%;
-    height: 100%;
+    height: 35%;
     border-radius: 0px 0px 20px 20px;
 }
 
@@ -27,16 +27,16 @@
     width: 100%;
     /* height: 100%; */
     gap: 12px;
-    margin-top: 8%;
-    margin-bottom: 12%;
+    margin-top: -15%;
+    /* margin-bottom: 12%; */
 }
 
 .foto-user-config {
-    width: 25%;
-    height: 15%;
+    width: 140px;
+    height: 120px;
     border-radius: 100%;
     border: none;
-    outline: solid 5px #ffff;
+    outline: solid 5px var(--fundo_card_inicial);
 }
 
 .name-user-config {
@@ -45,34 +45,41 @@
     font-size: 24px;
     font-family: "Lato", "sans-serif";
     color: #ffff;
-    width: 60%;
+    width: 80%;
 }
 
 .div-opcoes-config {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     width: 100%;
     gap: 10px;
     height: 100%;
-    margin-top: -6.5%;
+    margin-top: 5%;
 }
 
 .opcao-config {
     display: flex;
     align-items: center;
-    text-decoration: none;
+    justify-content: space-between;
     background-color: var(--fundo-campo);
     font-weight: bold;
     font-size: 16px;
     font-family: "Lato", "sans-serif";
     color: #ffff;
-    width: 75%;
-    height: 53px;
+    text-decoration: none;
+    gap: 1em;
+    width: 80%;
+    height: 45px;
     border-radius: 20px;
-    padding-left: 2em;
+    padding-left: 1em;
+    padding-right: 1.6em;
 }
 
-
-
+.opcao-config-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1em;
+}
