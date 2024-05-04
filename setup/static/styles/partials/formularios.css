@@ -96,7 +96,6 @@
     .campo-user:focus {
         outline: solid 2px var(--destaque);
     }
-
     
     .btn-entrar {
         display: flex;

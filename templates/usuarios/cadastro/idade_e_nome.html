@@ -4,21 +4,9 @@
 
 {% if request.method == 'GET' %}
 
-    <style>
+<style>
 
-    .div-btn-back {
-        display: none;
-    }
-    </style>
-
-
-{% endif %}
-
-  
-
-<!-- <style>
-
-    .div-btn-back, .upload-img, #sexo {
+    .btn-back, .upload-img, #sexo, #btn-entrar, #btn-hide {
         display: none;
     }   
 
@@ -30,13 +18,15 @@
         width: 85%;
     }
 
-</style> -->
+</style>
+
+{% endif %}
 
 <div class="div-titulo-profile">
-    <p class="titulo-profile">Como podemos te chamar?</p>
+    <p class="titulo-profile" id="titulo-profile">Como podemos te chamar?</p>
 </div>
 
-<form class="section-login-form" action="{% url 'novo_perfil' %}" method="post" enctype="multipart/form-data">
+<form class="section-login-form" action="{% url 'novo_perfil' %}" method="post" enctype="multipart/form-data" id="novo_perfil">
 
     {% csrf_token %}
 
@@ -55,13 +45,33 @@
         {% endfor %}
         {% endfor %}
 
-    </div>
+    </div> 
+
+    <script src="{% static '/js/novo_resumo.js' %}"></script>
 
     <div class="div-botao-login">
 
-        <button class="btn-entrar" type="submit">Continuar</button>
+        <button class="btn-entrar" type="submit" id="btn-entrar">Continuar</button>
+        <a href="javascript: show_fields()" class="btn-entrar" id="btn-avancar">Continuar</a>
 
     </div>
+
+    <section class="section-status-progress">
+
+        <div class="div-status-progress">
+        
+            <div class="status-progress" id="1" style="background-color: var(--destaque);">
+            </div>
+        
+            <div class="status-progress" id="2">
+            </div>
+        
+            <div class="status-progress" id="3">
+            </div>
+
+        </div>
+
+    </section>
 
 </form>
 

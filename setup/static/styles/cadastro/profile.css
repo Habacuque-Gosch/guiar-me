@@ -99,3 +99,37 @@
 .upload-img::-webkit-file-upload-button {
     display: none;
 }
+
+
+.section-status-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.div-status-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 1.5em;
+    margin-top: 10px;
+
+}
+
+.status-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18%;
+    height: 9px;
+    background: var(--fundo-campo);
+    border-radius: 20px;
+}
+
+
+
+

@@ -18,15 +18,9 @@
     
             <div class="tela-cadastro">
                 
-                <script>
-                    function voltar()
-                    {
-                      history.back();
-                    }
-                    
-                </script>
+                <script src="{% static '/js/formularios.js' %}"></script>
     
-                <div class="div-btn-back">
+                <div class="div-btn-back" id="div-btn-back">
                     <a href="javascript: voltar()" class="btn-back"><img src="{% static '/assets/icones_login/back-icone.svg' %}" alt=""></a>
                 </div>
     
