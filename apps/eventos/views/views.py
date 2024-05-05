@@ -11,6 +11,7 @@ from apps.resumo.models import Resumo
 
 # @login_required(login_url='login')
 def index_eventos(request):
+    '''  '''
 
     user = request.user
 
@@ -24,11 +25,6 @@ def index_eventos(request):
         # messages.error(request, "Preencha seu perfil")
         return redirect('novo_perfil')
     
-    # try:
     eventos = Evento.objects.filter(publicada=True)
-
-    # except:
-    #     # messages.error(request, "Preencha seu perfil")
-    #     return render(request, 'estabelecimentos/index.html')
 
     return render(request, 'eventos/index.html', {'eventos': eventos})

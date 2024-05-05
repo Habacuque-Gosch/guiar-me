@@ -2,6 +2,13 @@
 {% load static %}
 {% block content %}
 
+<!-- {% if request.method == 'GET' %}
+
+    <style>
+    </style>
+
+{% endif %} -->
+
 <section class="section-cards-estabelecimentos">
 
     <div class="div-busca-e-filtro">
@@ -55,23 +62,13 @@
     {% else %}
 
     <div class="nenhum-estabelecimento-encontrado">
-        <p class="">Nenhum estabelecimento encontrado</p>
+        <h1>Ooops!</h1>
+        <p class="">Não achamos nem um estabelecimento com essas informações.</p>
     </div>
 
     {% endif %}
         
     {% include 'partials/_navegation_bar.html' %}
-
-    <!-- {% if request.method == 'GET' %}
-
-        <style>
-            #home {
-                fill: #ff0505;
-                background-color: #ff0505;
-            }
-        </style>
-
-    {% endif %} -->
     
     {% include 'partials/_footer.html' %}
 
