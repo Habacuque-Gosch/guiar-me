@@ -162,13 +162,13 @@
     background-color: var(--destaque);
     color: #ffff;
     height: 60px;
-    width: 80%;
+    width: 86.2%;
     padding: 6px;
     border: 1px solid var(--destaque);
     border-radius: 20px;
     font-size: 20px;
     text-decoration: none;
-    margin-top: 26px    ;
+    margin-top: 26px;
 }
 
 .btn-comprar-ingressos:hover {
