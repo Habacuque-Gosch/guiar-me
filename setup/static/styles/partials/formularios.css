@@ -17,8 +17,6 @@
         align-items: left;
         width: 100%;
         margin-top: 2em;
-        /* height: 100%; */
-
     }
 
     .btn-back{
@@ -44,7 +42,6 @@
 
     .section-login-form label {
         font-size: 16px;
-        font-family: "Lato", "sans-serif";
         font-weight: bold;
         text-decoration: none;
         color: var(--texto-no-card);
@@ -65,7 +62,6 @@
         outline: var(--destaque);
         border-radius: 20px;
         font-size: 18px;
-        font-family: "Lato", "sans-serif";
         font-weight: bold;
         text-decoration: none;
         margin-bottom: 7px;
@@ -87,7 +83,6 @@
         outline: var(--destaque);
         border-radius: 20px;
         font-size: 18px;
-        font-family: "Lato", "sans-serif";
         font-weight: bold;
         text-decoration: none;
         margin-bottom: 7px;
@@ -109,7 +104,6 @@
         border: 1px solid #ffff;
         border-radius: 20px;
         font-size: 20px;
-        font-family: "Lato", "sans-serif";
         text-decoration: none;
         margin-top: 1.2em;
     }

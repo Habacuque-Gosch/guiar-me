@@ -30,7 +30,7 @@
         box-sizing: border-box;
         font-weight: bold;
         font-size: 20px ;
-        font-family: "Lato", "sans-serif";
+         
         color: #ffff;
     }
 
@@ -69,7 +69,6 @@
         color: #ffff;
         font-weight: bold;
         font-size: 14px ;
-        font-family: "Lato", "sans-serif";
         border-radius: 20px;
         padding: 0px 25px 0px 25px;
         width: 100%;

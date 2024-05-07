@@ -8,7 +8,6 @@
         background-color: var(--destaque);
         width: 100%;
         height: 100%;
-    
     }
     
     .section-home {
@@ -20,7 +19,6 @@
         width: 100%;
         height: 100%;
     }
-    
     
     .logo-e-contexto {
         display: flex;
@@ -38,10 +36,9 @@
         height: 50%;
     }
     
-    
     .contexto-home {
         font-size: 16px;
-        font-family: "Lato", "sans-serif";
+         
         color: var(--texto_70);
     }
     .logo-texto {
@@ -56,7 +53,6 @@
         gap: 1em;
         width: 100%;
         height: 100%;
-    
     }
     .botao-criar-conta  {
         display: flex;
@@ -69,7 +65,7 @@
         border: none;
         border-radius: 20px;
         font-size: 20px;
-        font-family: "Lato", "sans-serif";
+         
         text-decoration: none;
     }
     
@@ -84,7 +80,6 @@
     .avisos p {
         text-align: center;
         font-size: 14px;
-        font-family: "Lato", "sans-serif";
         color: var(--texto_miudo);
         width: 80%;
     }

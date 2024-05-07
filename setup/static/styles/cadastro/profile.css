@@ -11,7 +11,7 @@
 .div-titulo-profile p{
     font-weight: bold;
     font-size: 40px;
-    font-family: "Lato", "sans-serif";
+     
     color: #ffff;
     width: 80%;
 }
@@ -42,7 +42,7 @@
 
 .section-profile-form label {
     /* font-size: 16px;
-    font-family: "Lato", "sans-serif";
+     
     font-weight: bold;
     text-decoration: none;
     color: var(--texto-no-card);
@@ -64,7 +64,7 @@
     outline: var(--destaque);
     border-radius: 20px;
     font-size: 18px;
-    font-family: "Lato", "sans-serif";
+     
     font-weight: bold;
     text-decoration: none;
     margin-bottom: 7px;

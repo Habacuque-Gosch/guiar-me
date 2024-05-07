@@ -31,7 +31,6 @@
 .contexto-de-agradecimento-inicial {
     font-weight: bold;
     font-size: 35px;
-    font-family: "Lato", "sans-serif";
     color: #ffff;
     text-align: center;
     width: 95%;
@@ -41,7 +40,6 @@
 .contexto-de-agradecimento-inicial-menor {
     font-weight: bold;
     font-size: 18px;
-    font-family: "Lato", "sans-serif";
     color: var(--texto_70);
     text-align: center;
     width: 95%;

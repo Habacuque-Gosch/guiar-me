@@ -21,8 +21,6 @@
         width: 100%;
         height: 100%;
         margin-top: 2em;
-        /* margin-top: 5%; */
-        /* background-color: var(--fundo_card_inicial); */
     }
     
     .titulo-e-btn-google {
@@ -37,7 +35,6 @@
     .titulo-login {
         font-weight: bold;
         font-size: 40px;
-        font-family: "Lato", "sans-serif";
         color: #ffff;
     }
     
@@ -78,7 +75,6 @@
     
     .texto-alternativa-login {
         font-size: 12px;
-        font-family: "Lato", "sans-serif";
         color: var(--texto-no-card);
     }
     
@@ -94,7 +90,6 @@
     
     .cadastro {
         font-size: 16px;
-        font-family: "Lato", "sans-serif";
         text-decoration: none;
         color: var(--texto-no-card);
         width: 90%;
@@ -102,7 +97,6 @@
 
     .esqueci-senha {
         font-size: 16px;
-        font-family: "Lato", "sans-serif";
         text-decoration: none;
         color: var(--texto-no-card);
         width: 100%;
