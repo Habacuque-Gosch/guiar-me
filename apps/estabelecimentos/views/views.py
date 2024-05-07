@@ -45,11 +45,10 @@ def estabelecimento(request, estabelecimento_id):
     
     try:
         estabelecimentos = get_object_or_404(Estabelecimento, pk=estabelecimento_id)
+        return render(request, 'estabelecimentos/estabelecimento.html', {'estabelecimentos': estabelecimentos})
 
     except:
         return render(request, 'estabelecimentos/estabelecimento.html')
 
-
-    return render(request, 'estabelecimentos/estabelecimento.html', {'estabelecimentos': estabelecimentos})
 
 

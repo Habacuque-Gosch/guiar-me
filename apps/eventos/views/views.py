@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_list_or_404
+from django.shortcuts import render, redirect, get_list_or_404, get_object_or_404
 from apps.eventos.models import Evento
 from django.contrib.auth.models import User
 from django.contrib import auth, messages
@@ -28,3 +28,21 @@ def index_eventos(request):
     eventos = Evento.objects.filter(publicada=True)
 
     return render(request, 'eventos/index.html', {'eventos': eventos})
+
+def evento(request, evento_id):
+
+    user = request.user
+
+    if not user.is_authenticated:
+        # messages.error(request, "Usuário não logado")
+        return redirect('login')
+    
+    try:
+        eventos = get_object_or_404(Evento, pk=evento_id)
+
+    except:
+        return render(request, 'eventos/evento.html')
+
+
+    return render(request, 'eventos/evento.html', {'eventos': eventos})
+

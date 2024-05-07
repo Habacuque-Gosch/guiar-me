@@ -2,16 +2,67 @@
 {% load static %}
 {% block content %}
 
-<section>
+<section class="section-card-estabelecimento">
 
-    
-    <div>
-        
+    {% if eventos %}
+
+        <div class="info-estabelecimento" style="background-image: url({{eventos.foto.url}});">
+
+            <div class="div-voltar-e-favoritar">
+
+                <script src="{% static '/js/formularios.js' %}"></script>
+                
+                <a href="javascript: voltar()"><img src="{% static '/assets/icones_card/voltar.svg' %}" alt=""></a>
+                <img src="{% static '/assets/icones_card/favoritar card.svg' %}" alt="">
+
+            </div>
+            
+            <div class="div-nome-e-evento">
+                <p>{{ eventos.nome }}</p>
+            </div>
+
+        </div>
+
+        <section class="section-descricao-e-ingressos">
+
+            <div class="div-descricao-evento">
+
+                <div class="titulo-descricao-evento">
+                    <h1>Descrição</h1>
+                </div>
+                
+                <p>{{ eventos.descricao }}</p>
+
+            </div>
+
+            <div class="div-btn-cta">
+
+                <h2>Veja os ingressos</h2>
+
+                <div class="div-btn-ingressos">
+
+                    <a href="" class="btn-ingressos">R$ 40</a>
+                    <a href="" class="btn-ingressos">R$ 40</a>
+
+                </div>
+
+                <a href="" class="btn-comprar-ingressos">Compre com parceiros</a>
+                
+            </div>
+
+        </section>  
+
+    {% else %}
+
+    <div class="nenhum-estabelecimento-encontrado" style="margin-top: 5em;">
+        <h1>Ooops!</h1>
+        <p class="">Não achamos nem um estabelecimento com essas informações.</p>
     </div>
 
-    {% include 'partials/navegation.html' %} 
-    {% include 'partials/footer.html' %} 
+    {% endif %}
     
+    {% include 'partials/_footer.html' %}
+
 </section>
 
 {% endblock %}

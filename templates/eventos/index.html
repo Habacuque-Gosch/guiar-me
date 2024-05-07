@@ -13,24 +13,29 @@
         {% if eventos %}
         {% for eventos in eventos %}
 
-        <div class="card-eventos" style="background-image: url({{eventos.foto.url}});">
+        <a href="{% url 'evento' eventos.id %}" class="link-evento">
 
-            <div class="div-favoritar">
+            <div class="card-eventos" style="background-image: url({{eventos.foto.url}});">
 
-                <img src="{% static '/assets/icones_card/favoritar.svg' %}" alt="">
-
+                <div class="div-favoritar">
+    
+                    <img src="{% static '/assets/icones_card/favoritar.svg' %}" alt="">
+    
+                </div>
+    
+                <!-- <img class="foto-principal-card" src="{{ eventos.foto.url }}" alt=""> -->
+    
+                <div class="div-informacao-card-evento">
+    
+                    <p class="duracao-evento">{{ eventos.duracao }}</p>
+                    <p class="nome-evento">{{ eventos.nome }}</p>
+    
+                </div>
+    
             </div>
 
-            <!-- <img class="foto-principal-card" src="{{ eventos.foto.url }}" alt=""> -->
-
-            <div class="div-informacao-card-evento">
-
-                <p class="duracao-evento">{{ eventos.duracao }}</p>
-                <p class="nome-evento">{{ eventos.nome }}</p>
-
-            </div>
-
-        </div>
+        </a>
+        
 
         {% endfor %}
         {% else %}
