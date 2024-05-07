@@ -2,24 +2,58 @@
 {% load static %}
 {% block content %}
 
-<section class="section-cards-estabelecimentos">
+<section class="section-card-estabelecimento">
 
     {% if estabelecimentos %}
 
-        <img src="{{ estabelecimentos.foto.url }}" alt="">
+        <div class="info-estabelecimento" style="background-image: url({{estabelecimentos.foto.url}});">
 
-        <p class="p-gasto-medio">Gasto médio</p>
-        <p class="v-gasto-medio">R${{ estabelecimentos.preco_medio }}</p>
+            <div class="div-voltar-e-favoritar">
 
-        <p class="nome-estabelecimento">{{ estabelecimentos.nome }}</p>
-        <p class="local-estabelecimento">{{ estabelecimentos.local }}</p>
+                <script src="{% static '/js/formularios.js' %}"></script>
+                
+                <a href="javascript: voltar()"><img src="{% static '/assets/icones_card/voltar.svg' %}" alt=""></a>
+                <img src="{% static '/assets/icones_card/favoritar card.svg' %}" alt="">
 
-        <img src="{% static '/assets/icones_card/avaliacao.svg' %}" alt="">
-        <p>{{ estabelecimentos.avaliacao }}</p>
+            </div>
+            
+            <div class="div-nome-e-avaliacao-card">
+
+                <p class="nome-estabelecimento-card">{{ estabelecimentos.nome }}</p>
+
+                <div class="div-avaliacao-card">
+
+                    <img src="{% static '/assets/icones_card/avaliacao.svg' %}" alt="">
+                    <p class="avaliacao-estabelecimento-card">{{ estabelecimentos.avaliacao }}</p>
+
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div class="local-card">
+            <p class="local-estabelecimento-card">{{ estabelecimentos.local }}</p>
+        </div>
+
+        <section class="section-cardapio-e-avaliacoes">
+
+            <div class="div-opcoes-cardapio-e-avaliacao">
+
+                <a href="" class="btn-opcao">Cardápio</a>
+                <a href="" class="btn-opcao">Avalições</a>
+
+            </div>
+
+            <div>
+
+            </div>
+
+        </section>  
 
     {% else %}
 
-    <div class="nenhum-estabelecimento-encontrado">
+    <div class="nenhum-estabelecimento-encontrado" style="margin-top: 5em;">
         <h1>Ooops!</h1>
         <p class="">Não achamos nem um estabelecimento com essas informações.</p>
     </div>
