@@ -2,13 +2,13 @@
 {% load static %}
 {% block content %}
 
-<section class="section-card-estabelecimento">
+<section class="section-card-evento">
 
     {% if eventos %}
 
-        <div class="info-estabelecimento" style="background-image: url({{eventos.foto.url}});">
+        <div class="info-evento" style="background-image: url({{eventos.foto.url}});">
 
-            <div class="div-voltar-e-favoritar">
+            <div class="div-voltar-e-favoritar-evento">
 
                 <script src="{% static '/js/formularios.js' %}"></script>
                 
@@ -61,7 +61,6 @@
 
     {% endif %}
     
-    {% include 'partials/_footer.html' %}
 
 </section>
 
