@@ -5,9 +5,9 @@ from django.contrib import messages
 
 
 def buscar_eventos(request):
-    if not request.user.is_authenticated:
-        messages.error(request, "Usuário não logado")
-        return redirect('login')
+    # if not request.user.is_authenticated:
+    #     messages.error(request, "Usuário não logado")
+    #     return redirect('login')
     
     eventos = Evento.objects.order_by("data_publicada").filter(publicada=True)
 

@@ -12,12 +12,9 @@ from apps.resumo.models import Resumo
 
 # @login_required(login_url='login')
 def index(request):
+    ''' função responsavél por entregar os objetos do banco de dados: Estabelecimento'''
 
     user = request.user
-
-    if not user.is_authenticated:
-        # messages.error(request, "Usuário não logado")
-        return redirect('login')
 
     try:
         resumo = get_list_or_404(Resumo, usuario=user)
@@ -29,13 +26,11 @@ def index(request):
 
     return render(request, 'estabelecimentos/index.html', {'estabelecimentos': estabelecimentos})
 
+
 def estabelecimento(request, estabelecimento_id):
+    ''' função responsavél por entregar os dados de um determinado objeto filtradao por id do banco de dados: Estabelecimento'''
 
     user = request.user
-
-    if not user.is_authenticated:
-        # messages.error(request, "Usuário não logado")
-        return redirect('login')
 
     try:
         resumo = get_list_or_404(Resumo, usuario=user)

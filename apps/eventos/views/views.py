@@ -9,9 +9,9 @@ from apps.resumo.models import Resumo
 
 
 
-# @login_required(login_url='login')
+@login_required(login_url='login')
 def index_eventos(request):
-    '''  '''
+    ''' função responsavél por entregar os objetos do banco de dados: Evento'''
 
     user = request.user
 
@@ -29,14 +29,12 @@ def index_eventos(request):
 
     return render(request, 'eventos/index.html', {'eventos': eventos})
 
+@login_required(login_url='login')
 def evento(request, evento_id):
+    ''' função responsavél por entregar os dados de um determinado objeto filtradao por id do banco de dados: Evento'''
 
     user = request.user
 
-    if not user.is_authenticated:
-        # messages.error(request, "Usuário não logado")
-        return redirect('login')
-    
     try:
         eventos = get_object_or_404(Evento, pk=evento_id)
 
