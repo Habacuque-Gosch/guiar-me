@@ -22,7 +22,7 @@ def index(request):
         # messages.error(request, "Preencha seu perfil")
         return redirect('novo_perfil')
     
-    estabelecimentos = Estabelecimento.objects.filter(publicada=True)
+    estabelecimentos = Estabelecimento.objects.order_by("data_publicada").filter(publicada=True)
 
     return render(request, 'estabelecimentos/index.html', {'estabelecimentos': estabelecimentos})
 
