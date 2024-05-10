@@ -25,7 +25,7 @@ def index_eventos(request):
         # messages.error(request, "Preencha seu perfil")
         return redirect('novo_perfil')
     
-    eventos = Evento.objects.filter(publicada=True)
+    eventos = Evento.objects.order_by("data_publicada").reverse().filter(publicada=True)
 
     return render(request, 'eventos/index.html', {'eventos': eventos})
 
