@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_list_or_404, get_object_or_404
 from apps.eventos.models import Evento
 from django.contrib.auth.models import User
+from django.views.decorators.cache import cache_page
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from .views import *
@@ -8,7 +9,7 @@ from apps.resumo.models import Resumo
 
 
 
-
+@cache_page(60 * 5)
 @login_required(login_url='login')
 def index_eventos(request):
     ''' função responsavél por entregar os objetos do banco de dados: Evento'''

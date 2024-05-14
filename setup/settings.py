@@ -69,9 +69,6 @@ TEMPLATES = [
     },
 ]
 
-CACHES = { 'default': { 'BACKEND': 'django.core.cache.backends.memcached.PyMemcacheCache', 'LOCATION': '127.0.0.1:11211', } 
-}
-
 WSGI_APPLICATION = 'setup.wsgi.application'
 
 
@@ -82,6 +79,27 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+# Memcache Cache
+
+SESSIONS_ENGINE='django.contrib.sessions.backends.cache'
+
+
+# CACHES = {
+#     "default": {
+#         "BACKEND": "django.core.cache.backends.memcached.PyMemcacheCache",
+#         "LOCATION": "127.0.0.1:11211",
+#     }
+# }
+
+# Redis Cache
+
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "LOCATION": "redis://default:VG6f2mi3n9OeS0lgk22kvm4daZDvoVUo@redis-17205.c240.us-east-1-3.ec2.redns.redis-cloud.com:17205",
     }
 }
 
@@ -142,7 +160,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # PROJECT_ROOT = os.path.dirname(__file__)
 # sys.path.insert(0, os.path.join(PROJECT_ROOT, '../apps'))
-
 
 
 # menssagens
