@@ -30,6 +30,8 @@ def index_eventos(request):
 
     return render(request, 'eventos/index.html', {'eventos': eventos})
 
+
+@cache_page(60 * 5)
 @login_required(login_url='login')
 def evento(request, evento_id):
     ''' função responsavél por entregar os dados de um determinado objeto filtradao por id do banco de dados: Evento'''

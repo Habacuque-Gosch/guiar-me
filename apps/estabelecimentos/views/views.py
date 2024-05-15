@@ -28,6 +28,7 @@ def index(request):
     return render(request, 'estabelecimentos/index.html', {'estabelecimentos': estabelecimentos})
 
 
+@cache_page(60 * 5)
 def estabelecimento(request, estabelecimento_id):
     ''' função responsavél por entregar os dados de um determinado objeto filtradao por id do banco de dados: Estabelecimento'''
 
