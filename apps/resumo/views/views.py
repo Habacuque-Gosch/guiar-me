@@ -60,7 +60,7 @@ def editar_perfil(request, resumo_id):
     form = ResumoForms(instance=resumo)
 
     if request.method == 'POST':
-        form = ResumoForms(request.POST, instance=resumo)
+        form = ResumoForms(request.POST, request.FILES, instance=resumo)
         if form.is_valid():
             form.save()
             # messages.success(request, "Resumo editado com sucesso")
