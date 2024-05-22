@@ -1,7 +1,7 @@
 // import 'formulario.js';
 
 
-var titulo = document.getElementById("titulo-profile")
+var titulo = document.getElementById("titulo-formulario")
 
 var fields = document.getElementById("campo")
 var fields_age = document.getElementById("campo-age")

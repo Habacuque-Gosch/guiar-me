@@ -1,5 +1,5 @@
 
-.div-titulo-profile {
+.div-titulo-formulario {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,7 @@
     margin-top: 2em;
 }
 
-.div-titulo-profile p{
+.div-titulo-formulario p{
     font-weight: bold;
     font-size: 40px;
     color: #ffff;
