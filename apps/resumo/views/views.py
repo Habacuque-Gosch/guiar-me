@@ -48,10 +48,25 @@ def config_user(request):
     ''' '''
     current_user = request.user
 
-    # try:
-    # resumo = get_list_or_404(Resumo, foto=current_user.foto)
     resumo = Resumo.objects.get(usuario=current_user)
 
     return render(request, 'usuarios/configuracoes/config.html', {'resumo': resumo})
+
+@login_required(login_url='login')
+def editar_perfil(request, resumo_id):
+    user = request.user
+    
+    resumo = Resumo.objects.get(id=resumo_id)
+    form = ResumoForms(instance=resumo)
+
+    if request.method == 'POST':
+        form = ResumoForms(request.POST, instance=resumo)
+        if form.is_valid():
+            form.save()
+            # messages.success(request, "Resumo editado com sucesso")
+            return redirect('configuracoes_user')
+
+    return render(request, 'usuarios/configuracoes/editar_resumo.html', {"form": form, "resumo_id": resumo_id, "resumo":resumo})
+
 
 

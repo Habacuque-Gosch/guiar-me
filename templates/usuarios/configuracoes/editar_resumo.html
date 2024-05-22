@@ -1,0 +1,50 @@
+{% extends 'usuarios/partials/base_formularios.html' %}
+{% load static %}
+{% block content %}
+
+{% if request.method == 'GET' %}
+
+    <style>
+
+        .div-titulo-profile p{
+            font-size: 30px;
+        }
+
+    </style>
+
+{% endif %}
+
+<div class="div-titulo-profile">
+    <p class="titulo-profile" id="titulo-profile">Editar perfil</p>
+</div>
+
+<form class="section-login-form" action="{% url 'editar_perfil' resumo.id %}" method="post" enctype="multipart/form-data" id="editar_perfil">
+
+    {% csrf_token %}
+
+    <div class="form-profile-campos" style="margin-top: -10px;">
+
+        {% for field in form.visible_fields %}
+
+            <label class="form-label" for="{{ field.id_for_label }}">{{field.label}}</label>
+            {{ field }}
+
+        {% for error in field.errors %}
+
+        <div class="alert alert-danger">
+            {{ error }}
+        </div>
+        {% endfor %}
+        {% endfor %}
+
+    </div> 
+
+    <div class="div-botao-login">
+
+        <button class="btn-entrar" type="submit" id="btn-entrar">Confirmar edições</button>
+
+    </div>
+
+</form>
+
+{% endblock %}
