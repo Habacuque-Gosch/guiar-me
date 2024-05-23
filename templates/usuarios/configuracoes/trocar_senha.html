@@ -1,0 +1,21 @@
+{% extends 'usuarios/partials/base_formularios.html' %}
+{% load static %}
+{% block content %}
+
+{% if request.method == 'GET' %}
+
+    <style>
+
+        .div-titulo-formulario p{
+            font-size: 30px;
+        }
+
+    </style>
+
+{% endif %}
+
+<div class="div-titulo-formulario">
+    <p class="titulo-formulario" id="titulo-formulario">Trocar senha</p>
+</div>
+
+{% endblock %}

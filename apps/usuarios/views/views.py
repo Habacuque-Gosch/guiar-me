@@ -99,5 +99,7 @@ def logout(request):
     auth.logout(request)
     return redirect('login')
 
+def trocar_senha(request):
+    return render(request, 'usuarios/configuracoes/trocar_senha.html')
 
 
