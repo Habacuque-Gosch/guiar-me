@@ -70,3 +70,11 @@ def editar_perfil(request, resumo_id):
 
 
 
+@login_required(login_url='login')
+def favoritos(request):
+
+    current_user = request.user
+
+    resumo = Resumo.objects.get(usuario=current_user)
+
+    return render(request, 'usuarios/configuracoes/favoritos.html', {'resumo': resumo})
