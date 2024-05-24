@@ -84,8 +84,9 @@ DATABASES = {
 
 # Memcache Cache
 
-SESSIONS_ENGINE='django.contrib.sessions.backends.cache'
-
+# SESSIONS_ENGINE='django.contrib.sessions.backends.cache'
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+SESSION_CACHE_ALIAS = "default"
 
 # CACHES = {
 #     "default": {
@@ -98,8 +99,11 @@ SESSIONS_ENGINE='django.contrib.sessions.backends.cache'
 
 CACHES = {
     "default": {
-        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "BACKEND": "django_redis.cache.RedisCache",
         "LOCATION": "redis://default:VG6f2mi3n9OeS0lgk22kvm4daZDvoVUo@redis-17205.c240.us-east-1-3.ec2.redns.redis-cloud.com:17205",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
     }
 }
 
