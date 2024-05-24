@@ -88,7 +88,7 @@ DATABASES = {
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "default"
 
-# CACHES = {
+# CACHES = {    
 #     "default": {
 #         "BACKEND": "django.core.cache.backends.memcached.PyMemcacheCache",
 #         "LOCATION": "127.0.0.1:11211",
