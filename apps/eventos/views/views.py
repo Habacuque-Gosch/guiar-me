@@ -9,7 +9,7 @@ from apps.resumo.models import Resumo
 
 
 
-@cache_page(60 * 5)
+@cache_page(60 * 2)
 @login_required(login_url='login')
 def index_eventos(request):
     ''' função responsavél por entregar os objetos do banco de dados: Evento'''
@@ -29,7 +29,6 @@ def index_eventos(request):
     eventos = Evento.objects.order_by("data_publicada").reverse().filter(publicada=True)
 
     return render(request, 'eventos/index.html', {'eventos': eventos})
-
 
 @cache_page(60 * 2)
 @login_required(login_url='login')

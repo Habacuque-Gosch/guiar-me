@@ -97,7 +97,7 @@ def logout(request):
     ''' Realiza o logout do usuario na aplicação '''
     # messages.success(request, "Logout efetuado com sucesso")
     auth.logout(request)
-    return redirect('login')
+    return redirect('/')
 
 def trocar_senha(request):
     return render(request, 'usuarios/configuracoes/trocar_senha.html')

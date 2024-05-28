@@ -10,8 +10,7 @@ from apps.resumo.models import Resumo
 
 
 
-@cache_page(60 * 5)
-# @login_required(login_url='login')
+@cache_page(60 * 2)
 def index(request):
     ''' função responsavél por entregar os objetos do banco de dados: Estabelecimento'''
 

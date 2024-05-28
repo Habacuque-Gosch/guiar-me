@@ -1,13 +1,14 @@
 {% extends 'partials/base.html' %}
 {% load static %}
 {% block content %}
-
+{% load cache %}
+{% cache 300 config_user %}
 <section class="section-configuracoes-user">
 
     <div class="div-img-e-name-user"></div>
 
     <div class="img-e-name-user">
-            
+        {% endcache %}
         {% if resumo.foto.url != '' %}
             <img class="foto-user-config" src="{{resumo.foto.url}}" alt="">
         {% else %}
@@ -16,7 +17,7 @@
         <p class="name-user-config">{{ resumo.nome }}</p>
 
     </div>
-
+{% cache 300 config_user_option %}
     <div class="div-opcoes-config">
 
         <a class="opcao-config" href="{% url 'editar_perfil' resumo.id %}">
@@ -68,6 +69,7 @@
         </a>
 
     </div>
+{% endcache %}
 
     {% include 'partials/_navegation_bar.html' %}
 </section>
