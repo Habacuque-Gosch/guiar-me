@@ -83,20 +83,22 @@ DATABASES = {
     }
 }
 
-# Memcache Cache
+# Postgress DB
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'db_name',                      
+#         'USER': 'db_user',
+#         'PASSWORD': 'db_user_password',
+#         'HOST': '',
+#         'PORT': 'db_port_number',
+#     }
+# }
 
 # SESSIONS_ENGINE='django.contrib.sessions.backends.cache'
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "default"
-
-# CACHES = {    
-#     "default": {
-#         "BACKEND": "django.core.cache.backends.memcached.PyMemcacheCache",
-#         "LOCATION": "127.0.0.1:11211",
-#     }
-# }
-
-# Redis Cache
 
 CACHES = {
     "default": {
