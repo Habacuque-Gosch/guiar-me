@@ -19,6 +19,7 @@ class Estabelecimento(models.Model):
     categoria = models.CharField(max_length=100, choices=OPCOES_CATEGORIAO, default='')
     descricao = models.TextField(null=False, blank=False)
     local = models.CharField(max_length=200, null=False, blank=False)
+    cep = models.IntegerField(default=0.0,null=False, blank=False)
     publicada = models.BooleanField(default=True)
     data_publicada = models.DateTimeField(default=datetime.now, blank=False)
     foto = models.ImageField(upload_to="fotos/%Y/%m/%d/", blank=True)
