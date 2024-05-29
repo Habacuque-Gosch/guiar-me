@@ -40,7 +40,7 @@
     flex-direction: row;
     width: 100%;
     gap: 1.5em;
-    margin-top: 4em;
+    margin-top: 3em;
 }
 .nome-estabelecimento-card {
     color: rgb(255, 255, 255);
@@ -77,19 +77,20 @@
     text-align: left;
     width: 100%;
     margin-top: 1em;
-    padding-left: 14%;
+    margin-left: 14%;
 }
 
 .local-estabelecimento-card {
     color: var(--textos);
     font-size: 14px;
     font-weight: bold;
+    width: 85%;
 }
 
 .iframe-map {
+    height: 130px;
     width: 86%;
     border-radius: 20px;
-    
 }
 
 .section-cardapio-e-avaliacoes {
@@ -106,7 +107,8 @@
     align-items: center;
     flex-direction: row;
     width: 100%;
-    gap: 13px;
+    gap: 20px;
+    margin-top: 2em;
 }
 
 .btn-opcao{
@@ -116,13 +118,12 @@
     background-color: #ffff;
     color: var(--destaque);
     height: 48px;
-    width: 37%;
+    width: 40%;
     padding: 6px;
     border: 1px solid #ffff;
-    border-radius: 20px;
+    border-radius: 15px;
     font-size: 20px;
     text-decoration: none;
-    margin-top: 1.2em;
 }
 
 .btn-opcao:hover {

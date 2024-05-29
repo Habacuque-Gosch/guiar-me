@@ -53,15 +53,27 @@ def estabelecimento(request, estabelecimento_id):
         return render(request, 'estabelecimentos/estabelecimento.html')
 
 
-def maps(request):
-   
-    coordenadas = [-27.6307035,-48.6840267]
+def maps(request, estabelecimento_id):
 
-    map = folium.Map(location=coordenadas, zoom_start=16, zoom_control=False)
+    estabelecimentos = get_object_or_404(Estabelecimento, pk=estabelecimento_id)
+
+    cep_estabelecimento = str(estabelecimentos.cep)
+
+    endereco_coleta = pycep_correios.get_address_from_cep(cep_estabelecimento)
+
+    geolocator = Nominatim(user_agent="GuiarMe")
+    location = geolocator.geocode(endereco_coleta['logradouro'] + ", " + endereco_coleta['bairro'])
+
+    #LATIDUDE E LOGITUDE COLETA
+    lat_estabelecimento, long_estabelecimento = location.latitude, location.longitude
+    #COORDENADAS DA COLETA
+    coordenadas_estabelecimento = lat_estabelecimento, long_estabelecimento
+
+    map = folium.Map(location=coordenadas_estabelecimento, zoom_start=16, zoom_control=False)
     folium.TileLayer('cartodbdark_matter').add_to(map)
 
     folium.Marker(
-        location=coordenadas,
+        location=coordenadas_estabelecimento,
         popup="<i>O lugar que você procura</i>",
         icon= folium.Icon(icon="glyphicon glyphicon-record", prefix="glyphicon", icon_color="white", color="green"),
         tooltip="Estabelecimento"
