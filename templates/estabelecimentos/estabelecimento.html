@@ -34,7 +34,7 @@
 
         <div class="local-card">
 
-            <iframe class="iframe-map" src="https://guiar-me-e98f4b3315b3.herokuapp.com/map/" frameborder="0"></iframe>
+            <iframe class="iframe-map" src="{% url 'map' estabelecimentos.id %}" frameborder="0"></iframe>
 
             <div class="div-nome-local-card-estabelecimento">
 
@@ -49,9 +49,8 @@
 
             <div class="div-opcoes-cardapio-e-avaliacao">
 
-                <a href="" class="btn-opcao">Cardápio</a>
-                <a href="" class="btn-opcao">Avalições</a>
-
+                <button href="" class="btn-opcao">Cardápio</button>
+                <button href="" class="btn-opcao">Avalições</button>
             </div>
 
             <div>
