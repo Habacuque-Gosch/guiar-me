@@ -35,7 +35,7 @@ def index(request):
 
 @cache_page(60 * 2)
 def estabelecimento(request, estabelecimento_id):
-    ''' função responsavél por entregar os dados de um determinado objeto filtradao por id do banco de dados: Estabelecimento'''
+    ''' função responsavél por entregar os dados de um determinado estabelecimendo filtradao por id do banco de dados: Estabelecimento'''
 
     user = request.user
 
@@ -53,7 +53,8 @@ def estabelecimento(request, estabelecimento_id):
         return render(request, 'estabelecimentos/estabelecimento.html')
 
 
-def maps(request, estabelecimento_id):
+def maps_estabelecimentos(request, estabelecimento_id):
+    ''' Funcionalidade responsável por processar os dados de lat e long e renderizar o componente mapa'''
 
     estabelecimentos = get_object_or_404(Estabelecimento, pk=estabelecimento_id)
 
@@ -74,8 +75,8 @@ def maps(request, estabelecimento_id):
 
     folium.Marker(
         location=coordenadas_estabelecimento,
-        popup="<i>O lugar que você procura</i>",
-        icon= folium.Icon(icon="glyphicon glyphicon-record", prefix="glyphicon", icon_color="white", color="green"),
+        popup=f"<b>{estabelecimentos.nome}</b>",
+        icon= folium.Icon(icon="glyphicon glyphicon-record", prefix="glyphicon", icon_color="white", color="blue"),
         tooltip="Estabelecimento"
     ).add_to(map)
 
