@@ -33,8 +33,17 @@
         </div>
 
         <div class="local-card">
-            <p class="local-estabelecimento-card">{{ estabelecimentos.local }}</p>
+
+            <iframe class="iframe-map" src="{% url 'map' %}" frameborder="0"></iframe>
+
+            <div class="div-nome-local-card-estabelecimento">
+
+                <p class="local-estabelecimento-card">{{ estabelecimentos.local }}</p>
+           
+            </div>
+            
         </div>
+
 
         <section class="section-cardapio-e-avaliacoes">
 
