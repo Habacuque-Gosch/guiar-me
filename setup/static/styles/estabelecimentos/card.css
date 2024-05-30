@@ -11,8 +11,15 @@
 
     .foto-principal-card {
         width: 100%;
-        height: 80%;
+        height: 200px;
         border-radius: 20px;
+    }
+
+    .foto-principal-card img{
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        /* object-fit: fill; */
     }
 
     .div-gasto-medio-e-favorito {
