@@ -17,8 +17,12 @@
         <p class="name-user-config">{{ resumo.nome }}</p>
 
     </div>
+
+</section>
+
 {% cache 300 config_user_option %}
-    <div class="div-opcoes-config">
+
+    <section class="section-opcoes-config">
 
         <a class="opcao-config" href="{% url 'editar_perfil' resumo.id %}">
             <div class="opcao-config-select">
@@ -68,11 +72,12 @@
             <img src="{% static '/assets/partials/configuracoes/seta-sair.svg' %}" alt="">
         </a>
 
-    </div>
+    </section>
+
 {% endcache %}
 
-    {% include 'partials/_navegation_bar.html' %}
-</section>
+
+{% include 'partials/_navegation_bar.html' %}
 
 {% include 'partials/_footer.html' %}
 
