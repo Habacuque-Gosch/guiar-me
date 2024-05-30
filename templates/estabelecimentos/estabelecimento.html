@@ -19,7 +19,7 @@
             
             <div class="div-nome-e-avaliacao-card">
 
-                <p class="nome-estabelecimento-card" style="">{{ estabelecimentos.nome }}</p>
+                <p class="nome-estabelecimento-card">{{ estabelecimentos.nome }}</p>
 
                 <div class="div-avaliacao-card">
 
@@ -34,7 +34,7 @@
 
         <div class="local-card">
 
-            <iframe class="iframe-map" src="{% url 'map' estabelecimentos.id %}" frameborder="0"></iframe>
+            <iframe class="iframe-map" src="{% url 'map' estabelecimentos.id %}" frameborder="0" > </iframe>
 
             <div class="div-nome-local-card-estabelecimento">
 
