@@ -65,8 +65,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: var(--destaque);
-        color: #ffff;
+        background-color: var(--fundo-campo);
         font-weight: bold;
         font-size: 14px ;
         border-radius: 20px;
@@ -75,14 +74,15 @@
         height: 38px;
     }
 
-    .tag p{
+    .tag a{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
         text-align: center;
         width: auto;
-
+        text-decoration: none;
+        color: #ffff;
     }
     
 }
