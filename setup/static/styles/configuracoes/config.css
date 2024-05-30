@@ -56,7 +56,11 @@
     gap: 10px;
     height: 60%;
     margin-top: 5%;
+<<<<<<< HEAD
     /* overflow-y: visible; */
+=======
+    overflow-y: visible;
+>>>>>>> 35b9af22b11d853005e5deca2fb8bef68d56f8b9
     width: 100%;
     height: 100%;
     margin-top: -20%;
