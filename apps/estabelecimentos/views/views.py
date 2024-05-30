@@ -60,10 +60,10 @@ def maps_estabelecimentos(request, estabelecimento_id):
 
     cep_estabelecimento = str(estabelecimentos.cep)
 
-    endereco_coleta = pycep_correios.get_address_from_cep(cep_estabelecimento)
+    endereco_estabelecimento = pycep_correios.get_address_from_cep(cep_estabelecimento)
 
     geolocator = Nominatim(user_agent="GuiarMe")
-    location = geolocator.geocode(endereco_coleta['logradouro'] + ", " + endereco_coleta['bairro'])
+    location = geolocator.geocode(endereco_estabelecimento['logradouro'] + ", " + endereco_estabelecimento['bairro'])
 
     #LATIDUDE E LOGITUDE COLETA
     lat_estabelecimento, long_estabelecimento = location.latitude, location.longitude
