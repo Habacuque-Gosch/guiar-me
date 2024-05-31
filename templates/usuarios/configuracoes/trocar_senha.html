@@ -15,7 +15,45 @@
 {% endif %}
 
 <div class="div-titulo-formulario">
+
     <p class="titulo-formulario" id="titulo-formulario">Trocar senha</p>
+
+</div>
+
+<form class="section-cadastro-form" action="{% url 'trocar_senha' %}" method="post">
+    
+    {% csrf_token %}
+
+    <div class="form-group-campos" style="gap: 1em;">
+
+
+        {% for field in form.visible_fields %}
+
+            <label class="form-label" for="{{ field.id_for_label }}">{{field.label}}</label>
+            {{ field }}
+
+        {% for error in field.errors %}
+
+        <div class="alert alert-danger">
+            {{ error }}
+        </div>
+        {% endfor %}
+        {% endfor %}
+
+        <script src="{% static '/js/formularios.js' %}"></script>
+
+        <a href="javascript: show_pass_confirm()" style="margin-right: -18em; margin-top: -4em;"><img src="{% static 'assets/icones_login/eyes.svg' %}" alt=""  width="25px" height="25px"></a>
+
+    </div>
+
+    <div class="div-botao-login">
+        <button class="btn-entrar" type="submit">Redefinir senha</button>
+    </div>
+    
+</form>
+
+<div class="div-alternativas-de-login" style="margin-top: 1em; width: 100%;">
+    <a href="/" class="cadastro">Esqueci minha senha</a>
 </div>
 
 {% endblock %}

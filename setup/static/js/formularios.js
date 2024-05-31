@@ -29,3 +29,47 @@ function progress(contador)
     };
 
 };
+
+function show_pass(){
+
+    var input_senha = document.getElementById("input-senha")
+
+    if (input_senha.type == 'text')
+        {
+            input_senha.type = 'password'
+
+        }
+        
+    else
+    {
+        input_senha.type = 'text'
+    }
+    
+};
+
+function show_pass_confirm(){
+
+    var input_senha = document.getElementById("input-senha")
+
+    var input_senha_confirma = document.getElementById("input-senha-confirma")
+
+    input_senha_confirma_nova = document.getElementById("input-senha-confirma-nova")
+
+
+    if (input_senha_confirma.type == 'text')
+        {
+            input_senha.type = 'password'
+            input_senha_confirma.type = 'password'
+            input_senha_confirma_nova.type = 'password'
+
+
+        }
+        
+    else
+    {
+        input_senha.type = 'text'
+        input_senha_confirma.type = 'text'
+        input_senha_confirma_nova.type = 'text'
+    }
+    
+};

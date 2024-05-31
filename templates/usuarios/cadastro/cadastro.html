@@ -8,32 +8,6 @@
 
 <form class="section-cadastro-form" action="{% url 'cadastro' %}" method="post">
 
-    <script>
-
-        function show_pass_confirm(){
-
-            var input_senha = document.getElementById("input-senha")
-
-            var input_senha_confirma = document.getElementById("input-senha-confirma")
-
-
-            if (input_senha_confirma.type == 'text')
-                {
-                    input_senha.type = 'password'
-                    input_senha_confirma.type = 'password'
-        
-                }
-                
-            else
-            {
-                input_senha.type = 'text'
-                input_senha_confirma.type = 'text'
-            }
-            
-        };
-
-    </script>
-
     {% csrf_token %}
 
     <div class="form-group-campos" style="gap: 1em;">
@@ -50,6 +24,8 @@
         </div>
         {% endfor %}
         {% endfor %}
+
+        <script src="{% static '/js/formularios.js' %}"></script>
 
         <a href="javascript: show_pass_confirm()" style="margin-right: -18em; margin-top: -9.2em;"><img src="{% static 'assets/icones_login/eyes.svg' %}" alt="" width="25px" height="25px"></a>
 
