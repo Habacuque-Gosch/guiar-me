@@ -35,10 +35,11 @@
         font-weight: 900;
     }
 
-    .nenhum-estabelecimento-encontrado p {
+    .error-oops {
         color: rgb(255, 255, 255);
         font-size: 18px;
         font-weight: 900;
+        width: 90%;
     }
 
 }
