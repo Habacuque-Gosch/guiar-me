@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect, get_list_or_404
 # from apps.vagas.models import Vagas
 from django.contrib.auth.models import User
 from django.contrib import auth, messages
-from apps.usuarios.forms import LoginForms, CadastroForms
+from apps.usuarios.forms import LoginForms, CadastroForms, ChangePassForms
 
 
 
@@ -100,6 +100,44 @@ def logout(request):
     return redirect('/')
 
 def trocar_senha(request):
-    return render(request, 'usuarios/configuracoes/trocar_senha.html')
+    ''' Realiza a troca de senha do usuario no sistema '''
+
+    user = request.user
+
+    form = ChangePassForms()
+    if request.method == 'POST':
+        form = ChangePassForms(request.POST)
+        
+        if form.is_valid():
+            if form["senha_nova"].value() != form["senha_nova_confirma"].value():
+                messages.error(request, "senhas não são iguais")
+                return redirect('trocar_senha')
+            
+            senha_atual = form["senha_atual"].value()
+            
+            check_senha = user.check_password(senha_atual)
+
+            if check_senha == True:
+                senha_nova = form["senha_nova"].value()
+
+                usuario = User.objects.get(username=user)
+                usuario.set_password(senha_nova)
+                usuario.save()
+
+                print(user)
+            
+                auth.logout(request)
+                        
+                auth.authenticate(
+                    request,
+                    username=user,
+                    password=senha_nova
+                )
+                return redirect('index')
+            
+            else:
+                return redirect('trocar_senha')
+
+    return render(request, 'usuarios/configuracoes/trocar_senha.html', {"form": form})
 
 

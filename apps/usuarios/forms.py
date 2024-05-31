@@ -29,7 +29,6 @@ class LoginForms(forms.Form):
     )
 
 
-
 class CadastroForms(forms.Form):
     nome_cadastro = forms.CharField(
         label="Nome de usuário",
@@ -69,7 +68,7 @@ class CadastroForms(forms.Form):
     )
 
     senha_confirma = forms.CharField(
-        label="Confirme sua Senha",
+        label="Confirme sua senha",
         required=True,
         max_length=70,
         widget=forms.PasswordInput(
@@ -92,3 +91,46 @@ class CadastroForms(forms.Form):
             else:
                 return nome
             
+
+class ChangePassForms(forms.Form):
+    senha_atual = forms.CharField(
+        label="Senha",
+        required=True,
+        max_length=70,
+        widget=forms.PasswordInput(
+            attrs={
+                "class": "campo-user",
+                "placeholder" : "Digite sua senha atual",
+                "id":'input-senha'
+            }
+        )
+    )
+
+    senha_nova = forms.CharField(
+        label="Senha",
+        required=True,
+        max_length=70,
+        widget=forms.PasswordInput(
+            attrs={
+                "class": "campo-user",
+                "placeholder" : "Digite sua nova senha",
+                "id":'input-senha-confirma'
+            }
+        )
+    )
+
+    senha_nova_confirma = forms.CharField(
+        label="Confirme sua senha",
+        required=True,
+        max_length=70,
+        widget=forms.PasswordInput(
+            attrs={
+                "class": "campo-user",
+                "placeholder" : "Confirme sua nova senha",
+                "id":'input-senha-confirma-nova'
+
+            }
+        )
+    )
+
+
