@@ -125,8 +125,7 @@ def trocar_senha(request):
                 usuario.save()
 
                 print(user)
-            
-                auth.logout(request)
+                print(senha_nova)
                         
                 auth.authenticate(
                     request,
