@@ -1,32 +1,25 @@
 from django.shortcuts import render, redirect, get_list_or_404, get_object_or_404
-from apps.resumo.forms import ResumoForms
-from apps.estabelecimentos.models import Estabelecimento
 from django.contrib.auth.models import User
-from django.views.decorators.cache import cache_page
 from django.contrib import auth, messages
+from django.views.decorators.cache import cache_page
 from django.contrib.auth.decorators import login_required
+from .views import *
+from apps.estabelecimentos.models import Estabelecimento
+from apps.resumo.models import Resumo
 import requests
 from geopy.distance import geodesic
 from geopy.geocoders import Nominatim
 import pycep_correios
 import folium
 from folium.plugins import LocateControl
-from .views import *
-from apps.resumo.models import Resumo
 
 
 
+
+@login_required(login_url='login')
 @cache_page(60 * 2)
 def index(request):
-    ''' função responsavél por entregar os objetos do banco de dados: Estabelecimento'''
-
-    user = request.user
-
-    try:
-        resumo = get_list_or_404(Resumo, usuario=user)
-    except:
-        # messages.error(request, "Preencha seu perfil")
-        return redirect('novo_perfil')
+    ''' função responsável por entregar os objetos do banco de dados: Estabelecimento '''
     
     estabelecimentos = Estabelecimento.objects.order_by("data_publicada").reverse().filter(publicada=True)
 
@@ -53,6 +46,7 @@ def estabelecimento(request, estabelecimento_id):
         return render(request, 'estabelecimentos/estabelecimento.html')
 
 
+@login_required(login_url='login')
 def maps_estabelecimentos(request, estabelecimento_id):
     ''' Funcionalidade responsável por processar os dados de lat e long e renderizar o componente mapa'''
 

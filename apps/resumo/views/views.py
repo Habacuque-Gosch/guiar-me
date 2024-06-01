@@ -1,17 +1,16 @@
-from django.shortcuts import render, redirect, get_list_or_404
-from apps.resumo.forms import ResumoForms
-from apps.resumo.models import Resumo
+from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
+from apps.resumo.forms import ResumoForms
+from apps.resumo.models import Resumo
 
 
 
 @login_required(login_url='login')
 def novo_perfil(request):
-    ''' '''
+    ''' função responsável por exibir a página de criação de perfil '''
     current_user = request.user
-    print(current_user.id)
 
     form = ResumoForms
 
@@ -45,10 +44,17 @@ def splash_home(request, foto_user_id):
     return render(request, 'usuarios/cadastro/splash_agradecimento.html', {'resumo': resumo})
 
 def config_user(request):
-    ''' '''
-    current_user = request.user
+    ''' função responsável por renderizar a página de usuário '''
 
-    resumo = Resumo.objects.get(usuario=current_user)
+    user = request.user
+
+    try:
+        resumo = Resumo.objects.get(usuario=user)
+    except:
+        # messages.error(request, "Preencha seu perfil")
+        return redirect('novo_perfil')
+
+    resumo = Resumo.objects.get(usuario=user)
 
     return render(request, 'usuarios/configuracoes/config.html', {'resumo': resumo})
 
@@ -67,7 +73,6 @@ def editar_perfil(request, resumo_id):
             return redirect('configuracoes_user')
 
     return render(request, 'usuarios/configuracoes/editar_resumo.html', {"form": form, "resumo_id": resumo_id, "resumo":resumo})
-
 
 
 @login_required(login_url='login')

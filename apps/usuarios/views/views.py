@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect, get_list_or_404
-# from apps.usuarios.models import Resumo
-# from apps.vagas.models import Vagas
 from django.contrib.auth.models import User
 from django.contrib import auth, messages
+from django.contrib.auth import update_session_auth_hash, login, authenticate
 from apps.usuarios.forms import LoginForms, CadastroForms, ChangePassForms
+
 
 
 
@@ -85,7 +85,7 @@ def cadastro(request):
         if usuario is not None:
             auth.login(request, usuario)
             # messages.success(request, f"{nome} logado com sucesso")
-            return redirect('index')
+            return redirect('novo_perfil')
         else:
             messages.error(request, "usuário ou senha inválido")
             return redirect('login')
@@ -105,6 +105,7 @@ def trocar_senha(request):
     user = request.user
 
     form = ChangePassForms()
+    
     if request.method == 'POST':
         form = ChangePassForms(request.POST)
         
@@ -112,7 +113,25 @@ def trocar_senha(request):
             if form["senha_nova"].value() != form["senha_nova_confirma"].value():
                 messages.error(request, "senhas não são iguais")
                 return redirect('trocar_senha')
+
+            # senha_atual = request.POST['input_senha']
             
+            # check_senha = user.check_password(senha_atual)
+
+            # if check_senha == True:
+
+            #     senha_nova = form["senha_nova"].value()
+
+            #     usuario = form.save()
+            #     update_session_auth_hash(request, usuario)  # Important!
+
+            #     autenticate_user = auth.authenticate(request, username=user, password=senha_nova)
+
+            #     if autenticate_user is not None:
+            #         login(request, autenticate_user)
+
+            #     return redirect('index')
+
             senha_atual = form["senha_atual"].value()
             
             check_senha = user.check_password(senha_atual)
@@ -123,16 +142,8 @@ def trocar_senha(request):
                 usuario = User.objects.get(username=user)
                 usuario.set_password(senha_nova)
                 usuario.save()
+                return redirect('/')
 
-                print(user)
-                print(senha_nova)
-                        
-                auth.authenticate(
-                    request,
-                    username=user,
-                    password=senha_nova
-                )
-                return redirect('index')
             
             else:
                 return redirect('trocar_senha')

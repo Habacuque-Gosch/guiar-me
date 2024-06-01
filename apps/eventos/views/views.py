@@ -13,18 +13,6 @@ from apps.resumo.models import Resumo
 @login_required(login_url='login')
 def index_eventos(request):
     ''' função responsavél por entregar os objetos do banco de dados: Evento'''
-
-    user = request.user
-
-    if not user.is_authenticated:
-        # messages.error(request, "Usuário não logado")
-        return redirect('login')
-
-    try:
-        resumo = get_list_or_404(Resumo, usuario=user)
-    except:
-        # messages.error(request, "Preencha seu perfil")
-        return redirect('novo_perfil')
     
     eventos = Evento.objects.order_by("data_publicada").reverse().filter(publicada=True)
 
@@ -38,11 +26,15 @@ def evento(request, evento_id):
     user = request.user
 
     try:
+        resumo = get_list_or_404(Resumo, usuario=user)
+    except:
+        # messages.error(request, "Preencha seu perfil")
+        return redirect('novo_perfil')
+
+    try:
         eventos = get_object_or_404(Evento, pk=evento_id)
+        return render(request, 'eventos/evento.html', {'eventos': eventos})
 
     except:
         return render(request, 'eventos/evento.html')
-
-
-    return render(request, 'eventos/evento.html', {'eventos': eventos})
 
