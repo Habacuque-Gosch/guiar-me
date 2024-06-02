@@ -1,5 +1,3 @@
-// import 'formulario.js';
-
 
 var titulo = document.getElementById("titulo-formulario")
 

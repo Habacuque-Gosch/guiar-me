@@ -25,22 +25,17 @@ def novo_perfil(request):
             # messages.success(request, "salvo com sucesso")
             resumo = Resumo.objects.get(id=resumo.id)
             return render(request, 'usuarios/cadastro/splash_agradecimento.html', {'resumo': resumo})
-            # return redirect('splash_home')
+
+        else:
+            return redirect('novo_perfil')
 
     return render(request, 'usuarios/cadastro/idade_e_nome.html', {'form': form})
 
 def splash_home(request, foto_user_id):
     ''' '''
 
-    current_user = request.user
-
-    # try:
-    # resumo = get_list_or_404(Resumo, foto=current_user.foto)
     resumo = Resumo.objects.get(id=foto_user_id)
-    #     return render(request, 'usuarios/cadastro/splash_agradecimento.html', {'resumo': resumo})
 
-
-    # except:
     return render(request, 'usuarios/cadastro/splash_agradecimento.html', {'resumo': resumo})
 
 def config_user(request):

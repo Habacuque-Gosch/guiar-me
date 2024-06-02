@@ -12,7 +12,7 @@
         {% if resumo.foto.url != '' %}
             <img class="foto-user-config" src="{{resumo.foto.url}}" alt="">
         {% else %}
-            <img class="foto-user-config" src="{% static '/assets/icones_cadastro/profile_default.svg' %}" alt="" max>
+            <img class="foto-user-config" src="{% static '/assets/icones_cadastro/profile_default.svg' %}" alt="">
         {% endif %}
         <p class="name-user-config">{{ resumo.nome }}</p>
 
