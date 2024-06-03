@@ -55,6 +55,8 @@ def config_user(request):
 
 @login_required(login_url='login')
 def editar_perfil(request, resumo_id):
+    ''' função responsável por renderizar a página de usuário '''
+
     user = request.user
     
     resumo = Resumo.objects.get(id=resumo_id)
@@ -69,12 +71,26 @@ def editar_perfil(request, resumo_id):
 
     return render(request, 'usuarios/configuracoes/editar_resumo.html', {"form": form, "resumo_id": resumo_id, "resumo":resumo})
 
+def favoritar_estabelecimento(request):
+    ''' função responsável por renderizar a página de usuário '''
+
+    # estabelecimentos_favoritos
+    estabelecimentos_favoritos = Resumo.objects.all()
+    print(estabelecimentos_favoritos)
+
+    return render(request, 'usuarios/configuracoes/favoritos.html', {'estabelecimentos_favoritos': estabelecimentos_favoritos})
+
 
 @login_required(login_url='login')
 def favoritos(request):
+    '''  '''
 
-    current_user = request.user
+    user = request.user
 
-    resumo = Resumo.objects.get(usuario=current_user)
+    resumo = Resumo.objects.filter(id=user.id)
 
-    return render(request, 'usuarios/configuracoes/favoritos.html', {'resumo': resumo})
+    estabelecimentos_favoritos = resumo
+
+    print(estabelecimentos_favoritos)
+
+    return render(request, 'usuarios/configuracoes/favoritos.html', {'estabelecimentos_favoritos': estabelecimentos_favoritos})
