@@ -14,8 +14,65 @@
 
 {% endif %}
 
-<div class="div-titulo-formulario">
+<div class="div-titulo-formulario" style="margin-bottom: 2em;">
     <p class="titulo-formulario" id="titulo-formulario">Favoritos</p>
 </div>
+<section class="section-cards-estabelecimentos">
+
+    {% if estabelecimentos_favoritos %}
+    {% for estabelecimentos in estabelecimentos_favoritos %}
+
+    <div class="card-estabelecimentos">
+
+        <a class="foto-principal-card" href="{% url 'estabelecimento' estabelecimentos.id %}"><img src="{{ estabelecimentos.foto.url }}" alt=""></a>
+
+        <div class="div-gasto-medio-e-favorito">
+
+            <div class="gasto-medio">
+                <p class="p-gasto-medio">Gasto médio</p>
+                <p class="v-gasto-medio">R${{ estabelecimentos.preco_medio }}</p>
+            </div>
+
+            <a href="{% url 'desfavoritar_estabelecimento' estabelecimentos.id %}" style="width: 50px; height: 50px;"><img src="{% static '/assets/icones_card/desfavoritar.svg' %}" alt=""></a>
+
+        </div>
+
+        <div class="div-informacao-card-estabelecimento">
+
+            <a href="{% url 'estabelecimento' estabelecimentos.id %}" style="width: 100%; text-decoration: none;">
+
+                <div class="div-nome-e-local">
+
+                    <p class="nome-estabelecimento">{{ estabelecimentos.nome }}</p>
+                    <p class="local-estabelecimento">{{ estabelecimentos.local }}</p>
+
+                </div>
+            </a>
+
+            <div class="div-avaliacao">
+
+                <img src="{% static '/assets/icones_card/avaliacao.svg' %}" alt="">
+                <p>{{ estabelecimentos.avaliacao }}</p>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+    {% endfor %}
+    {% else %}
+
+    <div class="nenhum-estabelecimento-encontrado">
+        <h1>Ooops!</h1>
+        <p class="error-oops">Pacece que você ainda não possui estabelecimentos favoritos, volte a explorar ;)</p>
+    </div>
+
+    {% endif %}
+    
+
+</section>
+
+{% include 'partials/_footer.html' %}
 
 {% endblock %}

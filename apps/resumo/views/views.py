@@ -4,6 +4,8 @@ from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from apps.resumo.forms import ResumoForms
 from apps.resumo.models import Resumo
+from apps.estabelecimentos.models import Estabelecimento
+
 
 
 
@@ -29,7 +31,7 @@ def novo_perfil(request):
         else:
             return redirect('novo_perfil')
 
-    return render(request, 'usuarios/cadastro/idade_e_nome.html', {'form': form})
+    return render(request, 'usuarios/cadastro/criando_perfil.html', {'form': form})
 
 def splash_home(request, foto_user_id):
     ''' '''
@@ -71,26 +73,48 @@ def editar_perfil(request, resumo_id):
 
     return render(request, 'usuarios/configuracoes/editar_resumo.html', {"form": form, "resumo_id": resumo_id, "resumo":resumo})
 
-def favoritar_estabelecimento(request):
-    ''' função responsável por renderizar a página de usuário '''
-
-    # estabelecimentos_favoritos
-    estabelecimentos_favoritos = Resumo.objects.all()
-    print(estabelecimentos_favoritos)
-
-    return render(request, 'usuarios/configuracoes/favoritos.html', {'estabelecimentos_favoritos': estabelecimentos_favoritos})
-
 
 @login_required(login_url='login')
 def favoritos(request):
     '''  '''
 
     user = request.user
+    
+    resumo = Resumo.objects.get(usuario=user)
 
-    resumo = Resumo.objects.filter(id=user.id)
-
-    estabelecimentos_favoritos = resumo
-
-    print(estabelecimentos_favoritos)
+    estabelecimentos_favoritos = resumo.estabelecimentos_fav.all().filter(publicada=True)
 
     return render(request, 'usuarios/configuracoes/favoritos.html', {'estabelecimentos_favoritos': estabelecimentos_favoritos})
+
+@login_required(login_url='login')
+def favoritar_estabelecimento(request, estabelecimento_id):
+    ''' função responsável por renderizar a página de usuário '''
+
+    user = request.user
+
+    estabelecimento_selecionado = Estabelecimento.objects.get(id=estabelecimento_id)
+
+    resumo = Resumo.objects.get(usuario=user)
+
+    estabelecimento_selecionado = resumo.estabelecimentos_fav.add(estabelecimento_selecionado)
+
+    resumo.save()
+
+    return redirect('favoritos')
+
+
+@login_required(login_url='login')
+def desfavoritar_estabelecimento(request, estabelecimento_id):
+    ''' função responsável por renderizar a página de usuário '''
+
+    user = request.user
+
+    estabelecimento_selecionado = Estabelecimento.objects.get(id=estabelecimento_id)
+
+    resumo = Resumo.objects.get(usuario=user)
+
+    estabelecimento_selecionado = resumo.estabelecimentos_fav.remove(estabelecimento_selecionado)
+
+    resumo.save()
+
+    return redirect('favoritos')
