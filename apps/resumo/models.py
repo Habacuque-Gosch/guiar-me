@@ -22,6 +22,7 @@ class Resumo(models.Model):
     orientacao_sexual = models.CharField(max_length=100, choices=orientacao_sexual, default='')
     foto = models.ImageField(upload_to="fotos/%Y/%m/%d/", blank=True)
     estabelecimentos_fav = models.ManyToManyField(Estabelecimento, related_name='estabelecimentos_favoritos', blank=True, null=True)
+    # tags_filtro = models.CharField(max_length=100, choices=orientacao_sexual, default='')
     usuario = models.ForeignKey(
         to=User,
         on_delete=models.SET_NULL,

@@ -7,9 +7,26 @@ from django.contrib.auth.models import User
 class Estabelecimento(models.Model):
 
     OPCOES_CATEGORIAO = [
-        ("teste", "TESTE"),
-        ("teste1", "TESTE1" ),
-        ("teste2", "TESTE2" ),
+        ("Árabe", "TESTE"),
+        ("Brasileira", "TESTE1" ),
+        ("Chinesa", "TESTE2" ),
+        ("Italiana", "TESTE2" ),
+        ("Fast Food", "TESTE2" ),
+        ("Gourmet", "TESTE2" ),
+        ("Japonesa", "TESTE2" ),
+        ("Mexicana", "TESTE2" ),
+        ("Vegetariana", "TESTE2" ),
+        ("Vegana", "TESTE2" ),
+        ("Pizza", "TESTE2" ),
+        ("Sushi", "TESTE2" ),
+        ("Frutos do mar", "TESTE2" ),
+        ("Hambúrguer", "TESTE2" ),
+        ("Massa", "TESTE2" ),
+        ("Carne", "TESTE2" ),
+        ("Peixe", "TESTE2" ),
+        ("Sopa", "TESTE2" ),
+        ("Salada", "TESTE2" ),
+        ("Sobremesa", "TESTE2" ),
     ]
 
     nome = models.CharField(max_length=150, null=False, blank=False)
