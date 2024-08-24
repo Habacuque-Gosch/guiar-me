@@ -52,7 +52,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: var(--fundo-campo);
+        background-color: var(--fundo_card_inicial);
         color: #ffffff;
         height: 60px;
         width: 30%;
