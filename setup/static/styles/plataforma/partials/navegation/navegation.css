@@ -65,13 +65,18 @@
     justify-content: left;
     gap: 1em;
     flex-direction: row;
-    background-color: var(--destaque);
+    background-color: var(--fundo-campo);
     text-decoration: none;
     width: 90%;
     /* height: 100%; */
     border-radius: 20px;
     color: #fff;
     font-size: 20px;
+    transition: 100ms;
+}
+
+.nav-item-plataforma:hover {
+    background-color: var(--destaque);
 }
 
 .nav-item-plataforma div {
@@ -96,7 +101,7 @@
     border-radius: 20px;
     color: #fff;
     font-size: 20px;
-    /* margin-bottom: 1em; */
+    margin-bottom: 10px;
 }
 
 .btn-criar-evento-nav img {

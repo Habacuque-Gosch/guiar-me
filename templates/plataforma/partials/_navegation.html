@@ -9,17 +9,17 @@
 
   <div class="div-nav-bar-plataforma">
 
-    <a class="nav-item-plataforma" href="{% url 'dashboard' %}">
+    <a class="nav-item-plataforma" href="{% url 'dashboard' %}" id="dashboard">
       <div>
         <img src="{% static '/assets/icones_plaform/navegation_bar/dashboard.svg' %}" width="20" height="20">
         Dashboard
       </div>
     </a>
-    
-    <a class="nav-item-plataforma" href="/">
+
+    <a class="nav-item-plataforma" href="/" id="cardapio">
       <div>
         <img src="{% static '/assets/icones_plaform/navegation_bar/cardapio.svg' %}" width="20" height="20">
-        Meu Cardapio
+        Meu Cardápio
       </div>
     </a>
   
@@ -36,26 +36,17 @@
         Minhas Avalições
       </div>
     </a>
-    
-    <!-- <a class="nav-item-plataforma" href="/">
-      <div>
-        <img src="{% static '/assets/icones_plaform/navegation_bar/config.svg' %}" width="20" height="20" >
-        Configurações
-      </div>
-    </a> -->
   
   </div>
   
-  <!-- <div class="div-btn-criar-evento-nav"> -->
-    <div class="btn-criar-evento-nav">
+    <a class="btn-criar-evento-nav" href="/">
       <img src="{% static '/assets/icones_plaform/navegation_bar/seta.svg' %}" width="70" height="70">
       <p>Criar Evento</p>
-    </div>
-  <!-- </div> -->
+    </a>
 
 </nav>
 <!-- {% load cache %}
-{% cache 300 navegation_bar %} -->
+{% cache 300 navegation_plataform %} -->
 
 <!-- {% endcache %} -->
 
