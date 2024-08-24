@@ -7,7 +7,7 @@
     flex-direction: column;
     position: fixed;
     background-color: var(--fundo-campo);
-    gap: 5%;
+    gap: 6%;
     height: 95%;
     width: 25%;
     border-radius: 25px;
@@ -19,26 +19,45 @@
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
 .img-business-nav img {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
 }
 
 .div-nav-bar-plataforma {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* overflow: hidden;
-    overflow-y: visible; */
+    overflow: hidden;
+    overflow-y: visible;
     gap: 1em;
     flex-direction: column;
     width: 100%;
-    height: 50%;
-    margin-bottom: 5em;
+    height: 20%;
+    padding-top: 6.8em;
+    border-radius: 20px;
+    margin-bottom: 1em;
+    
 }
+.div-nav-bar-plataforma::-webkit-scrollbar {
+    /* display: none; */
+    background-color: var(--fundo-campo);
+    width: 10px;
+}
+.div-nav-bar-plataforma::-webkit-scrollbar-thumb {
+    /* display: none; */
+    background-color: var(--destaque);
+    height: 10px;
+    border-radius: 20px;
+}
+
+.div-nav-bar-plataforma::-webkit-scrollbar-thumb {
+    height: 10px;
+}
+
 
 .nav-item-plataforma {
     display: flex;
@@ -61,8 +80,7 @@
     justify-content: center;
     gap: 1em;
     margin-left: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    height: 70px;
 }
 
 .btn-criar-evento-nav {
@@ -70,7 +88,7 @@
     align-items: center;
     justify-content: center;
     gap: 1em;
-    flex-direction: row;
+    flex-direction: column;
     background-color: var(--destaque);
     text-decoration: none;
     width: 90%;
@@ -78,5 +96,10 @@
     border-radius: 20px;
     color: #fff;
     font-size: 20px;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
+}
+
+.btn-criar-evento-nav img {
+    margin-top: -3.5em;
+
 }

@@ -34,7 +34,7 @@
     height: 120px;
     border-radius: 100%;
     border: none;
-    outline: solid 5px var(--fundo_card_inicial);
+    outline: solid 5px var(--fundo-card-inicial);
     object-fit: fill;
 }
 

@@ -6,7 +6,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: var(--fundo_card_inicial);
+        background-color: var(--fundo-card-inicial);
         width: 100%;
         height: 80%;
     }

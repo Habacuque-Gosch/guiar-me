@@ -31,7 +31,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: var(--fundo_card_inicial);
+        background-color: var(--fundo-card-inicial);
         color: #ffffff;
         height: 60px;
         width: 30%;
@@ -52,7 +52,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: var(--fundo_card_inicial);
+        background-color: var(--fundo-card-inicial);
         color: #ffffff;
         height: 60px;
         width: 30%;
