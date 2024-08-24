@@ -4,16 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 
-/* ESTILOS PLATAFORMA */
-@import url(plataforma/home/home.css);
-
-@import url(plataforma/partials/formularios/base.css);
-@import url(plataforma/login/login.css);
-@import url(plataforma/cadastro/cadastro.css);
-
-@import url(plataforma/partials/navegation.css);
-
-
 
 /* ESTILOS MOBILE */
 @import url(home/home.css);

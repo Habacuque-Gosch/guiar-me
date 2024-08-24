@@ -1,0 +1,20 @@
+
+
+.nav-navegation-bar-plataforma {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    background-color: #fff;
+    height: 100%;
+    width: 40%;
+}
+
+.div-navegation-bar-plataforma {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    flex-direction: column;
+
+}
