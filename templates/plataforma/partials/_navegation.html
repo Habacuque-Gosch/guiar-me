@@ -1,0 +1,38 @@
+{% load static %}
+
+<!-- {% load cache %}
+{% cache 300 navegation_bar %} -->
+<nav class="navegation-bar">
+
+  <a class="nav-item" href="{% url 'home_plataforma' %}">
+    <img src="{% static '/assets/icones_plaform/navegation_bar/dashboard.svg' %}" width="26" height="24">
+    Dashboard
+  </a>
+  
+  <a class="nav-item" href="{% url 'index_eventos' %}">
+    <img src="{% static '/assets/icones_plaform/navegation_bar/cardapio.svg' %}" width="26" height="20">
+    Meu Cardapio
+  </a>
+
+  <a class="nav-item" href="{% url 'configuracoes_user' %}">
+    <img src="{% static '/assets/icones_plaform/navegation_bar/eventos.svg' %}" width="20" height="24" >
+    Meus Eventos
+  </a>
+  
+  <a class="nav-item" href="{% url 'configuracoes_user' %}">
+    <img src="{% static '/assets/icones_plaform/navegation_bar/avaliacao.svg' %}" width="20" height="24" >
+    Minhas Avalições
+  </a>
+  
+  <a class="nav-item" href="{% url 'configuracoes_user' %}">
+    <img src="{% static '/assets/icones_plaform/navegation_bar/config.svg' %}" width="20" height="24" >
+    Configurações
+  </a>
+
+</nav>
+<!-- {% endcache %} -->
+
+<script>
+  feather.replace();
+  document.querySelector(".nav-item").focus();
+</script>

@@ -65,6 +65,24 @@
     {% include 'partials/_navegation_bar.html' %}
     {% include 'partials/_footer.html' %}
 
+    {% if request.method == 'GET' %}
+
+{% endif %}
+
+{% if request.method == 'GET' %}
+
+    <script src="{% static '/js/check.js' %}"></script>
+
+    <script>
+
+        var link = "{% url 'home_plataforma' %}"
+
+        detectar_mobile(link);
+
+    </script>
+
+{% endif %}
+
 </section>
 
 {% endblock %}

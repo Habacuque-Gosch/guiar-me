@@ -5,38 +5,13 @@
 
 
 /* ESTILOS PLATAFORMA */
-@import url(plataforma/home/home.css);
-
-@import url(plataforma/partials/formularios/base.css);
-@import url(plataforma/login/login.css);
-@import url(plataforma/cadastro/cadastro.css);
-
-@import url(plataforma/partials/navegation.css);
-
-
-
-/* ESTILOS MOBILE */
 @import url(home/home.css);
+
+@import url(partials/formularios/base.css);
 @import url(login/login.css);
 @import url(cadastro/cadastro.css);
-@import url(cadastro/profile.css);
-@import url(cadastro/splash_profile.css);
 
-@import url(estabelecimentos/index.css);
-@import url(estabelecimentos/card.css);
-@import url(estabelecimentos/estabelecimento.css);
-
-@import url(eventos/index.css);
-@import url(eventos/card.css);
-@import url(eventos/eventos.css);
-
-@import url(partials/header.css);
-@import url(partials/formularios.css);
-@import url(partials/busca.css);
-@import url(partials/navegation_bar.css);
-@import url(partials/footer.css);
-
-@import url(configuracoes/config.css);
+@import url(partials/navegation.css);
 
 
 /* RESET */

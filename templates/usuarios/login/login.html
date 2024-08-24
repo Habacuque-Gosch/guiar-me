@@ -30,7 +30,7 @@
 
     <script src="{% static '/js/formularios.js' %}"></script>
 
-    <a href="javascript: show_pass()" style="margin-right: -18em; margin-top: -3em;"><img src="{% static 'assets/icones_login/eyes.svg' %}" alt=""  width="25px" height="25px"></a>
+    <a class="show-pass-login" href="javascript: show_pass()"><img src="{% static 'assets/icones_login/eyes.svg' %}" alt=""  width="25px" height="25px"></a>
 
     <div class="div-botao-login" style="margin-top: 1em;">
         <button class="btn-entrar" type="submit">Entrar</button>
@@ -46,5 +46,25 @@
     <a href="{% url 'cadastro' %}" class="cadastro">Criar uma conta</a>
 
 </div>
+
+{% if request.method == 'GET' %}
+
+    <style>
+        html, main, body {
+            height: 100%;
+        }
+    </style>
+
+    <script src="{% static '/js/check.js' %}"></script>
+
+    <script>
+
+        var link = "{% url 'home_plataforma' %}"
+
+        detectar_mobile(link);
+
+    </script>
+
+{% endif %}
 
 {% endblock %}

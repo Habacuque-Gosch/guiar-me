@@ -1,0 +1,59 @@
+{% extends 'plataforma/partials/base_formularios.html' %}
+{% load static %}
+{% block content %}
+
+<div class="div-btn-google-plataforma">
+    <a class="btn-google-plataforma" href=""><img src="{% static '/assets/icones_login/google-icone.svg' %}" alt="">Continue google</a>
+</div>
+
+<div class="div-alternativa-de-login-plataforma">
+    <hr>
+    <p class="texto-alternativa-login-plataforma">OU LOGIN COM E-MAIL</p>
+    <hr>
+</div>
+
+<form class="section-login-form-plataforma" action="{% url 'login_plataforma' %}" method="post">
+
+    {% csrf_token %}
+
+    <div class="form-group-login-plataforma">
+
+        {% for field in form.visible_fields %}
+    
+        <label class="form-label-login-plataforma" for="{{ field.id_for_label }}">{{field.label}}</label>
+        {{ field }}
+    
+        {% endfor %}
+
+    </div>
+
+    <script src="{% static '/js/formularios.js' %}"></script>
+
+    <a class="show-pass-login-plataforma" href="javascript: show_pass()"><img src="{% static 'assets/icones_login/eyes.svg' %}" alt=""  width="25px" height="25px"></a>
+
+    <div class="div-botao-login-plataforma" style="margin-top: 1em;">
+        <button class="btn-entrar-plataforma" type="submit">Entrar</button>
+    </div>
+
+
+</form>
+
+<div class="div-alternativas-de-login-plataforma">
+            
+    <a href="" class="esqueci-senha">Esqueci minha senha</a>
+    
+    <a href="{% url 'cadastro_plataforma' %}" class="cadastro">Criar uma conta</a>
+
+</div>
+
+{% if request.method == 'GET' %}
+
+    <style>
+        html, main, body {
+            height: 100%;
+        }
+    </style>
+
+{% endif %}
+
+{% endblock %}

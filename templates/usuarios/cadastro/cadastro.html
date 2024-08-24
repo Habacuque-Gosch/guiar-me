@@ -10,7 +10,7 @@
 
     {% csrf_token %}
 
-    <div class="form-group-campos" style="gap: 1em;">
+    <div class="form-group-campos" style="gap: 1em; height: auto;">
 
         {% for field in form.visible_fields %}
 
@@ -27,8 +27,7 @@
 
         <script src="{% static '/js/formularios.js' %}"></script>
 
-        <a href="javascript: show_pass_confirm()" style="margin-right: -18em; margin-top: -9.2em;"><img src="{% static 'assets/icones_login/eyes.svg' %}" alt="" width="25px" height="25px"></a>
-
+        <a class="show-pass-cadastro" href="javascript: show_pass_confirm()"><img src="{% static 'assets/icones_login/eyes.svg' %}" alt="" width="25px" height="25px"></a>
 
         <div class="div-alternativas-de-login" style="margin-top: 7em;">
             <p class="cadastro">Ao utilizar o GuiarMe, você concorda com nossos Termos de Serviço e Política de Privacidade.</p>
@@ -41,5 +40,25 @@
     </div>
     
 </form>
+
+{% if request.method == 'GET' %}
+
+    <style>
+        html, main, body {
+            height: 100%;
+        }
+    </style>
+
+    <script src="{% static '/js/check.js' %}"></script>
+
+    <script>
+
+        var link = "{% url 'home_plataforma' %}"
+
+        detectar_mobile(link);
+
+    </script>
+
+{% endif %}
 
 {% endblock %}

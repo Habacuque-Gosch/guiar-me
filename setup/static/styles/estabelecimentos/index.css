@@ -1,4 +1,6 @@
-
+.section-cards-estabelecimentos {
+    display: none;
+}
 @media (max-width: 428px) {
     
     .section-cards-estabelecimentos {

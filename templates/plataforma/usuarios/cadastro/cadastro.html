@@ -1,0 +1,54 @@
+{% extends 'plataforma/partials/base_formularios.html' %}
+{% load static %}
+{% block content %}
+
+<!-- <div class="titulo-cadastro">
+    <p class="titulo-login">Novo por aqui?</p>
+</div> -->
+
+<form class="section-cadastro-form-plataforma" action="{% url 'cadastro_plataforma' %}" method="post">
+
+    {% csrf_token %}
+
+    <div class="form-group-campos-plataforma" style="gap: 1em; height: auto;">
+
+        {% for field in form.visible_fields %}
+
+            <label class="form-label-plataforma" for="{{ field.id_for_label }}">{{field.label}}</label>
+            {{ field }}
+
+        {% for error in field.errors %}
+
+        <div class="alert alert-danger">
+            {{ error }}
+        </div>
+        {% endfor %}
+        {% endfor %}
+
+        <script src="{% static '/js/formularios.js' %}"></script>
+
+        <a class="show-pass-cadastro-plataforma" href="javascript: show_pass_confirm()"><img src="{% static 'assets/icones_login/eyes.svg' %}" alt="" width="25px" height="25px"></a>
+
+        <div class="div-alternativas-de-login-plataforma" style="margin-top: 7em;">
+            <p class="cadastro">Ao utilizar o GuiarMe, você concorda com nossos Termos de Serviço e Política de Privacidade.</p>
+        </div>
+
+    </div>
+
+    <div class="div-botao-login-plataforma">
+        <button class="btn-entrar-plataforma" type="submit">Criar minha conta</button>
+    </div>
+    
+</form>
+
+{% if request.method == 'GET' %}
+
+    <style>
+        html, main, body {
+            height: 100%;
+        }
+    </style>
+
+{% endif %}
+
+{% endblock %}

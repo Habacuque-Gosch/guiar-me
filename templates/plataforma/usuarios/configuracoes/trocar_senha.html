@@ -1,4 +1,4 @@
-{% extends 'usuarios/partials/base_formularios.html' %}
+{% extends 'plataforma/partials/base_formularios.html' %}
 {% load static %}
 {% block content %}
 
@@ -6,7 +6,7 @@
 
     <style>
 
-        .div-titulo-formulario p{
+        .div-titulo-formulario-plataforma p{
             font-size: 30px;
         }
 
@@ -20,15 +20,15 @@
 
 </div>
 
-<form class="section-cadastro-form" action="{% url 'trocar_senha' %}" method="post">
+<form class="section-cadastro-form-plataforma" action="{% url 'trocar_senha' %}" method="post">
     
     {% csrf_token %}
 
-    <div class="form-group-campos" style="gap: 1em;">
+    <div class="form-group-campos-plataforma" style="gap: 1em;">
 
         {% for field in form.visible_fields %}
 
-            <label class="form-label" for="{{ field.id_for_label }}">{{field.label}}</label>
+            <label class="form-label-plataforma" for="{{ field.id_for_label }}">{{field.label}}</label>
             {{ field }}
 
         {% for error in field.errors %}
@@ -45,14 +45,23 @@
 
     </div>
 
-    <div class="div-botao-login" style="margin-top: 2em;">
+    <div class="div-botao-login-plataforma" style="margin-top: 2em;">
         <button class="btn-entrar" type="submit">Redefinir senha</button>
     </div>
     
 </form>
 
-<div class="div-alternativas-de-login" style="margin-top: 1em; width: 100%;">
+<div class="div-alternativas-de-login-plataforma" style="margin-top: 1em; width: 100%;">
     <a href="/" class="cadastro">Esqueci minha senha</a>
 </div>
 
+{% if request.method == 'GET' %}
+
+    <style>
+        html, main, body {
+            height: 100%;
+        }
+    </style>
+
+{% endif %}
 {% endblock %}

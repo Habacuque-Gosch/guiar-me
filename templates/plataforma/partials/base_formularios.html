@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faça login ou cadastre-se | GuiarMe</title>
-    <link rel="stylesheet" href="{% static '/styles/styles.css' %}">
+    <link rel="stylesheet" href="{% static '/styles/plataforma/styles.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static '/assets/icones_id/logo_g.png' %}">
 </head>
 
@@ -14,17 +14,15 @@
     
     <main> 
 
-        <section class="section-tela">
+        <section class="section-tela-plataforma">
 
-            <!-- <div class="tela-cadastro" style="background-image: url({% static '/assets/icones_plaform/login/background_login.svg' %});"> -->
-    
-            <div class="tela-cadastro">
+            <div class="tela-cadastro-plataforma" style="background-image: url({% static '/assets/icones_plaform/login/background_login.svg' %});">
                 
                 <script src="{% static '/js/formularios.js' %}"></script>
     
-                <div class="div-btn-back" id="div-btn-back">
+                <!-- <div class="div-btn-back" id="div-btn-back">
                     <a href="javascript: voltar()" class="btn-back"><img src="{% static '/assets/icones_login/back-icone.svg' %}" alt=""></a>
-                </div>
+                </div> -->
     
                 {% block content%}{% endblock %}
     

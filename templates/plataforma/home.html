@@ -1,0 +1,47 @@
+{% extends 'plataforma/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<main class="main-home_plataforma" id="mobile-main" style="background-image: url({% static '/assets/icones_plaform/home/background_home1.svg' %});">
+
+    <section class="section-home_plataforma">
+
+        <div class="components-home_plataforma">
+
+            <img class="logo-inicial_plataforma" src="{% static '/assets/icones_plaform/home/logo_plataforma.svg' %}" alt="logo incial">
+
+            <div class="logo-e-contexto_plataforma">
+                <img class="logo-texto_plataforma" src="{% static '/assets/icones_id/logo_texto.svg' %}" alt="">
+                <p class="contexto-home">Apareça para seu mundo ideal!</p>
+            </div>
+    
+            <div class="botoes-login-ou-cadastro_plataforma">
+    
+                <a href="{% url 'cadastro_plataforma' %}" class="botao-criar-conta" style="background-color: var(--destaque); color: #ffff;">Criar uma conta</a>
+    
+                <a href="{% url 'login_plataforma' %}" class="botao-criar-conta" style="background-color: #1855ab00; color: #ffff; border: solid 1px #ffff; margin-bottom: 10px;">Login</a>
+    
+            </div>
+    
+            <div class="avisos_plataforma">
+                <p>Ao utilizar o GuiarMe, você concorda com nossos Termos de Serviço e Política de Privacidade.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+{% if request.method == 'GET' %}
+
+    <style>
+        html, main, body {
+            height: 100%;
+        }
+    </style>
+
+{% endif %}
+
+{% endblock %}
