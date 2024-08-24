@@ -11,6 +11,10 @@ def buscar(request):
     
     estabelecimentos = Estabelecimento.objects.order_by("data_publicada").filter(publicada=True)
 
+    categorias = Estabelecimento.categoria
+
+    print(categorias)
+
     if "buscar" in request.GET:
         nome_a_buscar = request.GET['buscar']
         if nome_a_buscar:

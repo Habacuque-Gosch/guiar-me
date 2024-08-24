@@ -84,4 +84,14 @@ def maps_estabelecimentos(request, estabelecimento_id):
     return render(request, 'estabelecimentos/map.html', context)
 
 
+@login_required(login_url='login')
+# @cache_page(60 * 2)
+def dashboard(request):
+    ''' função responsável por entregar os objetos do banco de dados: Estabelecimento '''
+    
+    # estabelecimentos = Estabelecimento.objects.order_by("data_publicada").reverse().filter(publicada=True)
+
+    # return render(request, 'estabelecimentos/index.html', {'estabelecimentos': estabelecimentos})
+    return render(request, 'plataforma/dashboard/index.html')
+
 
