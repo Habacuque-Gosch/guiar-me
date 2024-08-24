@@ -7,11 +7,11 @@
 /* ESTILOS PLATAFORMA */
 @import url(home/home.css);
 
+@import url(partials/navegation/navegation.css);
 @import url(partials/formularios/base.css);
 @import url(login/login.css);
 @import url(cadastro/cadastro.css);
 
-@import url(partials/navegation/navegation.css);
 
 
 /* RESET */

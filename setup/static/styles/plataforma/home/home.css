@@ -1,6 +1,6 @@
 
 @media (max-width: 1440px) {
-    .main-home_plataforma {
+    .main-home-plataforma {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -13,7 +13,7 @@
         height: 100%;
     }
 
-    .components-home_plataforma {
+    .components-home-plataforma {
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -22,7 +22,7 @@
         height: 100%;
     }
 
-    .section-home_plataforma {
+    .section-home-plataforma {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -32,7 +32,7 @@
         height: 80%;
     }
 
-    .logo-e-contexto_plataforma {
+    .logo-e-contexto-plataforma {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -42,21 +42,21 @@
         gap: 8px;
         margin-bottom: 2.5em;
     }
-    .logo-inicial_plataforma {
+    .logo-inicial-plataforma {
         width: 140px;
         height: 140px;
         margin-bottom: 2em;
     }
 
-    .contexto-home {
+    .contexto-home-plataforma {
         font-size: 16px;
         color: var(--texto_70);
     }
-    .logo-texto_plataforma {
+    .logo-texto-plataforma {
         width: 15%;
     }
 
-    .botoes-login-ou-cadastro_plataforma {
+    .botoes-login-ou-cadastro-plataforma {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -65,7 +65,7 @@
         width: 50%;
         height: 50%;
     }
-    .botao-criar-conta {
+    .botao-criar-conta-plataforma {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -79,7 +79,7 @@
         text-decoration: none;
     }
 
-    .avisos_plataforma {
+    .avisos-plataforma {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -87,7 +87,7 @@
         margin-bottom: 2em;
     }
 
-    .avisos_plataforma p {
+    .avisos-plataforma p {
         text-align: center;
         font-size: 14px;
         color: var(--texto_miudo);

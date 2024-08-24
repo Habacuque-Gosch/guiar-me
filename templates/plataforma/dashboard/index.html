@@ -3,8 +3,38 @@
 {% block content %}
 
 
-<p>teste dashboards</p>
+<!-- <p>teste dashboards</p> -->
+
+<div>
+    <img src="{% static '/assets/icones_plaform/breve.png' %}" alt="" width="950px" height="450px" style="margin-top: 7.5em; margin-left: 22em;">
+</div>
+
+<!-- <div>
+    <p>teste</p>
+</div>
+
+<div>
+    <p>teste</p>
+</div>
+
+<div>
+    <p>teste</p>
+</div>
+
+<div>
+    <p>teste</p>
+</div> -->
 
 {% include 'plataforma/partials/_navegation.html' %}
+
+{% if request.method == 'GET' %}
+
+    <style>
+        html, main, body {
+            height: 100%;
+        }
+    </style>
+
+{% endif %}
 
 {% endblock %}

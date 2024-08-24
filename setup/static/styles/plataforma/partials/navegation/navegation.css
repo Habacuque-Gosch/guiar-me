@@ -4,17 +4,79 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1em;
-    background-color: #fff;
-    height: 100%;
-    width: 40%;
+    flex-direction: column;
+    position: fixed;
+    background-color: var(--fundo-campo);
+    gap: 5%;
+    height: 95%;
+    width: 25%;
+    border-radius: 25px;
+    margin-left: -72%;
 }
 
-.div-navegation-bar-plataforma {
+.img-business-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    margin-top: 2em;
+}
+
+.img-business-nav img {
+    width: 120px;
+    height: 120px;
+}
+
+.div-nav-bar-plataforma {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* overflow: hidden;
+    overflow-y: visible; */
+    gap: 1em;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    margin-bottom: 5em;
+}
+
+.nav-item-plataforma {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    gap: 1em;
+    flex-direction: row;
+    background-color: var(--destaque);
+    text-decoration: none;
+    width: 90%;
+    /* height: 100%; */
+    border-radius: 20px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.nav-item-plataforma div {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1em;
-    flex-direction: column;
+    margin-left: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
 
+.btn-criar-evento-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    flex-direction: row;
+    background-color: var(--destaque);
+    text-decoration: none;
+    width: 90%;
+    height: 20%;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 1em;
 }

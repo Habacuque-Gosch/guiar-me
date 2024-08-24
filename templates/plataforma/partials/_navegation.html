@@ -3,36 +3,50 @@
 
 <nav class="nav-navegation-bar-plataforma">
 
+  <div class="img-business-nav">
+    <img src="{% static '/assets/icones_plaform/home/logo_plataforma.svg' %}" alt="">
+  </div>
+
   <div class="div-nav-bar-plataforma">
 
-    <a class="nav-item" href="{% url 'dashboard' %}">
-      <img src="{% static '/assets/icones_plaform/navegation_bar/dashboard.svg' %}" width="20" height="20">
-      Dashboard
+    <a class="nav-item-plataforma" href="{% url 'dashboard' %}">
+      <div>
+        <img src="{% static '/assets/icones_plaform/navegation_bar/dashboard.svg' %}" width="20" height="20">
+        Dashboard
+      </div>
     </a>
     
-    <a class="nav-item" href="/">
-      <img src="{% static '/assets/icones_plaform/navegation_bar/cardapio.svg' %}" width="20" height="20">
-      Meu Cardapio
+    <a class="nav-item-plataforma" href="/">
+      <div>
+        <img src="{% static '/assets/icones_plaform/navegation_bar/cardapio.svg' %}" width="20" height="20">
+        Meu Cardapio
+      </div>
     </a>
   
-    <a class="nav-item" href="/">
-      <img src="{% static '/assets/icones_plaform/navegation_bar/eventos.svg' %}" width="20" height="20" >
-      Meus Eventos
+    <a class="nav-item-plataforma" href="/">
+      <div>
+        <img src="{% static '/assets/icones_plaform/navegation_bar/eventos.svg' %}" width="20" height="20" >
+        Meus Eventos
+      </div>
     </a>
     
-    <a class="nav-item" href="/">
-      <img src="{% static '/assets/icones_plaform/navegation_bar/avaliacao.svg' %}" width="20" height="20" >
-      Minhas Avalições
+    <a class="nav-item-plataforma" href="/">
+      <div>
+        <img src="{% static '/assets/icones_plaform/navegation_bar/avaliacao.svg' %}" width="20" height="20" >
+        Minhas Avalições
+      </div>
     </a>
     
-    <a class="nav-item" href="/">
-      <img src="{% static '/assets/icones_plaform/navegation_bar/config.svg' %}" width="20" height="20" >
-      Configurações
+    <a class="nav-item-plataforma" href="/">
+      <div>
+        <img src="{% static '/assets/icones_plaform/navegation_bar/config.svg' %}" width="20" height="20" >
+        Configurações
+      </div>
     </a>
   
   </div>
   
-  <div>
+  <div class="btn-criar-evento-nav">
     <p>Criar Evento</p>
   </div>
 
