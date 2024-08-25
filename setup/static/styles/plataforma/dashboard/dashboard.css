@@ -3,13 +3,12 @@
 .titulo-dashboard-index {
     display: flex;
     flex-direction: row;
-    width: 70%;
-    background-color: transparent;
-    margin-top: 5em;
-    margin-left: 21.8em;
-    margin-bottom: 2em;
     justify-content: space-between;
-    /* gap: 20em; */
+    background-color: transparent;
+    width: 68%;
+    position: fixed;
+    top: 18%;
+    right: 2em;
 }
 
 .titulo-dashboard-index h1 {
@@ -58,10 +57,12 @@
     align-items: center;
     justify-content: center;
     background-color: var(--fundo-campo);
-    width: 70%;
+    position: fixed;
+    width: 68%;
     height: 67%;
     border-radius: 20px;
-    margin-left: 21.8em;
+    top: 31%;
+    right: 2em;
 }
 
 .section-blocos-dashboard h2 {
