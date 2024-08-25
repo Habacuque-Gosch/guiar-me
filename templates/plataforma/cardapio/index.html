@@ -1,0 +1,64 @@
+{% extends 'plataforma/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="titulo-cardapio-index">
+
+    <h1>Meu Cardápio</h1>
+
+    <a class="div-editar-cardapio" href="/">
+        <p>Editar Cardápio</p>
+        <!-- <img src="{% static '/assets/icones_plaform/header/seta-export.svg' %}" alt=""> -->
+    </a>
+
+</div>
+
+<section class="section-blocos-dashboard">
+
+    <div class="div-container">
+
+        <div class="div-bloco-cardapio">
+
+            <div class="editar-cardapio">
+
+                <p>Em Breve</p>
+
+            </div>
+
+            <div class="editar-cardapio">
+
+                <p>Em Breve</p>
+
+            </div>
+
+        </div>
+
+        <div class="div-web-view-cardapio">
+            <img src="{% static 'assets/icones_plaform/cardapio/web-view.svg' %}" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+{% include 'plataforma/partials/_header.html' %}
+
+{% include 'plataforma/partials/_navegation.html' %}
+
+<script src="{% static '/js/redirect_and_color.js' %}"></script>
+<script>
+  redirect_and_color('cardapio')
+</script>
+
+{% if request.method == 'GET' %}
+
+    <style>
+        html, main, body {
+            height: 100%;
+        }
+    </style>
+
+{% endif %}
+
+{% endblock %}

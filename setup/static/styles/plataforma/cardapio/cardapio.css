@@ -1,0 +1,87 @@
+
+
+.titulo-cardapio-index {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+    width: 68%;
+    position: fixed;
+    top: 19.8%;
+    right: 2em;
+}
+
+.titulo-cardapio-index h1 {
+    font-weight: bold;
+    font-size: 45px;
+    color: #ffff;
+}
+
+.div-editar-cardapio {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--destaque);
+    gap: 1em;
+    padding: 1em;
+    border-radius: 20px;
+}
+
+.div-editar-cardapio p {
+    font-weight: bold;
+    font-size: 1em;
+    color: #ffff;
+}
+
+.div-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    /* gap: 3.5%; */
+}
+
+.div-bloco-cardapio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 77.5%;
+    gap: 3.5%;
+}
+
+.div-bloco-cardapio p{
+    font-weight: bold;
+    font-size: 3em;
+    color: #ffff;
+}
+
+.editar-cardapio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--destaque);
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.div-web-view-cardapio {
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    height: 100%;
+    width: 21%;
+    /* background-color: #ffff; */
+}
+
+.div-web-view-cardapio img {
+    width: 100%;
+    height: 100%;
+}
