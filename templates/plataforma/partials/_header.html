@@ -16,9 +16,13 @@
         <a href="" class="nav-item-header">
             <img src="{% static 'assets/icones_plaform/header/filter.svg'  %}" alt="">
         </a>
-
+        
         <a href="" class="nav-item-header">
-            <img src="{% static 'assets/icones_plaform/header/filter.svg'  %}" alt="">
+            {% if resumo_business.foto.url == None %}
+                <img class="image-user-business" src="{% static 'assets/icones_cadastro/profile_default.svg'  %}" alt="image user">
+            {% else %}
+                <img class="image-user-business" src="{{ resumo_business.foto.url }}" alt="image user">
+            {% endif %}
         </a>
 
     </div>
