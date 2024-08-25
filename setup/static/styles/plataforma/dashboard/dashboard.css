@@ -18,6 +18,17 @@
     color: #ffff;
 }
 
+.div-filtrar-data {
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: center;
+    background-color: var(--fundo-campo);
+    width: 300px;
+    border-radius: 20px;
+    margin-left: 15em;
+}
+
 .div-exportar-dashboard {
     display: flex;
     flex-direction: row;
