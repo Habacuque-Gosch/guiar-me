@@ -116,15 +116,15 @@ def my_events(request):
     return render(request, 'plataforma/eventos/index.html')
 
 
-# @login_required(login_url='login-plataforma')
-# # @cache_page(60 * 2)
-# def menu(request):
-#     ''' função responsável por entregar os objetos do banco de dados: Estabelecimento '''
+@login_required(login_url='login')
+# @cache_page(60 * 2)
+def my_reviews(request):
+    ''' função responsável por entregar os objetos do banco de dados: Estabelecimento '''
     
-#     # estabelecimentos = Estabelecimento.objects.order_by("data_publicada").reverse().filter(publicada=True)
+    # estabelecimentos = Estabelecimento.objects.order_by("data_publicada").reverse().filter(publicada=True)
 
-#     # return render(request, 'estabelecimentos/index.html', {'estabelecimentos': estabelecimentos})
-#     return render(request, 'plataforma/cardapio/index.html')
+    # return render(request, 'estabelecimentos/index.html', {'estabelecimentos': estabelecimentos})
+    return render(request, 'plataforma/avaliacoes/index.html')
 
 
 # @login_required(login_url='login-plataforma')
