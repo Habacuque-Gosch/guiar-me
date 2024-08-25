@@ -3,13 +3,30 @@
 {% block content %}
 
 
-<!-- <p>teste dashboards</p> -->
 
-<div>
-    <img src="{% static '/assets/icones_plaform/breve.png' %}" alt="" width="950px" height="450px" style="margin-top: 7.5em; margin-left: 22em;">
+<div class="titulo-dashboard-index">
+
+    <h1>Dashboard</h1>
+
+    <a class="div-exportar-dashboard" href="/">
+        <p>Exportar</p>
+        <img src="{% static '/assets/icones_plaform/header/seta-export.svg' %}" alt="">
+    </a>
+
 </div>
 
+<section class="section-blocos-dashboard">
+    <h2>Em Breve...</h2>
+    <!-- <img src="{% static '/assets/icones_plaform/breve.png' %}" alt="" > -->
+</section>
+{% include 'plataforma/partials/_header.html' %}
+
 {% include 'plataforma/partials/_navegation.html' %}
+
+<script src="{% static '/js/redirect_and_color.js' %}"></script>
+<script>
+  redirect_and_color('dashboard')
+</script>
 
 {% if request.method == 'GET' %}
 
@@ -20,10 +37,5 @@
     </style>
 
 {% endif %}
-
-<script src="{% static '/js/redirect_and_color.js' %}"></script>
-<script>
-  redirect_and_color('dashboard')
-</script>
 
 {% endblock %}
