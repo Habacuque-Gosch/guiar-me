@@ -96,12 +96,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #ffff;
-        color: var(--destaque);
+        background-color: var(--destaque);
+        color: #ffff;
         height: 60px;
         width: 90%;
         padding: 6px;
-        border: 1px solid #ffff;
+        border: 1px solid var(--destaque);
         border-radius: 20px;
         font-size: 20px;
         text-decoration: none;
@@ -109,9 +109,9 @@
     }
 
     .btn-entrar:hover {
-        background-color: var(--destaque);
-        color: #ffff;
-        border: 1px solid var(--destaque);
+        background-color: #ffff;
+        color: var(--destaque);
+        border: 1px solid #ffff;
     }
 }
 
