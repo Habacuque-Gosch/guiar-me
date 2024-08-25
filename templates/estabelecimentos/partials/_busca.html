@@ -1,16 +1,59 @@
 {% load static %}
 
+<script>
+
+    function exibir_filtro() {
+
+        var id_filtro = document.getElementById("filtro_id_mobile")
+
+        id_filtro.style.display = "flex"
+
+    }
+
+    function fechar_filtro() {
+
+    var id_filtro = document.getElementById("filtro_id_mobile")
+
+    id_filtro.style.display = "none"
+
+    }
+
+</script>
+
 <div class="div-busca">
     
     <form class="form-de-busca" action="{% url 'buscar' %}">
 
         <input class="input-busca" type="text" name="buscar" id="buscar" placeholder="Pesquisar">
-        
-        <button class="btn-filtro">
+
+        <button class="btn-filtro" type="button" onclick="exibir_filtro()">
             <img class="img-btn-filtro" src="{% static '/assets/partials/busca/filtro.svg' %}" alt="ícone de filtro">
         </button>
 
     </form>
+
+    <div id="filtro_id_mobile" class="div-filtro-mobile">
+
+        <div class="distancia-filtro-mobile">
+
+            <p>Distância</p>
+
+        </div>
+
+        <div class="distancia-filtro-mobile">
+
+            <p>Preços</p>
+
+        </div>
+
+        <div class="btns-filtro-mobile">
+
+            <a href="/" class="btn-entrar">Aplicar Filtros</a>
+            <a onclick="fechar_filtro()" class="btn-entrar" style="background-color: #fff; color: var(--destaque);">Fechar</a>
+
+        </div>
+
+    </div>
 
     <div class="caixa-tags">
 
