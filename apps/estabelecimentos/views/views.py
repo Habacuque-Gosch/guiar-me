@@ -97,7 +97,11 @@ def dashboard(request):
     
     resumo_user = Resumo.objects.get(usuario_id=request.user.id)
 
-    return render(request, 'plataforma/dashboard/index.html', {'resumo_business':resumo_user})
+    estabelecimento = Estabelecimento.objects.get(usuario_business_id=request.user.id)
+
+    print(estabelecimento)
+
+    return render(request, 'plataforma/dashboard/index.html', {'resumo_business':resumo_user,'estabelecimento_business': estabelecimento})
 
 @login_required(login_url='login')
 # @cache_page(60 * 2)

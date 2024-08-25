@@ -40,13 +40,13 @@ class Estabelecimento(models.Model):
     publicada = models.BooleanField(default=True)
     data_publicada = models.DateTimeField(default=datetime.now, blank=False)
     foto = models.ImageField(upload_to="fotos/%Y/%m/%d/", blank=True)
-    # usuario = models.ForeignKey(
-    #     to=User,
-    #     on_delete=models.SET_NULL,
-    #     null=True,
-    #     blank=False,
-    #     related_name="user",
-    # )
+    usuario_business = models.ForeignKey(
+        to=User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=False,
+        related_name="user_business",
+    )
 
     def __str__(self):
         return self.nome
