@@ -28,7 +28,7 @@ def index(request):
 
 @cache_page(60 * 2)
 def estabelecimento(request, estabelecimento_id):
-    ''' função responsavél por entregar os dados de um determinado estabelecimendo filtradao por id do banco de dados: Estabelecimento'''
+    ''' função responsavél por entregar os dados de um determinado estabelecimendo filtrado por id do banco de dados: Estabelecimento'''
 
     user = request.user
 

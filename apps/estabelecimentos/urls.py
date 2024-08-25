@@ -7,6 +7,7 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('index/', index, name = 'index'),
     path('buscar/', buscar, name = "buscar"),
+    # path('filtrar/<str:estabelecimento_nome>/', filtrar, name = "filtrar"),
     path('estabelecimento/<int:estabelecimento_id>/', estabelecimento, name= "estabelecimento"),
     path('map/<int:estabelecimento_id>/', maps_estabelecimentos, name="map"),
 
