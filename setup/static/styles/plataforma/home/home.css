@@ -1,98 +1,99 @@
 
-@media (max-width: 1440px) {
-    .main-home-plataforma {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: transparent;
-        background-position: center center;
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 100%;
-    }
+/* @media (max-width: 1440px) { */
 
-    .components-home-plataforma {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        background-color: transparent;
-        width: 100%;
-        height: 100%;
-    }
-
-    .section-home-plataforma {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: transparent;
-        width: 80%;
-        height: 80%;
-    }
-
-    .logo-e-contexto-plataforma {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        /* height: 30%;  */
-        gap: 8px;
-        margin-bottom: 2.5em;
-    }
-    .logo-inicial-plataforma {
-        width: 140px;
-        height: 140px;
-        margin-bottom: 2em;
-    }
-
-    .contexto-home-plataforma {
-        font-size: 16px;
-        color: var(--texto_70);
-    }
-    .logo-texto-plataforma {
-        width: 15%;
-    }
-
-    .botoes-login-ou-cadastro-plataforma {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 1.5em;
-        width: 50%;
-        height: 50%;
-    }
-    .botao-criar-conta-plataforma {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #ffff;
-        color: #1855AB;
-        height: 60px;
-        width: 70%;
-        border: none;
-        border-radius: 20px;
-        font-size: 20px;
-        text-decoration: none;
-    }
-
-    .avisos-plataforma {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 8px;
-        margin-bottom: 2em;
-    }
-
-    .avisos-plataforma p {
-        text-align: center;
-        font-size: 14px;
-        color: var(--texto_miudo);
-        width: 60%;
-    }
-
-
+.main-home-plataforma {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    background-position: center center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
 }
+
+.components-home-plataforma {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+
+.section-home-plataforma {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    width: 80%;
+    height: 80%;
+}
+
+.logo-e-contexto-plataforma {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    /* height: 30%;  */
+    gap: 8px;
+    margin-bottom: 2.5em;
+}
+.logo-inicial-plataforma {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 2em;
+}
+
+.contexto-home-plataforma {
+    font-size: 16px;
+    color: var(--texto_70);
+}
+.logo-texto-plataforma {
+    width: 15%;
+}
+
+.botoes-login-ou-cadastro-plataforma {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5em;
+    width: 50%;
+    height: 50%;
+}
+.botao-criar-conta-plataforma {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffff;
+    color: #1855AB;
+    height: 60px;
+    width: 70%;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.avisos-plataforma {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 2em;
+}
+
+.avisos-plataforma p {
+    text-align: center;
+    font-size: 14px;
+    color: var(--texto_miudo);
+    width: 60%;
+}
+
+
+/* } */
