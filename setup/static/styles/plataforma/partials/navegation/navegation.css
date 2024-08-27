@@ -1,108 +1,110 @@
 
+@media (min-width: 960px) {
+        
+    .nav-navegation-bar-plataforma {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        position: fixed;
+        background-color: var(--fundo-campo);
+        height: 95%;
+        width: 25%;
+        border-radius: 25px;
+        top: 3%;
+        left: 2em;
+    }
 
-.nav-navegation-bar-plataforma {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    position: fixed;
-    background-color: var(--fundo-campo);
-    height: 95%;
-    width: 25%;
-    border-radius: 25px;
-    top: 3%;
-    left: 2em;
-}
+    .img-business-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        margin-top: 2em;
+    }
 
-.img-business-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    margin-top: 2em;
-}
+    .img-business-nav img {
+        width: 110px;
+        height: 110px;
+    }
 
-.img-business-nav img {
-    width: 110px;
-    height: 110px;
-}
+    .div-nav-bar-plataforma {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        overflow-y: visible;
+        gap: 1em;
+        flex-direction: column;
+        width: 100%;
+        height: 30%;
+        padding-top: 3.8em;
+        padding-bottom: 1px;
+        border-radius: 20px;
+        margin-bottom: 1em;
+        
+    }
+    .div-nav-bar-plataforma::-webkit-scrollbar {
+        background-color: var(--fundo-campo);
+        width: 10px;
+    }
+    .div-nav-bar-plataforma::-webkit-scrollbar-thumb {
+        background-color: var(--destaque);
+        height: 10px;
+        border-radius: 20px;
+    }
 
-.div-nav-bar-plataforma {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    overflow-y: visible;
-    gap: 1em;
-    flex-direction: column;
-    width: 100%;
-    height: 30%;
-    padding-top: 3.8em;
-    padding-bottom: 1px;
-    border-radius: 20px;
-    margin-bottom: 1em;
-    
-}
-.div-nav-bar-plataforma::-webkit-scrollbar {
-    background-color: var(--fundo-campo);
-    width: 10px;
-}
-.div-nav-bar-plataforma::-webkit-scrollbar-thumb {
-    background-color: var(--destaque);
-    height: 10px;
-    border-radius: 20px;
-}
+    .div-nav-bar-plataforma::-webkit-scrollbar-thumb {
+        height: 10px;
+    }
 
-.div-nav-bar-plataforma::-webkit-scrollbar-thumb {
-    height: 10px;
-}
+    .nav-item-plataforma {
+        display: flex;
+        align-items: left;
+        justify-content: left;
+        gap: 1em;
+        flex-direction: row;
+        background-color: var(--fundo-campo);
+        text-decoration: none;
+        width: 90%;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 20px;
+        transition: 100ms;
+    }
 
-.nav-item-plataforma {
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    gap: 1em;
-    flex-direction: row;
-    background-color: var(--fundo-campo);
-    text-decoration: none;
-    width: 90%;
-    border-radius: 20px;
-    color: #fff;
-    font-size: 20px;
-    transition: 100ms;
-}
+    .nav-item-plataforma:hover {
+        background-color: var(--destaque);
+    }
 
-.nav-item-plataforma:hover {
-    background-color: var(--destaque);
-}
+    .nav-item-plataforma div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        margin-left: 1em;
+        height: 60px;
+    }
 
-.nav-item-plataforma div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    margin-left: 1em;
-    height: 60px;
-}
+    .btn-criar-evento-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        flex-direction: column;
+        background-color: var(--destaque);
+        text-decoration: none;
+        width: 90%;
+        height: 18%;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 1em;
+    }
 
-.btn-criar-evento-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    flex-direction: column;
-    background-color: var(--destaque);
-    text-decoration: none;
-    width: 90%;
-    height: 18%;
-    border-radius: 20px;
-    color: #fff;
-    font-size: 20px;
-    margin-bottom: 1em;
-}
+    .btn-criar-evento-nav img {
+        position: fixed;
+        margin-top: -7.5%;
 
-.btn-criar-evento-nav img {
-    position: fixed;
-    margin-top: -7.5%;
-
+    }
 }

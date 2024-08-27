@@ -1,63 +1,63 @@
 
-/* @media (max-width: 1440px) { */
+@media (min-width: 960px) {
 
-.tela-cadastro-plataforma {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: transparent;
-    background-position: center center;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
+    .tela-cadastro-plataforma {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: transparent;
+        background-position: center center;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+
+    .titulo-cadastro-plataforma {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* width: 100%; */
+        /* margin-top: 1em; */
+    }
+
+    .section-cadastro-form-plataforma {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin-top: 2em;
+    }
+
+    .form-group-login-plataforma {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        /* height: 100%; */
+        text-align: left;
+    }
+
+    .section-cadastro-form-plataforma label {
+        display: none;
+    }
+
+    .div-alternativas-de-login-plataforma p {
+        font-size: 16px;
+        text-decoration: none;
+        color: var(--texto-no-card-plataforma);
+        width: 60%;
+
+    }
+
+    .show-pass-cadastro-plataforma {
+        margin-right: -23em; 
+        margin-top: -9.2em;
+    }
+
 }
-
-.titulo-cadastro-plataforma {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    /* width: 100%; */
-    /* margin-top: 1em; */
-}
-
-.section-cadastro-form-plataforma {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    margin-top: 2em;
-}
-
-.form-group-login-plataforma {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    /* height: 100%; */
-    text-align: left;
-}
-
-.section-cadastro-form-plataforma label {
-    display: none;
-}
-
-.div-alternativas-de-login-plataforma p {
-    font-size: 16px;
-    text-decoration: none;
-    color: var(--texto-no-card-plataforma);
-    width: 60%;
-
-}
-
-.show-pass-cadastro-plataforma {
-    margin-right: -23em; 
-    margin-top: -9.2em;
-}
-
-/* } */

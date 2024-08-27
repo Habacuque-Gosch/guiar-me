@@ -1,25 +1,25 @@
 
 
-/* @media (max-width: 1440px) { */
-.btn-google-plataforma{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffff;
-    color: #151A22;
-    height:45px;
-    width: 30%;
-    padding: 6px;
-    gap: 1.8em;
-    border: 1px solid #ffff;
-    border-radius: 20px;
-    font-size: 20px;
-    text-decoration: none;
-}
+@media (min-width: 960px) {
+    .btn-google-plataforma{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffff;
+        color: #151A22;
+        height:45px;
+        width: 30%;
+        padding: 6px;
+        gap: 1.8em;
+        border: 1px solid #ffff;
+        border-radius: 20px;
+        font-size: 20px;
+        text-decoration: none;
+    }
 
-.btn-google-plataforma img {
-    margin-left: -15%;
-    width: 25px;
-    height: 25px;
+    .btn-google-plataforma img {
+        margin-left: -15%;
+        width: 25px;
+        height: 25px;
+    }
 }
-/* } */

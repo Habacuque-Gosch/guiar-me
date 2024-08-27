@@ -1,5 +1,5 @@
 
-@media (max-width: 1880px) {
+@media (min-width: 960px) {
 
     .section-tela-plataforma {
         display: flex;
