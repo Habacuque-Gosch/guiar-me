@@ -4,6 +4,25 @@ from django.contrib.auth.models import User
 
 
 
+
+class Produto(models.Model):
+    nome = models.CharField(max_length=150, null=False, blank=False)
+    preco = models.FloatField(default=0.0, max_length=120, null=False, blank=False)
+    serve = models.IntegerField(null=True, blank=False)
+    imagem_produto = models.ImageField(upload_to="fotos/produtos/%Y/%m/%d/", blank=True)
+    disponivel = models.BooleanField(default=True)
+    usuario_business_prod = models.ForeignKey(
+        to=User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=False,
+        related_name="user_business_prod",
+    )
+
+    def __str__(self):
+        return self.nome
+
+
 class Estabelecimento(models.Model):
 
     OPCOES_CATEGORIAO = [
@@ -40,6 +59,7 @@ class Estabelecimento(models.Model):
     publicada = models.BooleanField(default=True)
     data_publicada = models.DateTimeField(default=datetime.now, blank=False)
     foto = models.ImageField(upload_to="fotos/%Y/%m/%d/", blank=True)
+    produtos = models.ManyToManyField(Produto, related_name='produtos_adicionados', blank=True, null=True)
     usuario_business = models.ForeignKey(
         to=User,
         on_delete=models.SET_NULL,
