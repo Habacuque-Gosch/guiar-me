@@ -19,7 +19,7 @@
             
             <div class="div-nome-e-avaliacao-card">
 
-                <p class="nome-estabelecimento-card">{{ estabelecimentos.nome }}</p>
+                <h1 class="nome-estabelecimento-card">{{ estabelecimentos.nome }}</h1>
 
                 <div class="div-avaliacao-card">
 
@@ -44,18 +44,40 @@
             
         </div>
 
-
         <section class="section-cardapio-e-avaliacoes">
 
             <div class="div-opcoes-cardapio-e-avaliacao">
 
                 <button href="" class="btn-opcao">Cardápio</button>
-                <button href="" class="btn-opcao">Avalições</button>
-            </div>
-
-            <div>
+                <button href="" class="btn-opcao" style="background-color: var(--fundo-campo); border: solid 1px var(--fundo-campo)">Avalições</button>
 
             </div>
+
+            <section class="section-produtos-estabelecimento-mobile">
+
+                <h2 class="titulo-produto-cardapio-mobile">Lanches</h2>
+
+                {% if produtos_adicionados %}   
+                {% for produtos in produtos_adicionados %}
+                
+                <article class="article-produto-estabelecimento-mobile">
+
+                    <div class="div-info-produto-cardapio-mobile">
+                        <h2>{{ produtos.nome }}</h2>
+                        <h3>Serve {{ produtos.serve }} pessoa</h3>
+                        <p>R$ {{ produtos.preco }}</p>
+                    </div>
+
+                    <div>
+                        <img src="{% static 'assets/burguer.png' %}" alt="" width="90px" height="64px">
+                    </div>
+
+                </article>
+
+                {% endfor %}
+                {% endif %}
+
+            </section>
 
         </section>  
 

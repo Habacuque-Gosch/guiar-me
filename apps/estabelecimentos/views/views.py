@@ -38,9 +38,13 @@ def estabelecimento(request, estabelecimento_id):
         # messages.error(request, "Preencha seu perfil")
         return redirect('novo_perfil')
     
+    estabelecimentos = get_object_or_404(Estabelecimento, pk=estabelecimento_id)
+
+    produtos_adicionados = estabelecimentos.produtos.all().filter(disponivel=True)
+    
     try:
         estabelecimentos = get_object_or_404(Estabelecimento, pk=estabelecimento_id)
-        return render(request, 'estabelecimentos/estabelecimento.html', {'estabelecimentos': estabelecimentos})
+        return render(request, 'estabelecimentos/estabelecimento.html', {'estabelecimentos': estabelecimentos, 'produtos_adicionados': produtos_adicionados})
 
     except:
         return render(request, 'estabelecimentos/estabelecimento.html')
