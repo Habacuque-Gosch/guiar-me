@@ -40,6 +40,9 @@ def estabelecimento(request, estabelecimento_id):
     
     estabelecimentos = get_object_or_404(Estabelecimento, pk=estabelecimento_id)
 
+    estabelecimentos.visualizacoes = + 1
+    estabelecimentos.save()
+
     produtos_adicionados = estabelecimentos.produtos.all().filter(disponivel=True)
     
     try:
