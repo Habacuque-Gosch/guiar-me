@@ -48,12 +48,12 @@
 
             <div class="div-opcoes-cardapio-e-avaliacao">
 
-                <button href="" class="btn-opcao">Cardápio</button>
-                <button href="" class="btn-opcao" style="background-color: var(--fundo-campo); border: solid 1px var(--fundo-campo)">Avalições</button>
+                <button type="button" class="btn-opcao-ativado-cardapio-mobile" onclick="show_produtos()" id="btn-cardapio-mobile">Cardápio</button>
+                <button type="button" class="btn-opcao-desativado-cardapio-mobile" onclick="show_reviews()" id="btn-reviews-mobile">Avalições</button>
 
             </div>
 
-            <section class="section-produtos-estabelecimento-mobile">
+            <section class="section-produtos-estabelecimento-mobile" id="hide-cardapio-mobile">
 
                 <h2 class="titulo-produto-cardapio-mobile">Lanches</h2>
 
@@ -76,6 +76,30 @@
 
                 {% endfor %}
                 {% endif %}
+
+            </section>
+
+            <section class="section-avaliacoes-estabelecimento-mobile" id="hide-reviews-mobile">
+
+                <div class="div-avalicoes-total-estabelecimento">
+
+                    <h1>{{ estabelecimentos.avaliacao }}</h1>
+                    <!-- <img src="" alt=""> -->
+                    <p>aaaaa</p>
+                    <p>130 avaliações no total</p>
+
+                </div>
+
+                <article class="article-avaliacao-estabelecimento-mobile">
+                    <div class="img-user-avaliacao-estabelecimento-mobile">
+                        <img src="{% static 'assets/icones_cadastro/profile_default.svg'  %}" alt="" width="48px" height="48px">
+                    </div>
+                    <div class="user-e-avaliacao-estabelecimento-mobile">
+                        <h2>{{ user }}</h2>
+                        <h3>teste</h3>
+                    </div>
+
+                </article>
 
             </section>
 
@@ -105,6 +129,8 @@
         detectar_mobile(link);
 
     </script>
+
+    <script src="{% static '/js/mobile/btn_cardapio_avaliacao_mobile.js' %}"></script>
 
 {% endif %}
 

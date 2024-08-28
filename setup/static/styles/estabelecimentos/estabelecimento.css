@@ -111,7 +111,7 @@
     margin-top: 2em;
 }
 
-.btn-opcao{
+.btn-opcao-ativado-cardapio-mobile {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,7 +123,6 @@
     border: 1px solid var(--destaque);
     border-radius: 15px;
     font-size: 16px;
-    text-decoration: none;
 }
 
 /* .btn-opcao:hover {
@@ -131,6 +130,20 @@
     color: #ffff;
     border: 1px solid var(--destaque);
 } */
+
+.btn-opcao-desativado-cardapio-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fundo-campo);
+    border: solid 1px var(--fundo-campo);
+    color: #ffff;
+    height: 48px;
+    width: 48%;
+    padding: 6px;
+    border-radius: 15px;
+    font-size: 16px;
+}
 
 .section-produtos-estabelecimento-mobile {
     display: flex;
@@ -175,25 +188,100 @@
     /* background-color: rgb(42, 177, 177); */
     margin-top: 2%;
 }
-
-
 .div-info-produto-cardapio-mobile h2{
     color: #ffff;
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 5px;
 }
-    
 .div-info-produto-cardapio-mobile h3{
     color: #ffff;
     font-size: 12px;
     font-weight: bold;
     margin-bottom: 10px;
 }
-    
 .div-info-produto-cardapio-mobile p{
     color: var(--destaque);
     font-size: 12px;
     font-weight: bold;
 
+}
+
+.section-avaliacoes-estabelecimento-mobile {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #ffff; */
+    margin-top: 1em;
+    flex-direction: column;
+    width: 85%;
+}
+
+.div-avalicoes-total-estabelecimento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.div-avalicoes-total-estabelecimento h1{
+    color: var(--destaque);
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.div-avalicoes-total-estabelecimento p {
+    color: #ffff;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.article-avaliacao-estabelecimento-mobile {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    /* background-color: #ffff; */
+    /* margin-top: 1em; */
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+    margin-top: 1em;
+    border-top-style: outset;
+    border-top-width: 1px;
+    border-top-color: var(--fundo-campo)
+}
+.img-user-avaliacao-estabelecimento-mobile {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 48px;
+    margin-top: 1em;
+
+}
+.user-e-avaliacao-estabelecimento-mobile {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    width: 90%;
+    color: #ffff;
+    margin-top: 1em;
+    height: 30px;
+}
+
+.user-e-avaliacao-estabelecimento-mobile h2 {
+    color: #ffff;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.user-e-avaliacao-estabelecimento-mobile h3 {
+    color: #ffff;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
