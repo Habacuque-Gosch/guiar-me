@@ -34,21 +34,29 @@
 
     <div id="filtro_id_mobile" class="div-filtro-mobile">
 
+        <form class="form-de-busca" action="{% url 'buscar' %}">
+
+            <input class="input-busca-filtro" type="text" name="buscar" id="buscar" placeholder="Pesquisar">
+    
+        </form>
+
         <div class="distancia-filtro-mobile">
 
             <p>Distância</p>
+            <input type="range"  min="0" max="200" value="10">
 
         </div>
 
         <div class="distancia-filtro-mobile">
 
             <p>Preços</p>
+            <input type="range" min="0" max="200" value="50">
 
         </div>
 
         <div class="btns-filtro-mobile">
 
-            <a href="/" class="btn-entrar">Aplicar Filtros</a>
+            <a href="{% url 'buscar' %}" class="btn-entrar">Aplicar Filtros</a>
             <a onclick="fechar_filtro()" class="btn-entrar" style="background-color: #fff; color: var(--destaque);">Fechar</a>
 
         </div>

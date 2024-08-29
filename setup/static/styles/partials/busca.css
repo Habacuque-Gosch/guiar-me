@@ -92,31 +92,54 @@
         position: fixed;
         background-color: var(--fundo-campo);
         width: 100%;
-        height: 70%;
+        height: 80%;
         border-radius: 20px;
         top: 0em;
         transition: 200ms;
         animation: fadeIn 1s ease-in-out;
+        /* padding-top: 2em; */
+
+    }
+
+    .input-busca-filtro {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 20px;
+        width: 90%;
+        height: 60px;
+        background-color: var(--fundo-card-inicial);
+        padding-left: 1.2em;
+        box-sizing: border-box;
+        font-weight: bold;
+        font-size: 20px ;
+        color: #ffff;
+        /* margin-top: 2em; */
     }
 
 
     .distancia-filtro-mobile {
         display: flex;
-        /* justify-content: center;
-        align-items: center; */
-        /* flex-direction: row; */
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         width: 100%;
-        margin-bottom: 3em;
+        /* margin-bottom: 3em; */
+        gap: 2em;
+        margin-top: 2em;
+    }
+
+    .distancia-filtro-mobile input {
+        width: 90%;
+        background-color: var(--destaque);
     }
 
     .distancia-filtro-mobile p {
         font-weight: bold;
         font-size: 20px ;
         color: #ffff;
-        text-align: left;
-        width: 100%;
-        padding-left: 1em;
-
+        width: 90%;
     }
 
     .btns-filtro-mobile {
@@ -126,6 +149,7 @@
         flex-direction: column;
         width: 100%;
         /* height: 20%; */
+        margin-top: 1em;
     }
     
 }
