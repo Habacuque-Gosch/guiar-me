@@ -1,22 +1,29 @@
 {% load static %}
-
 {% load cache %}
 {% cache 300 navegation_bar %}
-<nav class="navegation-bar">
 
-  <a class="nav-item" href="/" >
-    <img id="home" src="{% static '/assets/partials/navegation_bar/home.svg' %}" width="26" height="24">
-  </a>
-  
-  <a class="nav-item" href="{% url 'index_eventos' %}">
-    <img src="{% static '/assets/partials/navegation_bar/eventos.svg' %}" width="26" height="20">
-  </a>
 
-  <a class="nav-item" href="{% url 'configuracoes_user' %}">
-    <img src="{% static '/assets/partials/navegation_bar/profile.svg' %}" width="20" height="24" >
-  </a>
-  
-</nav>
+<div class="background-nav">
+
+  <nav class="navegation-bar">
+
+    <a class="nav-item" href="/" >
+      <img id="home" src="{% static '/assets/partials/navegation_bar/home.svg' %}" width="26" height="24">
+    </a>
+    
+    <a class="nav-item" href="{% url 'index_eventos' %}">
+      <img src="{% static '/assets/partials/navegation_bar/eventos.svg' %}" width="26" height="20">
+    </a>
+
+    <a class="nav-item" href="{% url 'configuracoes_user' %}">
+      <img src="{% static '/assets/partials/navegation_bar/profile.svg' %}" width="20" height="24" >
+    </a>
+    
+  </nav>
+
+</div>
+
+
 {% endcache %}
 
 <script>
