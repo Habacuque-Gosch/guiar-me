@@ -1,24 +1,5 @@
 {% load static %}
 
-<script>
-
-    function exibir_filtro() {
-
-        var id_filtro = document.getElementById("filtro_id_mobile")
-
-        id_filtro.style.display = "flex"
-
-    }
-
-    function fechar_filtro() {
-
-    var id_filtro = document.getElementById("filtro_id_mobile")
-
-    id_filtro.style.display = "none"
-
-    }
-
-</script>
 
 <div class="div-busca">
     
@@ -38,17 +19,18 @@
 
             <input class="input-busca-filtro" type="text" name="buscar" id="buscar" placeholder="Pesquisar">
     
-            <div class="distancia-filtro-mobile">
+            <div class="distancia-e-filtro-mobile">
 
-                <p>Distância</p>
-                <input type="range"  min="0" max="200" value="10">
+                <p>Distância <b class="destaque-distancia-filtro-mobile"><output id="value-distancia-filtro"></output>km</b></p>
+                <input type="range"  min="0" max="50" value="10" id="value-distancia-filtro-mobile">
+                <p>0km <b>50km</b></p>
 
             </div>
 
-            <div class="distancia-filtro-mobile">
+            <div class="distancia-e-filtro-mobile">
 
-                <p>Preços</p>
-                <input type="range" min="0" max="200" value="50">
+                <p>Preços <b class="destaque-distancia-filtro-mobile">R$<output id="value-preco-filtro"></output></b></p>
+                <input type="range"  min="1" max="2000" value="50" id="value-preco-filtro-mobile">
 
             </div>
 
@@ -81,3 +63,5 @@
     </div>
 
 </div> 
+
+<script src="{% static '/js/mobile/filtro_estabelecimento.js' %}"></script>

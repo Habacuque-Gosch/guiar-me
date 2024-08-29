@@ -97,8 +97,6 @@
         top: 0em;
         transition: 200ms;
         animation: fadeIn 1s ease-in-out;
-        /* padding-top: 2em; */
-
     }
 
     .form-fitro-estabelecimento {
@@ -123,11 +121,9 @@
         font-weight: bold;
         font-size: 20px ;
         color: #ffff;
-        /* margin-top: 2em; */
     }
 
-
-    .distancia-filtro-mobile {
+    .distancia-e-filtro-mobile {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -138,16 +134,26 @@
         margin-top: 2em;
     }
 
-    .distancia-filtro-mobile input {
+    .distancia-e-filtro-mobile input {
         width: 90%;
         background-color: var(--destaque);
     }
 
-    .distancia-filtro-mobile p {
+    .distancia-e-filtro-mobile p {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
         font-weight: bold;
-        font-size: 20px ;
+        font-size: 20px;
         color: #ffff;
         width: 90%;
+    }
+
+    .destaque-distancia-filtro-mobile {
+        font-size: 1em;
+        color: var(--destaque);
+
     }
 
     .div-btns-filtro-mobile {
