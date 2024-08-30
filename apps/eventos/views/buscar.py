@@ -1,13 +1,14 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from apps.eventos.models import Evento
-from django.contrib import messages
+# from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 
 
+
+@login_required(login_url='login')
 def buscar_eventos(request):
-    # if not request.user.is_authenticated:
-    #     messages.error(request, "Usuário não logado")
-    #     return redirect('login')
+    ''' Função responsável por buscar eventos na tabela dos Eventos '''
     
     eventos = Evento.objects.order_by("data_publicada").filter(publicada=True)
 
