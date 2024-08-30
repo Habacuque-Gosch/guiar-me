@@ -2,11 +2,11 @@
 {% load static %}
 {% block content %}
 
-{% if request.method == 'POST' %}
+{% if request.method == 'GET' %}
 
     <style>
         .div-btn-back {
-            display: none;
+            display: none;  
         }
     </style>
 
@@ -21,7 +21,7 @@
 </div>
 
 <div class="div-contexto-de-agradecimento-inicial">
-    <p class="contexto-de-agradecimento-inicial">Obrigado {{ resumo.nome }} por falar mais de você!</p>
+    <p class="contexto-de-agradecimento-inicial">{{ resumo.nome }} agora precisamos conhecer mais você!</p>
     <p class="contexto-de-agradecimento-inicial-menor">Sinta-se à vontade para personalizar suas preferências a qualquer momento.</p>
 </div>
 
