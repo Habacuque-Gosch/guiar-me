@@ -1,0 +1,61 @@
+{% extends 'usuarios/partials/base_formularios.html' %}
+{% load static %}
+{% block content %}
+
+{% if request.method == 'GET' %}
+
+<style>
+
+    .btn-back, .upload-img, #sexo, #btn-entrar, #btn-hide, .campo-user {
+        display: none;
+    }   
+
+    .div-botao-login a {
+        width: 85%;
+    }
+
+</style>
+
+{% endif %}
+ 
+<div class="div-user-image-splash" style="margin-top: 0em;">
+    {% if resumo.foto.url != '' %}
+        <img src="{{ resumo.foto.url }}" alt="" width="100px" height="100px">
+    {% else %}
+        <img src="{% static '/assets/icones_cadastro/profile_default.svg' %}" alt="" width="100px" height="100px">
+    {% endif %}
+</div>
+
+<div class="div-contexto-de-agradecimento-inicial">
+    <p class="contexto-de-agradecimento-inicial" style="width: 90%;">{{ resumo.nome }}, o que você gosta de comer?</p>
+</div>
+
+<form class="section-login-form" action="{% url 'novo_filtro' %}" method="post" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+    <div class="form-profile-campos">
+
+        {% for field in form.visible_fields %}
+
+            <label class="form-label" for="{{ field.id_for_label }}">{{field.label}}</label>
+            {{ field }}
+
+        {% for error in field.errors %}
+
+        <div class="alert alert-danger">
+            {{ error }}
+        </div>
+        {% endfor %}
+        {% endfor %}
+
+    </div>
+
+    <div class="div-botao-login" style="margin-top: 1em;">
+        <button type="submit" class="btn-entrar">Concluir cadastro</button>
+    </div>     
+
+</form>
+   
+
+{% endblock %}

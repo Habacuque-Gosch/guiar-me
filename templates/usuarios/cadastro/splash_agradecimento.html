@@ -2,11 +2,15 @@
 {% load static %}
 {% block content %}
 
-{% if request.method == 'GET' %}
+{% if request.method == 'POST' %}
 
     <style>
         .div-btn-back {
             display: none;  
+        }
+
+        .div-botao-login a {
+            width: 85%;
         }
     </style>
 
@@ -26,7 +30,7 @@
 </div>
 
 <div class="div-botao-login" style="margin-top: 1em;">
-    <a class="btn-entrar" href="{% url 'index' %}">Continuar</a>
+    <a class="btn-entrar" href="{% url 'novo_filtro' %}">Continuar</a>
 </div>        
 
 {% endblock %}

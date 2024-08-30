@@ -33,6 +33,30 @@ def novo_perfil(request):
 
     return render(request, 'usuarios/cadastro/criando_perfil.html', {'form': form})
 
+
+@login_required(login_url='login')
+def novo_filtro(request):
+    ''' função responsável por exibir a página de criação de filtro personalizado para o usuário '''
+    current_user = request.user
+
+    resumo = Resumo.objects.get(usuario=current_user)
+    form = ResumoForms(instance=resumo)
+
+    if request.method == 'POST':
+
+        form = ResumoForms(request.POST, request.FILES, instance=resumo)
+
+        if form.is_valid():
+            form.save()
+            # messages.success(request, "salvo com sucesso")
+            return redirect('index')
+
+        else:
+            return redirect('novo_filtro')
+
+    return render(request, 'usuarios/cadastro/make_filter.html', {'form': form, 'resumo':resumo})
+
+
 @login_required(login_url='login')
 def splash_home(request, foto_user_id):
     ''' Função responsável por exibir um splash de bem vindo a o usuário '''
@@ -60,7 +84,7 @@ def config_user(request):
 
 @login_required(login_url='login')
 def editar_perfil(request, resumo_id):
-    ''' função responsável por renderizar a página de usuário '''
+    ''' função responsável por renderizar a página de editar o perfil de usuário '''
 
     user = request.user
     
