@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.models import User
-from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from apps.resumo.forms import ResumoForms
 from apps.resumo.models import Resumo
-from apps.estabelecimentos.models import Estabelecimento
+from apps.estabelecimentos.models import Estabelecimento 
+# from django.contrib.auth.models import User
+# from django.contrib import auth, messages
 
 
 
@@ -33,13 +33,16 @@ def novo_perfil(request):
 
     return render(request, 'usuarios/cadastro/criando_perfil.html', {'form': form})
 
+@login_required(login_url='login')
 def splash_home(request, foto_user_id):
-    ''' '''
+    ''' Função responsável por exibir um splash de bem vindo a o usuário '''
+    # Por mim nem deveria ter essa página kkkkk mas enfim
 
     resumo = Resumo.objects.get(id=foto_user_id)
 
     return render(request, 'usuarios/cadastro/splash_agradecimento.html', {'resumo': resumo})
 
+@login_required(login_url='login')
 def config_user(request):
     ''' função responsável por renderizar a página de usuário '''
 
@@ -73,7 +76,6 @@ def editar_perfil(request, resumo_id):
 
     return render(request, 'usuarios/configuracoes/editar_resumo.html', {"form": form, "resumo_id": resumo_id, "resumo":resumo})
 
-
 @login_required(login_url='login')
 def favoritos(request):
     '''  '''
@@ -101,7 +103,6 @@ def favoritar_estabelecimento(request, estabelecimento_id):
     resumo.save()
 
     return redirect('favoritos')
-
 
 @login_required(login_url='login')
 def desfavoritar_estabelecimento(request, estabelecimento_id):
