@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from apps.eventos.models import Evento
-# from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 
