@@ -4,21 +4,21 @@
 
 {% if request.method == 'GET' %}
 
-<style>
+    <style>
 
-    .btn-back, .upload-img, #sexo, #btn-entrar, #btn-hide, .campo-user {
-        display: none;
-    }   
+        .btn-back, .upload-img, #sexo, #btn-entrar, #btn-hide, .campo-user {
+            display: none;
+        }   
 
-    .div-botao-login a {
-        width: 85%;
-    }
+        .div-botao-login button {
+            width: 85%;
+        }
 
-</style>
+    </style>
 
 {% endif %}
  
-<div class="div-user-image-splash" style="margin-top: 0em;">
+<div class="div-user-image-splash">
     {% if resumo.foto.url != '' %}
         <img src="{{ resumo.foto.url }}" alt="" width="100px" height="100px">
     {% else %}

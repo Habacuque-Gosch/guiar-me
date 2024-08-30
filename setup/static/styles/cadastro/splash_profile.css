@@ -15,7 +15,7 @@
     width: 40%;
     height: 150px;
     border-radius: 100%;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 .div-contexto-de-agradecimento-inicial {
@@ -44,4 +44,31 @@
     color: var(--texto_70);
     text-align: center;
     width: 95%;
+}
+
+.tags_filtro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fundo-campo);
+    color: #ffffff;
+    padding-left: 18px;
+    border: none;
+    outline: var(--destaque);
+    border-radius: 20px;
+    margin-bottom: 7px;
+    /* appearance: none; */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* background: url(../images/select-angle-down.png) no-repeat center; */
+    /* text-indent: 0px;
+    text-overflow: ''; */
+    height: 60px;
+    width: 85%;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.tags_filtro:focus {
+    outline: solid 2px var(--destaque);
 }
