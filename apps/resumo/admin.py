@@ -1,5 +1,5 @@
 from django.contrib import admin
-from apps.resumo.models import Resumo
+from apps.resumo.models import Resumo, TagsFilterUser
 
 
 
@@ -12,3 +12,4 @@ class ListandoResumo(admin.ModelAdmin):
     list_per_page = 20
 
 admin.site.register(Resumo, ListandoResumo)
+admin.site.register(TagsFilterUser)
