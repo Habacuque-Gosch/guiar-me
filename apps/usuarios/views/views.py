@@ -1,8 +1,10 @@
-from django.shortcuts import render, redirect, get_list_or_404
+from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import auth, messages
-from django.contrib.auth import update_session_auth_hash, login, authenticate
+from django.contrib.auth.decorators import login_required
 from apps.usuarios.forms import LoginForms, CadastroForms, ChangePassForms
+# from django.contrib.auth import update_session_auth_hash, login, authenticate
+
 
 
 
@@ -185,6 +187,7 @@ def logout(request):
     auth.logout(request)
     return redirect('/')
 
+@login_required(login_url='login')
 def trocar_senha(request):
     ''' Realiza a troca de senha do usuario no sistema '''
 
