@@ -97,14 +97,17 @@ DATABASES = {
 #     }
 # }
 
-# SESSIONS_ENGINE='django.contrib.sessions.backends.cache'
+
+REDIS_URI = str(os.getenv('URI_REDIS'))
+PORT_REDIS = str(os.getenv('PORT_REDIS'))
+
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "default"
 
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://default:VG6f2mi3n9OeS0lgk22kvm4daZDvoVUo@redis-17205.c240.us-east-1-3.ec2.redns.redis-cloud.com:17205",
+        "LOCATION": f"redis://default:{REDIS_URI}@redis-{PORT_REDIS}.c240.us-east-1-3.ec2.redns.redis-cloud.com:{PORT_REDIS}",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
@@ -132,7 +135,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-# https://docs.djangoproject.com/en/5.0/topics/i18n/
 
 LANGUAGE_CODE = 'pt-br'
 
@@ -143,8 +145,7 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.0/howto/static-files/
+# STATIC FILES (CSS, JavaScript, Images)
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / "staticfiles"
@@ -160,7 +161,7 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
-# Media
+# MEDIA_PATH
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
