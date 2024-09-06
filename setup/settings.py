@@ -98,8 +98,8 @@ DATABASES = {
 # }
 
 
-REDIS_URI = str(os.getenv('URI_REDIS'))
-PORT_REDIS = str(os.getenv('PORT_REDIS'))
+# REDIS_URI = str(os.getenv('URI_REDIS'))
+# PORT_REDIS = str(os.getenv('PORT_REDIS'))
 
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "default"
@@ -107,7 +107,7 @@ SESSION_CACHE_ALIAS = "default"
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": f"redis://default:{REDIS_URI}@redis-{PORT_REDIS}.c240.us-east-1-3.ec2.redns.redis-cloud.com:{PORT_REDIS}",
+        "LOCATION": f"redis://default:VG6f2mi3n9OeS0lgk22kvm4daZDvoVUo@redis-17205.c240.us-east-1-3.ec2.redns.redis-cloud.com:17205",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
