@@ -16,13 +16,13 @@ GuiarMe é uma plataforma do qual estou desenvolvendo o Back-end e Front-end par
 
 :heavy_check_mark: `Funcionalidade 2:`  Login no Aplicativo/Plataforma
 
-:heavy_check_mark: `Funcionalidade 3:` Buscar por Estabelecimntos e Eventos
+:heavy_check_mark: `Funcionalidade 3:` Buscar por Estabelecimentos e Eventos
 
 :heavy_check_mark: `Funcionalidade 4:` Filtrar por Distância e Preço
 
 :heavy_check_mark: `Funcionalidade 5:` Editar Perfil
 
-:heavy_check_mark: `Funcionalidade 5:` Trocar senha
+:heavy_check_mark: `Funcionalidade 5:` Trocar de senha
  
 <div align='center'>
     <h1>Aplicação<h1>
