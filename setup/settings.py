@@ -13,10 +13,13 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
-
+ALLOWED_HOSTS = [
+    'guiar-me-e98f4b3315b3.herokuapp.com',
+    'guiar-me.onrender.com/',
+    'haba.pythonanywhere.com'
+]
 
 # Application definition
 
