@@ -177,9 +177,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # sys.path.insert(0, os.path.join(PROJECT_ROOT, '../apps'))
 
 
-# menssagens
-from django.contrib.messages import constants as messages
-MESSAGE_TAGS = {
-    messages.ERROR: 'danger',
-    messages.SUCCESS: 'success',
-}
+# GPO and Security
+SECURE_HSTS_SECONDS = 32000000
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTOCOL", "https")
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
+CSP_DEFAULT_SRC = ("'self'", "https://polyfill.io")
+CSP_STYLE_SRC = ("'unsafe-inline'", "https:")
