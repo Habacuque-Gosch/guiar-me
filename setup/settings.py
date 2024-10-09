@@ -17,8 +17,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'guiar-me-e98f4b3315b3.herokuapp.com',
-    'guiar-me.onrender.com/',
-    'haba.pythonanywhere.com'
+    'guiar-me.onrender.com',
+    'guiar-me-haba.pythonanywhere.com',
+    'haba.pythonanywhere.com',
 ]
 
 # Application definition
@@ -158,8 +159,7 @@ STATICFILES_DIRS = [
 ]
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
