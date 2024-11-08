@@ -25,7 +25,31 @@
                 <p class="v-gasto-medio">R${{ estabelecimentos.preco_medio }}</p>
             </div>
 
-            <a href="{% url 'favoritar_estabelecimento' estabelecimentos.id %}" style="width: 50px; height: 50px;"><img src="{% static '/assets/icones_card/favoritar.svg' %}" alt=""></a>
+            <!-- <a href="{% url 'favoritar_estabelecimento' estabelecimentos.id %}" style="width: 50px; height: 50px;"><img src="{% static '/assets/icones_card/favoritar.svg' %}" alt=""></a> -->
+
+
+            <form id="favoritar-estabelecimento" method="GET" action="{% url 'favoritar_estabelecimento' estabelecimentos.id %}" style="background-color: transparent; color: transparent;">
+                {% csrf_token %}
+                <button style="width: 50px; height: 50px;"><img src="{% static '/assets/icones_card/favoritar.svg' %}" alt=""></button>
+            </form>
+
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+            <script>
+            
+                var url_form = "{% url 'favoritar_estabelecimento' estabelecimentos.id %}"
+                $(document).on('submit', '#favoritar-estabelecimento', function(){
+                $.ajax({ 
+                    type: $(this).attr('GET'), 
+                    url: this.action, 
+                    data: $(this).serialize(),
+                    context: this
+                    });
+                    return false;
+                });
+                
+            </script>
 
         </div>
 
@@ -71,13 +95,13 @@
 
 {% if request.method == 'GET' %}
 
-    <script src="{% static '/js/check.js' %}"></script>
+    <!-- <script src="{% static '/js/check.js' %}"></script> -->
 
     <script>
 
-        var link = "{% url 'home_plataforma' %}"
+        // var link = "{% url 'home_plataforma' %}"
 
-        detectar_mobile(link);
+        // detectar_mobile(link);
 
     </script>
 
