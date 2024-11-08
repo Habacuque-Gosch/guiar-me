@@ -13,9 +13,10 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
     'guiar-me-e98f4b3315b3.herokuapp.com',
     'guiar-me.onrender.com',
     'guiar-me-haba.pythonanywhere.com',
@@ -158,8 +159,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'setup/static')
 ]
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -178,10 +179,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # GPO and Security
-SECURE_HSTS_SECONDS = 32000000
-SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTOCOL", "https")
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
-CSP_DEFAULT_SRC = ("'self'", "https://polyfill.io")
-CSP_STYLE_SRC = ("'unsafe-inline'", "https:")
+# SECURE_HSTS_SECONDS = 32000000
+# SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTOCOL", "https")
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+# SECURE_SSL_REDIRECT = True
+# CSP_DEFAULT_SRC = ("'self'", "https://polyfill.io")
+# CSP_STYLE_SRC = ("'unsafe-inline'", "https:")
