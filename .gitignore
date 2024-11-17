@@ -1,6 +1,4 @@
 .vscode
 .env
-.key_guiarme
-.key_guiarme.pub
-db.sqlite3
+# db.sqlite3
 venv
