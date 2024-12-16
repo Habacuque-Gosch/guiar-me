@@ -13,6 +13,8 @@ ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
+DEBUG = True
+
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'guiar-me-e98f4b3315b3.herokuapp.com',
