@@ -39,12 +39,10 @@ INSTALLED_APPS = [
     'apps.eventos.apps.EventosConfig',
 ]
 
-INTERNAL_IPS = [
-    # ...
-    "127.0.0.1",
-    "https://guiar-me-e98f4b3315b3.herokuapp.com/",
-    # ...
-]
+# INTERNAL_IPS = [
+#     "127.0.0.1",
+#     "https://guiar-me-e98f4b3315b3.herokuapp.com/",
+# ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
