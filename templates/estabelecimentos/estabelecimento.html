@@ -120,16 +120,6 @@
 
 {% if request.method == 'GET' %}
 
-    <script src="{% static '/js/check.js' %}"></script>
-
-    <script>
-
-        var link = "{% url 'home_plataforma' %}"
-
-        detectar_mobile(link);
-
-    </script>
-
     <script src="{% static '/js/mobile/btn_cardapio_avaliacao_mobile.js' %}"></script>
 
 {% endif %}

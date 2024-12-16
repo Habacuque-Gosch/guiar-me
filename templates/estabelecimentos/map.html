@@ -6,18 +6,5 @@
     {{ map | safe }} 
   </div>
 
-{% if request.method == 'GET' %}
-
-  <script src="{% static '/js/check.js' %}"></script>
-
-  <script>
-
-    var link = "{% url 'home_plataforma' %}"
-
-    detectar_mobile(link);
-
-  </script>
-
-{% endif %}
 
 {% endblock %}
