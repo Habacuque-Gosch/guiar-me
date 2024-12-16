@@ -23,6 +23,7 @@ ALLOWED_HOSTS = [
     'haba.pythonanywhere.com',
 ]
 
+SITE_ID = 1
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,7 +38,22 @@ INSTALLED_APPS = [
     'apps.estabelecimentos.apps.EstabelecimentosConfig',
     'apps.resumo.apps.ResumoConfig',
     'apps.eventos.apps.EventosConfig',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
 ]
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': {
+            'profile',
+            'email'
+        },
+        'AUTH_PARAMS': {'access_type': 'online'}
+    }
+}
 
 # INTERNAL_IPS = [
 #     "127.0.0.1",
@@ -48,12 +64,14 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    # 'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # 'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'setup.urls'
@@ -171,17 +189,21 @@ MEDIA_URL = "/media/"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backend.AuthenticationBackend'
+)
 
-# PROJECT_ROOT = os.path.dirname(__file__)
-# sys.path.insert(0, os.path.join(PROJECT_ROOT, '../apps'))
+LOGIN_REDIRECT_URL = '/'
+lOGOUT_REDIRECT_URL = '/'
 
 
 # GPO and Security
-SECURE_HSTS_SECONDS = 32000000
-SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTOCOL", "https")
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
+# SECURE_HSTS_SECONDS = 32000000
+# SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTOCOL", "https")
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+# SECURE_SSL_REDIRECT = True
 # CSP_DEFAULT_SRC = ("'self'", "https://polyfill.io")
 # CSP_STYLE_SRC = ("'unsafe-inline'", "https:")
 X_FRAME_OPTIONS = 'SAMEORING'

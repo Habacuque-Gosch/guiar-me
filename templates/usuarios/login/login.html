@@ -1,10 +1,11 @@
 {% extends 'usuarios/partials/base_formularios.html' %}
 {% load static %}
+{% load socialaccount %}
 {% block content %}
 
 <div class="titulo-e-btn-google">
     <p class="titulo-login">Você por aqui?</p>
-    <a class="btn-google" href=""><img src="{% static '/assets/icones_login/google-icone.svg' %}" alt="">Continue google</a>
+    <a class="btn-google" href="{% url 'provider_login' 'google' %}?next=/"><img src="{% static '/assets/icones_login/google-icone.svg' %}" alt="">Continue google</a>
 </div>
 
 <div class="div-alternativa-de-login">
