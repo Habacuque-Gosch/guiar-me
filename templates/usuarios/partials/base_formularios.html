@@ -25,6 +25,16 @@
                 <div class="div-btn-back" id="div-btn-back">
                     <a href="javascript: voltar()" class="btn-back"><img src="{% static '/assets/icones_login/back-icone.svg' %}" alt=""></a>
                 </div>
+
+                <script src="{% static '/js/check.js' %}"></script>
+
+                <script>
+            
+                    var link = "{% url 'home_plataforma' %}"
+            
+                    detectar_mobile(link);
+            
+                </script>
     
                 {% block content%}{% endblock %}
     
