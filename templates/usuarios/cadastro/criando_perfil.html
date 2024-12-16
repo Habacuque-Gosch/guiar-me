@@ -30,11 +30,11 @@
 
     {% csrf_token %}
 
-    <div class="form-profile-campos">
+    <div class="form-group-campos">
 
         {% for field in form.visible_fields %}
 
-            <label class="form-label" for="{{ field.id_for_label }}">{{field.label}}</label>
+            <p class="form-label" for="{{ field.id_for_label }}">{{field.label}}</p>
             {{ field }}
 
         {% for error in field.errors %}
