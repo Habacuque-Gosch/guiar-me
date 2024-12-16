@@ -25,23 +25,23 @@ local_settings.py
 
 # Distribution / packaging
 .Python
-build/
+# build/
 develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
+# dist/
+# downloads/
+# eggs/
+# .eggs/
+# lib/
+# lib64/
+# parts/
+# sdist/
+# var/
+# wheels/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
+# MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -66,7 +66,7 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
-cover/
+# cover/
 
 # Translations
 *.mo
@@ -74,25 +74,25 @@ cover/
 # Django stuff:
 
 # Flask stuff:
-instance/
+# instance/
 .webassets-cache
 
 # Scrapy stuff:
 .scrapy
 
 # Sphinx documentation
-docs/_build/
+# docs/_build/
 
 # PyBuilder
 .pybuilder/
-target/
+# target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
 
 # IPython
-profile_default/
-ipython_config.py
+# profile_default/
+# ipython_config.py
 
 # pyenv
 #   For a library or package, you might want to ignore these files since the code is
@@ -148,7 +148,7 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
-/site
+# /site
 
 # mypy
 .mypy_cache/
