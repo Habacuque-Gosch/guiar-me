@@ -21,6 +21,7 @@
         width: 100%;
         height: 100%;
         margin-top: 2em;
+        text-align: left;
     }
     
     .titulo-e-btn-google {
@@ -38,7 +39,7 @@
         color: #ffff;
     }
     
-    .form-group-login {
+    /* .form-group-login {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -46,7 +47,7 @@
         width: 100%;
         height: 100%;
         text-align: left;
-    }
+    } */
 
     .show-pass-login {
         margin-right: -18em; 

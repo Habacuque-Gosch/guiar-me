@@ -18,11 +18,11 @@
 
     {% csrf_token %}
 
-    <div class="form-group-login">
+    <div class="form-group-campos">
 
         {% for field in form.visible_fields %}
     
-        <label class="form-label-login" for="{{ field.id_for_label }}">{{field.label}}</label>
+        <p for="{{ field.id_for_label }}">{{field.label}}</p>
         {{ field }}
     
         {% endfor %}

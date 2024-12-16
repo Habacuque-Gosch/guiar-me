@@ -10,7 +10,7 @@ class LoginForms(forms.Form):
         max_length=100,
         widget=forms.TextInput(
             attrs={
-                "class": "campo-user-login",
+                "class": "campo-user",
                 "placeholder" : "Entre com seu usuário"
             }
         )
@@ -21,7 +21,7 @@ class LoginForms(forms.Form):
         max_length=70,
         widget=forms.PasswordInput(
             attrs={
-                "class": "campo-user-login",
+                "class": "campo-user",
                 "placeholder" : "Digite sua senha",
                 "id":'input-senha'
             }
