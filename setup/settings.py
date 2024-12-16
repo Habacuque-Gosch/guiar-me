@@ -204,7 +204,6 @@ lOGOUT_REDIRECT_URL = '/'
 # GPO and Security
 # if ENVIRONMENT == 'production':
 # DEBUG = False
-SECRET_KEY = os.getenv('SECRET_KEY')
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 SECURE_BROWSER_XSS_FILTER = True
