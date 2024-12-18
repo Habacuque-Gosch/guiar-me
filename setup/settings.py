@@ -8,7 +8,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# ENVIRONMENT = 'production'
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-hg#-2l$&@yl_s+ky(s4pey_(4zjp*t29ldfad4j8h2b9bz2j7l'
@@ -57,7 +56,6 @@ SOCIALACCOUNT_PROVIDERS = {
 
 # INTERNAL_IPS = [
 #     "127.0.0.1",
-#     "https://guiar-me-e98f4b3315b3.herokuapp.com/",
 # ]
 
 MIDDLEWARE = [
@@ -105,6 +103,19 @@ DATABASES = {
     }
 }
 
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+SESSION_CACHE_ALIAS = "default"
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": f"redis://default:VG6f2mi3n9OeS0lgk22kvm4daZDvoVUo@redis-17205.c240.us-east-1-3.ec2.redns.redis-cloud.com:17205",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+
 # Postgress DB
 
 # DATABASES = {
@@ -121,21 +132,6 @@ DATABASES = {
 
 # REDIS_URI = str(os.getenv('URI_REDIS'))
 # PORT_REDIS = str(os.getenv('PORT_REDIS'))
-
-SESSION_ENGINE = "django.contrib.sessions.backends.cache"
-SESSION_CACHE_ALIAS = "default"
-
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": f"redis://default:VG6f2mi3n9OeS0lgk22kvm4daZDvoVUo@redis-17205.c240.us-east-1-3.ec2.redns.redis-cloud.com:17205",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        }
-    }
-}
-
-
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
@@ -188,6 +184,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# AUTH_USER_MODEL = 'authentication.CustomUser'
 
 AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`
