@@ -12,7 +12,7 @@ load_dotenv()
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
@@ -201,20 +201,20 @@ lOGOUT_REDIRECT_URL = '/'
 
 # GPO and Security
 
-ENVIRONMENT = os.getenv('ENVIRONMENT')
-if ENVIRONMENT == 'production':
-    print('############### PROD ###############')
-    # DEBUG = False
-    # SESSION_COOKIE_SECURE = True
-    # CSRF_COOKIE_SECURE = True
-    # SECURE_BROWSER_XSS_FILTER = True
-    # SECURE_CONTENT_TYPE_NOSNIFF = True
-    # SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-    # SECURE_HSTS_SECONDS = 31536000
-    # SECURE_REDIRECT_EXEMPT = []
-    # SECURE_SSL_REDIRECT = True
-    # SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTOCOL", "https")
-    # X_FRAME_OPTIONS = 'SAMEORING'
-    # CSP_DEFAULT_SRC = ("'self'", "https://polyfill.io")
-    # CSP_STYLE_SRC = ("'unsafe-inline'", "https:")
+# ENVIRONMENT = os.getenv('ENVIRONMENT')
+# if ENVIRONMENT == 'production':
+#     print('############### PROD ###############')
+# DEBUG = False
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_SECONDS = 31536000
+SECURE_REDIRECT_EXEMPT = []
+SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTOCOL", "https")
+X_FRAME_OPTIONS = 'SAMEORING'
+# CSP_DEFAULT_SRC = ("'self'", "https://polyfill.io")
+# CSP_STYLE_SRC = ("'unsafe-inline'", "https:")
 
