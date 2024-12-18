@@ -59,7 +59,7 @@ class Estabelecimento(models.Model):
     publicada = models.BooleanField(default=True)
     data_publicada = models.DateTimeField(default=datetime.now, blank=False)
     foto = models.ImageField(upload_to="fotos/%Y/%m/%d/", blank=True)
-    produtos = models.ManyToManyField(Produto, related_name='produtos_adicionados', blank=True, null=True)
+    produtos = models.ManyToManyField(Produto, related_name='produtos_adicionados', blank=True)
     visualizacoes = models.IntegerField(default=0.0,null=True, blank=True)
     usuario_business = models.ForeignKey(
         to=User,

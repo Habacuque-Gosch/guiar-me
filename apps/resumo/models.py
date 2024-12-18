@@ -26,8 +26,8 @@ class Resumo(models.Model):
     idade = models.CharField(max_length=2, null=False, blank=False)
     orientacao_sexual = models.CharField(max_length=100, choices=orientacao_sexual, default='')
     foto = models.ImageField(upload_to="fotos/%Y/%m/%d/", blank=True)
-    estabelecimentos_fav = models.ManyToManyField(Estabelecimento, related_name='estabelecimentos_favoritos', blank=True, null=True)
-    tags_filtro = models.ManyToManyField(TagsFilterUser, related_name='tags_user', blank=True, null=True)
+    estabelecimentos_fav = models.ManyToManyField(Estabelecimento, related_name='estabelecimentos_favoritos', blank=True)
+    tags_filtro = models.ManyToManyField(TagsFilterUser, related_name='tags_user', blank=True)
     usuario = models.ForeignKey(
         to=User,
         on_delete=models.SET_NULL,
