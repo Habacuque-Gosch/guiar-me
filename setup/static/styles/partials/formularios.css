@@ -51,15 +51,6 @@
         width: 85%;
     }
 
-    /* .section-login-form p {
-        font-size: 16px;
-        font-weight: bold;
-        text-decoration: none;
-        color: var(--texto-no-card);
-        margin-bottom: 10px;
-        text-align: left;
-    } */
-
     .campo-user-login {
         display: flex;
         justify-content: center;
