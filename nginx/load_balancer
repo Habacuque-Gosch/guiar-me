@@ -5,3 +5,8 @@
 
     client_max_body_size 4G;
 	keepalive_timeout 5;
+
+    # SERVER {}
+    # listen 443 http2;
+	# listen [::]:443 http2;
+	# server_name _;
