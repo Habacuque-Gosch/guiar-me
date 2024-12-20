@@ -14,13 +14,15 @@ SECRET_KEY = 'django-insecure-sadksakdoplsa;321321fdfds///////////dpsa;p******'
 
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'guiar-me-e98f4b3315b3.herokuapp.com',
-    'guiar-me.onrender.com',
-    'guiar-me-haba.pythonanywhere.com',
-    'haba.pythonanywhere.com',
-]
+# ALLOWED_HOSTS = [
+#     '127.0.0.1',
+#     'guiar-me-e98f4b3315b3.herokuapp.com',
+#     'guiar-me.onrender.com',
+#     'guiar-me-haba.pythonanywhere.com',
+#     'haba.pythonanywhere.com',
+# ]
+
+ALLOWED_HOSTS = ['*']
 
 SITE_ID = 2
 # Application definition
