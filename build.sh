@@ -18,7 +18,7 @@ cd "/home/ubuntu/guiar-me"
 # Convert static asset files
 
 # MAKE ALL .SH FILES
-chmod +x scripts/*.sh
+sudo chmod +x scripts/*.sh
 
 # EXECUTE SCRIPTS, PYTHON DEPENDENCIES, GUNICORN, NGINX AND START APP
 
