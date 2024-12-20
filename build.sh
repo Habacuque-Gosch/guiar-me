@@ -5,7 +5,7 @@
 set -e
 
 # URL REPOSITORY
-GIT_REPO_URL = "https://habacuque-gosch@github.com/habacuque-gosch/guiar-me.git" 
+# GIT_REPO_URL = "https://habacuque-gosch@github.com/habacuque-gosch/guiar-me.git" 
 
 # YOUR ACTUAL DIRNAME PROJECT
 PROJECT_MAIN_DIR_NAME = "guiar-me"
