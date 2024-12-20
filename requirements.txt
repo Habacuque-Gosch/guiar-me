@@ -3,6 +3,12 @@ asgiref==3.7.2
 asttokens==2.4.0
 Deprecated==1.2.14
 Django==5.0
+hiredis==2.3.2
+django-redis==5.4.0
+geographiclib==2.0
+pycep-correios==4.0.3
+folium==0.14.0
+geopy==2.4.0
 packaging==23.2
 Pillow==10.1.0
 sqlparse==0.4.4
@@ -35,7 +41,7 @@ urllib3==2.0.7
 Werkzeug==3.0.1
 wrapt==1.15.0
 zeep==4.2.1
-cryptography==1.7.1
+cryptography==44.0.0
 PyJWT==2.10.1
 django-allauth==65.0.2
 django-allauth==65.1.0
