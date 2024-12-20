@@ -1,0 +1,16 @@
+[Unit]
+Description=gunicorn deamon
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/guiar-me
+ExecStart=/home/ubuntu/guiar-me/venv/bin/gunicorn \
+            --acess-logfile - \
+            --workers 3 \
+            --bind unix:/run/gunicorn.sock \
+            setup.wsgi:application
+[Install]
+WantedBy=multi-user.target
