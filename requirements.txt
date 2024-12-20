@@ -10,7 +10,7 @@ pyinstaller-hooks-contrib==2024.4
 pymemcache==4.0.0
 requests==2.31.0
 gunicorn==22.0.0
-cryptography==1.17.1
+cryptography==1.7.1
 PyJWT==2.10.1
 django-allauth==4.2.16
 python-dotenv==1.0.1
