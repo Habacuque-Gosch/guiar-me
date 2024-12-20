@@ -1,0 +1,7 @@
+# upstream django {
+# 	server app_1_ip;
+# 	server app_2_ip;
+# }
+
+    client_max_body_size 4G;
+	keepalive_timeout 5;
