@@ -11,7 +11,7 @@ set -e
 PROJECT_MAIN_DIR_NAME = "guiar-me"
 
 # CLONE REPOSITORY
-git clone "$GIT_REPO_URL" "/home/ubuntu/$PROJECT_MAIN_DIR_NAME"
+# git clone "$GIT_REPO_URL" "/home/ubuntu/$PROJECT_MAIN_DIR_NAME"
 
 # CHANGE DIRECTORY
 cd "/home/ubuntu/$PROJECT_MAIN_DIR_NAME"
