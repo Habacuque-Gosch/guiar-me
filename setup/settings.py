@@ -14,15 +14,14 @@ SECRET_KEY = 'django-insecure-sadksakdoplsa;321321fdfds///////////dpsa;p******'
 
 DEBUG = True
 
-# ALLOWED_HOSTS = [
-#     '127.0.0.1',
-#     'guiar-me-e98f4b3315b3.herokuapp.com',
-#     'guiar-me.onrender.com',
-#     'guiar-me-haba.pythonanywhere.com',
-#     'haba.pythonanywhere.com',
-# ]
-
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'guiar-me-e98f4b3315b3.herokuapp.com',
+    'guiar-me.onrender.com',
+    'guiar-me-haba.pythonanywhere.com',
+    'haba.pythonanywhere.com',
+    '34.220.169.91'
+]
 
 SITE_ID = 2
 # Application definition
@@ -216,9 +215,9 @@ if ENVIRONMENT == 'production':
     SECURE_CONTENT_TYPE_NOSNIFF = True
     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
     SECURE_HSTS_SECONDS = 31536000
-    SECURE_REDIRECT_EXEMPT = []
-    SECURE_SSL_REDIRECT = True
-    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTOCOL", "https")
+    # SECURE_REDIRECT_EXEMPT = []
+    # SECURE_SSL_REDIRECT = True
+    # SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTOCOL", "https")
     X_FRAME_OPTIONS = 'SAMEORING'
     # CSP_DEFAULT_SRC = ("'self'", "https://polyfill.io")
     # CSP_STYLE_SRC = ("'unsafe-inline'", "https:")
