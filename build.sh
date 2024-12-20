@@ -8,13 +8,13 @@ set -e
 # GIT_REPO_URL = "https://habacuque-gosch@github.com/habacuque-gosch/guiar-me.git" 
 
 # YOUR ACTUAL DIRNAME PROJECT
-PROJECT_MAIN_DIR_NAME = "guiar-me"
+# PROJECT_MAIN_DIR_NAME = "guiar-me"
 
 # CLONE REPOSITORY
 # git clone "$GIT_REPO_URL" "/home/ubuntu/$PROJECT_MAIN_DIR_NAME"
 
 # CHANGE DIRECTORY
-cd "/home/ubuntu/$PROJECT_MAIN_DIR_NAME"
+cd "/home/ubuntu/guiar-me"
 # Convert static asset files
 
 # MAKE ALL .SH FILES

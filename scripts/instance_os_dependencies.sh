@@ -11,3 +11,5 @@ sudo apt install -y python3-pip
 # INSTALL VIRTUAL ENV
 sudo apt install -y virtualenv
 
+sudo apt install nginx
+
