@@ -14,14 +14,16 @@ SECRET_KEY = 'django-insecure-sadksakdoplsa;321321fdfds///////////dpsa;p******'
 
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'guiar-me-e98f4b3315b3.herokuapp.com',
-    'guiar-me.onrender.com',
-    'guiar-me-haba.pythonanywhere.com',
-    'haba.pythonanywhere.com',
-    '34.220.169.91'
-]
+# ALLOWED_HOSTS = [
+#     '127.0.0.1',
+#     'guiar-me-e98f4b3315b3.herokuapp.com',
+#     'guiar-me.onrender.com',
+#     'guiar-me-haba.pythonanywhere.com',
+#     'haba.pythonanywhere.com',
+#     '34.220.169.91'
+# ]
+
+ALLOWED_HOSTS = ['*']
 
 SITE_ID = 2
 # Application definition
@@ -105,6 +107,7 @@ DATABASES = {
     }
 }
 
+print('########### DB CONNECTED ###########')
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "default"
 
@@ -118,19 +121,7 @@ CACHES = {
     }
 }
 
-# Postgress DB
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'db_name',
-#         'USER': 'db_user',
-#         'PASSWORD': 'db_user_password',
-#         'HOST': '',
-#         'PORT': 'db_port_number',
-#     }
-# }
-
+print('########### DB CACHE CONNECTED ###########')
 
 # REDIS_URI = str(os.getenv('URI_REDIS'))
 # PORT_REDIS = str(os.getenv('PORT_REDIS'))
@@ -204,7 +195,6 @@ lOGOUT_REDIRECT_URL = '/'
 # GPO and Security
 
 ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')
-print(ENVIRONMENT)
 if ENVIRONMENT == 'production':
     print('############### PROD ###############')
     SECRET_KEY = str(os.getenv('SECRET_KEY'))
