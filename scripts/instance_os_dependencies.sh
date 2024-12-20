@@ -6,7 +6,7 @@ sudo apt update
 sudo apt install -y python3-pip
 
 # INSTALL NGINX
-sudo apt install nginx
+sudo apt install -y nginx
 
 # INSTALL VIRTUAL ENV
 sudo apt install -y virtualenv
