@@ -3,6 +3,7 @@ asgiref==3.7.2
 asttokens==2.4.0
 Deprecated==1.2.14
 Django==5.0
+psycopg2-binary>=2.9.6,<2.10
 hiredis>=2.3.2,<2.4
 django-redis==5.4.0
 geographiclib==2.0
