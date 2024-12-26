@@ -20,10 +20,9 @@ ALLOWED_HOSTS = [
     'guiar-me.onrender.com',
     'guiar-me-haba.pythonanywhere.com',
     'haba.pythonanywhere.com',
-    'http://35.88.145.142/'
+    '35.88.145.142/'
 ]
 
-# ALLOWED_HOSTS = ['*']
 
 SITE_ID = 2
 # Application definition
