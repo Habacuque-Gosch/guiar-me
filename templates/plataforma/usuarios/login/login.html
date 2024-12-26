@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="div-btn-google-plataforma">
-    <a class="btn-google-plataforma" href=""><img src="{% static '/assets/icones_login/google-icone.svg' %}" alt="">Continue google</a>
+    <a class="btn-google-plataforma" href="{% provider_login_url 'google' %}?next=/"><img src="{% static '/assets/icones_login/google-icone.svg' %}"><img src="{% static '/assets/icones_login/google-icone.svg' %}" alt="">Continue google</a>
 </div>
 
 <div class="div-alternativa-de-login-plataforma">
