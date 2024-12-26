@@ -16,6 +16,8 @@
         return 444;
     }
 
+    location = /favicon.ico { access_log off; log_not_found off; }
+
 
     server {
         listen 80;
