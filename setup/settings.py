@@ -20,7 +20,7 @@ ALLOWED_HOSTS = [
     'guiar-me.onrender.com',
     'guiar-me-haba.pythonanywhere.com',
     'haba.pythonanywhere.com',
-    '35.88.145.142/'
+    '35.88.145.142'
 ]
 
 
@@ -113,7 +113,7 @@ SESSION_CACHE_ALIAS = "default"
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": f"redis://default:VG6f2mi3n9OeS0lgk22kvm4daZDvoVUo@redis-17205.c240.us-east-1-3.ec2.redns.redis-cloud.com:17205",
+        "LOCATION": f"{str(os.getenv('LOCATION_REDIS'))}",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
