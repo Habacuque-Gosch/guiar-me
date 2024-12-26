@@ -44,6 +44,6 @@ wrapt==1.15.0
 zeep==4.2.1
 cryptography==44.0.0
 PyJWT==2.10.1
-django-allauth==65.3.0
+django-allauth
 # django-csp==3.8
 
