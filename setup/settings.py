@@ -207,6 +207,8 @@ if ENVIRONMENT == 'production':
     # SECURE_REDIRECT_EXEMPT = []
     # SECURE_SSL_REDIRECT = True
     # SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTOCOL", "https")
+    # SECURE_CONTENT_TYPE_NOSNIFF = True
+    # SECURE_HSTS_PRELOAD = True
     X_FRAME_OPTIONS = 'SAMEORING'
     # CSP_DEFAULT_SRC = ("'self'", "https://polyfill.io")
     # CSP_STYLE_SRC = ("'unsafe-inline'", "https:")
