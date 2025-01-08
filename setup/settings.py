@@ -20,7 +20,7 @@ ALLOWED_HOSTS = [
     'guiar-me.onrender.com',
     'guiar-me-haba.pythonanywhere.com',
     'haba.pythonanywhere.com',
-    'https://guiarme.onrender.com',
+    'guiarme.onrender.com',
     '35.88.145.142'
 ]
 
