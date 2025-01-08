@@ -20,6 +20,7 @@ ALLOWED_HOSTS = [
     'guiar-me.onrender.com',
     'guiar-me-haba.pythonanywhere.com',
     'haba.pythonanywhere.com',
+    'https://guiarme.onrender.com',
     '35.88.145.142'
 ]
 
@@ -166,8 +167,6 @@ STATICFILES_DIRS = [
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 # MEDIA_PATH
 
