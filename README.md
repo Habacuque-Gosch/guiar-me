@@ -22,7 +22,7 @@ GuiarMe é uma plataforma do qual estou desenvolvendo o Back-end e Front-end par
 
 :heavy_check_mark: `Funcionalidade 5:` Editar Perfil
 
-:heavy_check_mark: `Funcionalidade 5:` Trocar de senha
+:heavy_check_mark: `Funcionalidade 5:` Trocar de senha 
  
 <div align='center'>
     <h1>Aplicação<h1>
