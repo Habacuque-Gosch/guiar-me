@@ -1,0 +1,186 @@
+
+.section-card-evento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.info-evento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+    /* border-radius: 20px; */
+}
+
+.div-voltar-e-favoritar-evento {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    text-align: left;
+    width: 100%;
+    gap: 13.5em;
+    margin-top: 2em;
+}
+
+.link-evento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+}
+
+.div-voltar-e-favoritar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    text-align: left;
+    width: 100%;
+    gap: 13.5em;
+    margin-top: 2em;
+}
+
+.div-nome-e-evento {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width: 100%;
+    gap: 1.5em;
+    margin-top: 4em;
+}
+
+.div-nome-e-evento p{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: 700;
+    /* width: 70%; */
+    padding-left: 18px
+}
+
+.div-avaliacao-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.section-descricao-e-ingressos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.div-descricao-evento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1.8em;
+    gap: 15px;
+}
+
+.titulo-descricao-evento {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width: 100%;
+}
+
+.titulo-descricao-evento h1 {
+    font-size: 18px;
+    color: #ffff;
+    padding-left: 18px
+
+}
+
+.div-descricao-evento p {
+    font-size: 15px;
+    color: var(--texto_70);
+    text-align: justify;
+    width: 90%;
+}
+
+.div-btn-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2em;
+}
+
+.div-btn-cta h2 {
+    font-size: 1em;
+    color: #ffff;
+    padding-left: 18px
+}
+
+.div-btn-ingressos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+
+}
+
+.btn-ingressos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: var(--destaque);
+    height: 60px;
+    width: 40%;
+    padding: 6px;
+    border: 1px solid var(--destaque);
+    border-radius: 20px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.btn-ingressos:hover {
+    background-color: var(--destaque);
+    color: #ffff;
+    border: 1px solid var(--destaque);
+}
+
+.btn-comprar-ingressos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--destaque);
+    color: #ffff;
+    height: 60px;
+    width: 86.2%;
+    padding: 6px;
+    border: 1px solid var(--destaque);
+    border-radius: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 26px;
+}
+
+.btn-comprar-ingressos:hover {
+    background-color: #ffff;
+    color: var(--destaque);
+    border: 1px solid var(--destaque);
+}

@@ -1,0 +1,47 @@
+.section-cards-estabelecimentos {
+    display: none;
+}
+@media (max-width: 428px) {
+    
+    .section-cards-estabelecimentos {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .div-busca-e-filtro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 2.5em;
+        margin-bottom: 2em;
+    }
+
+    .nenhum-estabelecimento-encontrado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 1em;
+        width: 100%;
+    }
+
+    .nenhum-estabelecimento-encontrado h1 {
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        font-weight: 900;
+    }
+
+    .error-oops {
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-weight: 900;
+        width: 90%;
+    }
+
+}

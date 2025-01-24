@@ -1,0 +1,123 @@
+
+.div-titulo-formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 2em;
+}
+
+.div-titulo-formulario p{
+    font-weight: bold;
+    font-size: 40px;
+    color: #ffff;
+    width: 80%;
+}
+
+.section-profile-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-top: 2em;
+}
+
+.form-profile-campos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-top: 2em;
+    gap: 1em;
+}
+
+.form-profile-campos label {
+    display: none;
+}
+
+.section-profile-form label {
+    display: none;
+}
+
+.select-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fundo-campo);
+    color: #ffffff;
+    height: 60px;
+    width: 85%;
+    padding-left: 18px;
+    border: none;
+    outline: var(--destaque);
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 7px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 0px;
+    text-overflow: '';
+    width: 89%;
+    font-size: 16px;
+}
+
+.select-user:focus {
+    outline: solid 2px var(--destaque);
+}
+
+.upload-img {
+    background-color: transparent;
+    background-image: url('../cadastro/upload_img.svg');
+    background-position: center top;
+    background-size: 100% auto;
+    margin-top: 1em;
+    color: #ffffff00;
+    cursor: pointer;
+    padding: 5px 20px;
+    width: 30%;
+    height: 147px;
+    border-radius: 100%;
+}
+.upload-img label {
+    display: none;
+}
+.upload-img::-webkit-file-upload-button {
+    display: none;
+}
+
+
+.section-status-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.div-status-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 1.5em;
+    margin-top: 10px;
+
+}
+
+.status-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18%;
+    height: 9px;
+    background: var(--fundo-campo);
+    border-radius: 20px;
+}

@@ -1,0 +1,89 @@
+
+.section-configuracoes-user {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+}
+
+.div-img-e-name-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--destaque);
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.img-e-name-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    margin-top: -15%;
+}
+
+.foto-user-config {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    border: none;
+    outline: solid 5px var(--fundo-card-inicial);
+    object-fit: fill;
+}
+
+.name-user-config {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: #ffff;
+    width: 80%;
+}
+
+.section-opcoes-config {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    gap: 10px;
+    /* overflow-y: visible; */
+    overflow: hidden;
+    overflow-y: visible;
+    width: 100%;
+    height: 80%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.opcao-config {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--fundo-campo);
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffff;
+    text-decoration: none;
+    gap: 1em;
+    width: 80%;
+    /* height: 70px; */
+    border-radius: 20px;
+    padding-left: 1em;
+    padding-right: 1.6em;
+}
+
+.opcao-config-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1em;
+    height: 70px;
+
+}

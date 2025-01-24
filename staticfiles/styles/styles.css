@@ -1,0 +1,74 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+
+/* ESTILOS MOBILE */
+@import url(home/home.css);
+@import url(login/login.css);
+@import url(cadastro/cadastro.css);
+@import url(cadastro/profile.css);
+@import url(cadastro/splash_profile.css);
+
+@import url(estabelecimentos/index.css);
+@import url(estabelecimentos/card.css);
+@import url(estabelecimentos/estabelecimento.css);
+
+@import url(eventos/index.css);
+@import url(eventos/card.css);
+@import url(eventos/eventos.css);
+
+@import url(partials/header.css);
+@import url(partials/formularios.css);
+@import url(partials/busca.css);
+@import url(partials/navegation_bar.css);
+@import url(partials/footer.css);
+
+@import url(configuracoes/config.css);
+
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", "sans-serif";
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body, main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+}
+
+/* PALETA DE CORES (ROOT) */
+:root {
+    --destaque: #005DDF;
+    --primaria: #005DDF;
+    --secundaria: #22262D;
+    --terciaria: #EBF5F9;
+
+    /* HOME */
+    --texto: #ffffff;
+    --texto_70: #ffffffc5;
+    --texto_miudo: #78B0FF;
+
+    /* LOGIN */
+    --fundo-card-inicial: #22262D;
+    --texto-no-card:#455368;
+
+    --texto-no-card-plataforma: #b1d0ff;
+
+    --fundo-campo: #313640;
+    --textos:#75859D;
+
+}
+
+html {
+    background-color: #22262D;
+}

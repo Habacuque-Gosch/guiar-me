@@ -1,0 +1,95 @@
+
+@media (min-width: 960px) {
+
+    .section-tela-plataforma {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .form-group-campos-plataforma {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .section-login-form-plataforma label {
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        color: var(--texto-no-card-plataforma);
+        margin-bottom: 10px;
+        margin-left: -24em;
+    }
+
+    .campo-user-login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--fundo-card-inicial);
+        color: #ffffff;
+        height: 60px;
+        width: 30%;
+        padding-left: 18px;
+        border: none;
+        outline: var(--destaque);
+        border-radius: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        margin-bottom: 7px;
+    }
+    .campo-user-login:focus {
+        outline: solid 2px var(--destaque);
+    }
+
+    .campo-user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--fundo-card-inicial);
+        color: #ffffff;
+        height: 60px;
+        width: 30%;
+        padding-left: 18px;
+        border: none;
+        outline: var(--destaque);
+        border-radius: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        margin-bottom: 7px;
+    }
+
+    .campo-user:focus {
+        outline: solid 2px var(--destaque);
+    }
+    
+    .btn-entrar-plataforma {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--destaque);
+        color: #ffff;
+        height: 60px;
+        width: 30%;
+        padding: 6px;
+        /* border: 1px solid #ffff; */
+        border: none;
+        border-radius: 20px;
+        font-size: 20px;
+        text-decoration: none;
+        margin-top: 1.5em;
+    }
+
+    .btn-entrar-plataforma:hover {
+        background-color: #ffff;
+        color: var(--destaque);
+        border: 1px solid var(--destaque);
+    }
+}

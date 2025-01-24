@@ -1,0 +1,87 @@
+
+@media (max-width: 428px) {
+    .main-home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--destaque);
+        width: 100%;
+        height: 100%;
+    }
+    
+    .section-home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--destaque);
+        width: 100%;
+        height: 100%;
+    }
+    
+    .logo-e-contexto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        gap: 14px;
+        margin-bottom: 2.5em;
+        margin-top: 1em;
+    }
+    .logo-inicial {
+        width: 70%;
+        height: 50%;
+    }
+    
+    .contexto-home {
+        font-size: 16px;
+         
+        color: var(--texto_70);
+    }
+    .logo-texto {
+        margin-top: -1.5em;
+    }
+    
+    .botoes-login-ou-cadastro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1em;
+        width: 100%;
+        height: 100%;
+    }
+    .botao-criar-conta  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffff;
+        color: #1855AB;
+        height: 60px;
+        width: 80%;
+        border: none;
+        border-radius: 20px;
+        font-size: 20px;
+         
+        text-decoration: none;
+    }
+    
+    .avisos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 8px;
+        margin-bottom: 2em;
+    }
+    
+    .avisos p {
+        text-align: center;
+        font-size: 14px;
+        color: var(--texto_miudo);
+        width: 80%;
+    }
+    
+}
