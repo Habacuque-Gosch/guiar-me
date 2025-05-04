@@ -12,17 +12,13 @@ GuiarMe é uma plataforma do qual estou desenvolvendo o Back-end e Front-end par
  
 ## Funcionalidades
 
-:heavy_check_mark: `Funcionalidade 1:` Cadastro no Aplicativo/Plataforma
+:heavy_check_mark: `Funcionalidades básicas do sistema:` Registro com confirmação de e-mail, login, logout, desativação de conta, troca de senha e criação/edição do perfil;
 
-:heavy_check_mark: `Funcionalidade 2:`  Login no Aplicativo/Plataforma
+:heavy_check_mark: `Funcionalidades como usuário:` Visualizar estabelecimentos, buscar, filtrar e salvar estabelecimentos;
 
-:heavy_check_mark: `Funcionalidade 3:` Buscar por Estabelecimentos e Eventos
+:heavy_check_mark: `Funcionalidades do sistema:` Sistema de notificação interno;
 
-:heavy_check_mark: `Funcionalidade 4:` Filtrar por Distância e Preço
-
-:heavy_check_mark: `Funcionalidade 5:` Editar Perfil
-
-:heavy_check_mark: `Funcionalidade 5:` Trocar de senha 
+:heavy_check_mark: `Funcionalidades gerais:` configurações do usuário
  
 <div align='center'>
     <h1>Aplicação<h1>
