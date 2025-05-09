@@ -5,7 +5,7 @@ from django.views.decorators.cache import cache_page
 # from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from .views import *
-from apps.resumo.models import Resumo
+from ..models import Resumo
 
 
 

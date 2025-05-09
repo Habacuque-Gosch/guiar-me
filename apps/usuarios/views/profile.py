@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from apps.resumo.forms import ResumoForms
-from apps.resumo.models import Resumo
+from ..forms import ResumoForms
+from ..models import Profile
 from apps.estabelecimentos.models import Estabelecimento 
 # from django.contrib.auth.models import User
 # from django.contrib import auth, messages
@@ -25,7 +25,7 @@ def novo_perfil(request):
             resumo.usuario = current_user
             resumo.save()
             # messages.success(request, "salvo com sucesso")
-            resumo = Resumo.objects.get(id=resumo.id)
+            resumo = Profile.get_profile(id=resumo.id)
             return render(request, 'usuarios/cadastro/splash_agradecimento.html', {'resumo': resumo})
 
         else:
@@ -39,7 +39,7 @@ def novo_filtro(request):
     ''' função responsável por exibir a página de criação de filtro personalizado para o usuário '''
     current_user = request.user
 
-    resumo = Resumo.objects.get(usuario=current_user)
+    resumo = Profile.get_profile(usuario=current_user)
     form = ResumoForms(instance=resumo)
 
     if request.method == 'POST':
@@ -62,7 +62,7 @@ def splash_home(request, foto_user_id):
     ''' Função responsável por exibir um splash de bem vindo a o usuário '''
     # Por mim nem deveria ter essa página kkkkk mas enfim
 
-    resumo = Resumo.objects.get(id=foto_user_id)
+    resumo = Profile.get_profile(id=foto_user_id)
 
     return render(request, 'usuarios/cadastro/splash_agradecimento.html', {'resumo': resumo})
 
@@ -73,12 +73,12 @@ def config_user(request):
     user = request.user
 
     try:
-        resumo = Resumo.objects.get(usuario=user)
+        resumo = Profile.get_profile(usuario=user)
     except:
         # messages.error(request, "Preencha seu perfil")
         return redirect('novo_perfil')
 
-    resumo = Resumo.objects.get(usuario=user)
+    resumo = Profile.get_profile(usuario=user)
 
     return render(request, 'usuarios/configuracoes/config.html', {'resumo': resumo})
 
@@ -88,7 +88,7 @@ def editar_perfil(request, resumo_id):
 
     user = request.user
     
-    resumo = Resumo.objects.get(id=resumo_id)
+    resumo = Profile.get_profile(id=resumo_id)
     form = ResumoForms(instance=resumo)
 
     if request.method == 'POST':
@@ -106,7 +106,7 @@ def favoritos(request):
 
     user = request.user
     
-    resumo = Resumo.objects.get(usuario=user)
+    resumo = Profile.get_profile(usuario=user)
 
     estabelecimentos_favoritos = resumo.estabelecimentos_fav.all().filter(publicada=True)
 
@@ -120,7 +120,7 @@ def favoritar_estabelecimento(request, estabelecimento_id):
 
     estabelecimento_selecionado = Estabelecimento.objects.get(id=estabelecimento_id)
 
-    resumo = Resumo.objects.get(usuario=user)
+    resumo = Profile.get_profile(usuario=user)
 
     estabelecimento_selecionado = resumo.estabelecimentos_fav.add(estabelecimento_selecionado)
 
@@ -136,7 +136,7 @@ def desfavoritar_estabelecimento(request, estabelecimento_id):
 
     estabelecimento_selecionado = Estabelecimento.objects.get(id=estabelecimento_id)
 
-    resumo = Resumo.objects.get(usuario=user)
+    resumo = Profile.get_profile(usuario=user)
 
     estabelecimento_selecionado = resumo.estabelecimentos_fav.remove(estabelecimento_selecionado)
 

@@ -1,5 +1,7 @@
 from django import forms
 # from apps.usuarios.models import Resumo
+from django import forms
+from .models import Profile
 
 
 
@@ -27,7 +29,6 @@ class LoginForms(forms.Form):
             }
         )
     )
-
 
 class CadastroForms(forms.Form):
     nome_cadastro = forms.CharField(
@@ -89,8 +90,7 @@ class CadastroForms(forms.Form):
             if ' ' in nome:
                 raise forms.ValidationError('Espaços não são permitidos nesse campo')
             else:
-                return nome
-            
+                return nome  
 
 class ChangePassForms(forms.Form):
     senha_atual = forms.CharField(
@@ -132,5 +132,24 @@ class ChangePassForms(forms.Form):
             }
         )
     )
+
+
+class ResumoForms(forms.ModelForm):
+    class Meta:
+        model = Profile
+        exclude = ['usuario', 'estabelecimentos_fav']
+
+        labels = {
+            'foto' : ' ',
+            'orientacao_sexual' : ' ',
+        }
+
+        widgets = {
+            'nome': forms.TextInput(attrs={'class': 'campo-user', 'id': 'campo','placeholder':'Digite seu nome'}),
+            'idade': forms.TextInput(attrs={'class': 'campo-user', 'id': 'campo-age', 'placeholder':'Digite sua idade'}),
+            'orientacao_sexual': forms.Select(attrs={'class': 'select-user', 'id': 'sexo', 'placeholder':'Selecione seu sexo'}),
+            'foto': forms.FileInput(attrs={'class': 'upload-img', 'id': 'upload-img'}),
+            'tags_filtro': forms.SelectMultiple(attrs={'class': 'tags_filtro', 'id': 'tags_filtro'}),
+        }
 
 

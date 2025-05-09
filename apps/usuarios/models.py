@@ -1,3 +1,57 @@
 from django.db import models
+from datetime import datetime
+from django.contrib.auth.models import User
+from apps.estabelecimentos.models import Estabelecimento
+from django.contrib.auth.backends import ModelBackend
 
-# Create your models here.
+
+
+
+class EmailAuthBackend(ModelBackend):
+    def authenticate(self, request, username=None, password=None, **kwargs):
+        try:
+            user = User.objects.get(email=username)
+            if user.check_password(password):
+                return user
+        except User.DoesNotExist:
+            return None
+
+    def get_user(self, user_id):
+        try:
+            return User.objects.get(pk=user_id)
+        except User.DoesNotExist:
+            return None
+
+
+class Profile(models.Model):
+    orientacao_sexual = [
+        ('LESBICA','Lésbica'),
+        ('GAY','Gay'),
+        ('BISSEXUAL','Bissexual'),
+        ('TRANSGENERO','Transgênero'),
+        ('NAO_BINARIO','Não-Binário'),
+        ('HETEROSSEXUAL','Heterossexual'),
+        ('OUTRO','Outro'),
+    ]
+
+    nome = models.CharField(max_length=150, null=False, blank=False)
+    idade = models.CharField(max_length=2, null=False, blank=False)
+    orientacao_sexual = models.CharField(max_length=100, choices=orientacao_sexual, default='')
+    foto = models.ImageField(upload_to="fotos/%Y/%m/%d/", blank=True)
+    estabelecimentos_fav = models.ManyToManyField(Estabelecimento, related_name='estabelecimentos_favoritos', blank=True)
+    usuario = models.ForeignKey(
+        to=User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=False,
+        related_name="user",
+    )
+    
+    def __str__(self):
+        return self.nome
+    
+
+    def get_profile(user):
+        profile = Profile.objects.get(user=user)
+        return profile
+    

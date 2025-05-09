@@ -5,7 +5,7 @@ from django.views.decorators.cache import cache_page
 from django.contrib.auth.decorators import login_required
 from .views import *
 from apps.estabelecimentos.models import Estabelecimento
-from apps.resumo.models import Resumo
+from apps.usuarios.models import Profile
 import requests
 from geopy.distance import geodesic
 from geopy.geocoders import Nominatim
@@ -33,7 +33,7 @@ def estabelecimento(request, estabelecimento_id):
     user = request.user
 
     try:
-        resumo = get_list_or_404(Resumo, usuario=user)
+        profile = get_list_or_404(Profile, usuario=user)
     except:
         # messages.error(request, "Preencha seu perfil")
         return redirect('novo_perfil')
@@ -102,13 +102,13 @@ def dashboard(request):
 
     user = User.objects.get(id=request.user.id)
     
-    resumo_user = Resumo.objects.get(usuario_id=request.user.id)
+    profile_user = Profile.get_profile(usuario_id=request.user.id)
 
     estabelecimento = Estabelecimento.objects.get(usuario_business_id=request.user.id)
 
     print(estabelecimento)
 
-    return render(request, 'plataforma/dashboard/index.html', {'resumo_business':resumo_user,'estabelecimento_business': estabelecimento})
+    return render(request, 'plataforma/dashboard/index.html', {'profile_business':profile_user,'estabelecimento_business': estabelecimento})
 
 @login_required(login_url='login')
 # @cache_page(60 * 2)

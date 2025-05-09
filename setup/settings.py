@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     # 'debug_toolbar',
     'apps.usuarios.apps.UsuariosConfig',
     'apps.estabelecimentos.apps.EstabelecimentosConfig',
-    'apps.resumo.apps.ResumoConfig',
     'apps.eventos.apps.EventosConfig',
     'django.contrib.sites',
     'allauth',
