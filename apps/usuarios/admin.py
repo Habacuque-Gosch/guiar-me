@@ -2,8 +2,8 @@ from django.contrib import admin
 from .models import Profile
 
 
-admin.sites.AdminSite.site_header = 'Freelaworks'
-admin.sites.AdminSite.index_title = 'Freelaworks'
+admin.sites.AdminSite.site_header = 'GuiarMe'
+admin.sites.AdminSite.index_title = 'GuiarMe'
 admin.sites.AdminSite.site_title = 'Admin Site'
 
 
