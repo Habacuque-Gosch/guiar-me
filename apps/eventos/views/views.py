@@ -5,7 +5,7 @@ from django.views.decorators.cache import cache_page
 # from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from .views import *
-from ..models import Resumo
+from apps.usuarios.models import Profile
 
 
 
@@ -26,7 +26,7 @@ def evento(request, evento_id):
     user = request.user
 
     try:
-        resumo = get_list_or_404(Resumo, usuario=user)
+        profile = get_list_or_404(Profile, usuario=user)
     except:
         # messages.error(request, "Preencha seu perfil")
         return redirect('novo_perfil')
